@@ -5,11 +5,6 @@ the extension be to autoload all folder of containing `Gemfile.lock` in the work
 
 ## Features
 
-起始判断
-- 是否有ruby环境 -- 通过环境变量
-- 是否有bundle -- 通过环境变量
-- 是否包含 Gemfile.lock -- 拼接path，通过stat判断
-
 feature
 - explore RubyGems by `Gemfile.lock`
 - switch LockfileFolder which when the active editor has changed
