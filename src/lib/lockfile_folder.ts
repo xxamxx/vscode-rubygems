@@ -67,7 +67,7 @@ export class LockfileFolder {
 }
 
 export class LockfileFolders {
-    private static _folders: Map<Uri, LockfileFolder> = new Map();
+    private static _folders: Map<string, LockfileFolder> = new Map();
     static get folders() {
         return Array.from(this._folders.values());
     }
@@ -75,20 +75,21 @@ export class LockfileFolders {
     static async addFolders(uris: Uri[]) {
         for (const uri of uris) {
             const folder = new LockfileFolder(uri);
-            this._folders.set(uri, folder);
+            this._folders.set(uri.path, folder);
             await folder.load();
         }
     }
 
-    static async removeFolders(uris: Uri[]) {
+    static removeFolders(uris: Uri[]) {
         for (const uri of uris) {
-            this._folders.delete(uri);
+            const deleted = this._folders.delete(uri.path);
+            console.debug(uri.path, deleted);
         }
     }
 
     static get(uri: Uri | undefined) {
         if (!uri) { return uri; }
-        return this._folders.get(uri);
+        return this._folders.get(uri.path);
     }
 
     static find(name: string) {
