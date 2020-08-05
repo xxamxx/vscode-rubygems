@@ -33,6 +33,8 @@ export class Container extends ADisposable {
         });
         const visibleDefaultLockfileFolder = lockfileFolders[0];
 
+        console.debug('getCurrentLockfileFolder', visibleDefaultLockfileFolder, firstLockfileFolder);
+
         return visibleDefaultLockfileFolder || firstLockfileFolder;
     }
     

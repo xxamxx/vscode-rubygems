@@ -1,4 +1,5 @@
 import { Event, TreeItem, EventEmitter, TreeDataProvider, window, Disposable, TreeView } from 'vscode';
+import { placeholder } from '../config/basic';
 import { Entry } from '../definition';
 import { GeneralEntry } from '../explorer/entry';
 import { LockfileFolder } from '../lib/lockfile_folder';
@@ -15,7 +16,7 @@ export class RubygemsProvider implements TreeDataProvider<Entry> {
 	private currentLockfileFolder: LockfileFolder | undefined;
 	private setLockfileFolder = _.throttle((lockfileFolder) => {
 		this.currentLockfileFolder = lockfileFolder;
-		this.view.title = this.currentLockfileFolder ? `${this.defaultViewName} - ${this.currentLockfileFolder.name}` : this.defaultViewName;
+		this.view.title = this.currentLockfileFolder ? `${this.defaultViewName} ${placeholder.refer} ${this.currentLockfileFolder.name}` : this.defaultViewName;
 		this.refresh();
 	}, 20);
 

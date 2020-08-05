@@ -1,9 +1,10 @@
 import { Uri, workspace, QuickPickItem, WorkspaceFolder } from "vscode";
+import * as _ from "lodash";
 import { parse as pparse } from 'path';
 import { GemEntry } from "../explorer/entry";
 import { Specification } from "./ruby";
 import { Utils } from "../util";
-import _ = require("lodash");
+import { placeholder } from "../config/basic";
 
 export class LockfileFolder {
     private specifications: Specification[];
@@ -22,7 +23,7 @@ export class LockfileFolder {
     contain(uri: Uri) {
         return Utils.containPath(uri.fsPath, this.path);
     }
-
+     
     be_contained(uri: Uri) {
         return Utils.containPath(this.lockfile.fsPath, uri.fsPath);
     }
@@ -36,8 +37,8 @@ export class LockfileFolder {
         const wsName = this.workspaceFolder?.name;
         return {
             label: this.name,
-            description: wsName ? `${wsName} - ${this.name}` : this.name,
-            detail: wsName ? `${wsName} - ${this.name}` : this.name,
+            description: (this.name !== wsName) ? (wsName || placeholder.word) : '',
+            detail: this.path
         };
     }
 
