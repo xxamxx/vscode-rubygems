@@ -11,8 +11,8 @@ export class GemItem extends TreeItem {
     public readonly name: string;
     public readonly contextValue = 'gem-folder';
     public readonly iconPath = {
-        light: pjoin(__filename, '..', '..', '..', 'resources', 'light', 'dependency.svg'),
-        dark: pjoin(__filename, '..', '..', '..', 'resources', 'dark', 'dependency.svg')
+        light: pjoin(__filename, '..', '..', '..', 'resources', 'light', 'ruby-gem.svg'),
+        dark: pjoin(__filename, '..', '..', '..', 'resources', 'dark', 'ruby-gem.svg')
     };
     get uri(): Uri { return this.entry.uri; }
     get label(): string { return this.name; }
