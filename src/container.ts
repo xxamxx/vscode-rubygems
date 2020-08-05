@@ -40,12 +40,31 @@ export class Container {
 
         return executable;
     }
+
+    static getCurrentLockfileFolder() {
+        // 当前活跃的编辑器
+        const editor = window.activeTextEditor;
+        const lockfileFolder = editor ? LockfileFolders.match(editor.document.uri) : undefined;
+        if (lockfileFolder) { return lockfileFolder; }
+
+        const firstLockfileFolder = LockfileFolders.folders[0];
+
+        // 打开的编辑中选第一个
+        const lockfileFolders = window.visibleTextEditors.map(element => {
+            return LockfileFolders.match(element.document.uri);
+        });
+        const visibleDefaultLockfileFolder = lockfileFolders[0];
+
+        console.debug('getCurrentLockfileFolder', visibleDefaultLockfileFolder, firstLockfileFolder);
+
+        return visibleDefaultLockfileFolder || firstLockfileFolder;
+    }
     
     static async initialization(context: ExtensionContext) {
         console.log(context);
         
         if (!workspace.workspaceFolders) { return Disposable.from(); }
-        const autoSwitchLockfile = workspace.getConfiguration('rubygems.explore').get('autoSwitchLockfile', true);
+        const canSwitchLockfileFolder = workspace.getConfiguration('rubygems.explore').get('autoSwitchLockfileFolder', true);
         let gemFolderPaths: string[] = workspace.getConfiguration('rubygems.context').get('gemPath', []);
         if (!gemFolderPaths.length) { gemFolderPaths = Utils.getGemPaths(); }
         console.debug('rubygemsFolders', gemFolderPaths);
@@ -78,7 +97,7 @@ export class Container {
         // - 监听 workspace change event
         disposable.push(workspace.onDidChangeWorkspaceFolders(e => this.onWorkspaceFolderChanged(e)));
         disposable.push(workspace.onDidChangeConfiguration(e => this.onConfigurationChanged(e)));
-        if (autoSwitchLockfile) { 
+        if (canSwitchLockfileFolder) { 
             await this.onTextEditorActiveChanged(window.activeTextEditor);
             disposable.push(window.onDidChangeActiveTextEditor((e) => this.onTextEditorActiveChanged(e)));
             disposable.push(workspace.onDidOpenTextDocument((e) => this.onTextDocumentActivated(e)));
@@ -128,13 +147,7 @@ export class Container {
     static async onLockfilesDeleted(uris: Uri[]) {
         console.debug('onLockfilesDeleted', uris);
         await LockfileFolders.removeFolders(uris);
-        for (const uri of uris) {
-            const lockfileFolder = LockfileFolders.get(uri);
-            if (this.rubygemsProvider.lockfileFolder?.equal(lockfileFolder)) {
-                this.rubygemsProvider.lockfileFolder = undefined;
-                break;
-            }
-        }
+        if (this.rubygemsProvider) { this.rubygemsProvider.lockfileFolder = this.getCurrentLockfileFolder(); }
     }
 
     static async onLockfileChanged(uris: Uri[]) {
