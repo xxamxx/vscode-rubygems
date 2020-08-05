@@ -78,7 +78,7 @@
 					"markdownDescription": "Specifies rubygems path of the extension, default auto use `GEM_PATH`",
 					"scope": "machine-overridable"
 				},
-				"rubygems.explore.autoSwitchLockfile": {
+				"rubygems.explore.autoSwitchLockfileFolder": {
 					"type": "boolean",
 					"default": true,
 					"markdownDescription": "Can auto switch `Gemfile.lock` by activation of TextEditor",

@@ -1,9 +1,12 @@
 import { ExtensionContext } from 'vscode';
-import { Container } from './container';
+import { Initialization } from './initialization';
 
 export async function activate(context: ExtensionContext) {
-	const executable = await Container.check(context);
+	const executable = await Initialization.check(context);
 	if (!executable) { return; }
 
-	context.subscriptions.push(await Container.initialization(context));
+	await Initialization.preinit(context);
+	const initialization = new Initialization();
+	await initialization.init();
+	context.subscriptions.push(initialization);
 }

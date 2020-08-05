@@ -3,6 +3,7 @@ import { Entry } from '../definition';
 import { GeneralEntry } from '../explorer/entry';
 import { LockfileFolder } from '../lib/lockfile_folder';
 import { GemFolders } from '../lib/gem_folder';
+import * as _ from 'lodash';
 
 
 export class RubygemsProvider implements TreeDataProvider<Entry> {
@@ -12,11 +13,14 @@ export class RubygemsProvider implements TreeDataProvider<Entry> {
 	protected _disposable: Disposable;
 	private view: TreeView<Entry>;
 	private currentLockfileFolder: LockfileFolder | undefined;
-
-	set lockfileFolder(lockfileFolder: LockfileFolder | undefined) {
+	private setLockfileFolder = _.throttle((lockfileFolder) => {
 		this.currentLockfileFolder = lockfileFolder;
 		this.view.title = this.currentLockfileFolder ? `${this.defaultViewName} - ${this.currentLockfileFolder.name}` : this.defaultViewName;
 		this.refresh();
+	}, 20);
+
+	set lockfileFolder(lockfileFolder: LockfileFolder | undefined) {
+		this.setLockfileFolder(lockfileFolder);
 	}
 
 	get lockfileFolder() {
