@@ -1,21 +1,39 @@
+import { join as pjoin } from 'path';
 import * as vscode from 'vscode';
-import { join as pjoin, resolve } from 'path';
-import { exec } from 'child_process';
+import { RelativePattern, Uri, window, workspace, WorkspaceFolder } from 'vscode';
+import { Specification } from '../core/bundler';
 import { FileStat } from './file_stat';
 import { Utils as u } from './fs';
-import { Specification } from '../lib/ruby';
-import { workspace } from 'vscode';
+import { Path } from "./path";
 
-export namespace Utils {
-	// 解析 Gemfile
-	// export function readGemfile(path: string): object {
-	// 	const gemfilePath = pjoin(path, 'Gemfile');
-	// 	return JSON.parse(fs.readFileSync(gemfilePath, 'utf-8'));
-	// }
+export namespace Utils { 
+	export function findWorkspaceFolder(uri: Uri): WorkspaceFolder | undefined{
+		if (!workspace.workspaceFolders) return;
+		return workspace.workspaceFolders.find((folder) => Path.contain(uri.fsPath, folder.uri.path))
+	}
 
-	export function gemfileExists(path: string): Promise<boolean> {
-		const gemfilePath = pjoin(path, 'Gemfile');
-		return Utils.fs.exists(gemfilePath);
+	export function getCurrentWorkspaceFolder(): WorkspaceFolder | undefined {
+			// 当前活跃的编辑器
+			const editor = window.activeTextEditor;
+			if (editor) return workspace.getWorkspaceFolder(editor.document.uri);
+
+			// 打开的编辑中选第一个
+			for (const editor of window.visibleTextEditors) {
+				const workspaceFolder = workspace.getWorkspaceFolder(editor.document.uri);
+				if (workspaceFolder) return workspaceFolder;
+			}
+
+			return undefined;
+	}
+
+	export async function hasGemfile(path: string): Promise<boolean> {
+		if (path.length === 0) { return false; }
+		return fs.exists(pjoin(path, 'Gemfile'));
+	}
+
+	export async function hasLockfile(path: string): Promise<boolean>{
+		if (path.length === 0) { return false; }
+		return fs.exists(pjoin(path, 'Gemfile.lock'));
 	}
 
 	/**
@@ -55,55 +73,10 @@ export namespace Utils {
 		return false;
 	}
 
-	export async function hasLockfile(path: string): Promise<boolean>{
-		if (path.length === 0) { return false; }
-		return fs.exists(pjoin(path, 'Gemfile.lock'));
-	}
-
-	// 获取系统的 Ruby bin 文件的地址
-	const GEM_HOME = process.env['GEM_HOME'] || "";
-	export function getGemBin(): string {
-		return pjoin(GEM_HOME, '/bin/ruby');
-	}
-
 	// 获取系统的 gems 目录,多ruby环境(rvm)提供选项
-	const GEM_PATH = process.env['GEM_PATH'] || ""; // RubyGems 的 gem 目录
+	const GEM_PATH = process.env.GEM_PATH || ""; // RubyGems 的 gem 目录
 	export function getGemPaths(): string[] {
 		return GEM_PATH.split(':').map(path => pjoin(path, 'gems'));
-	}
-
-	export async function readLockfile(path: string): Promise<any[]> {
-		const gemfilePath = pjoin(path, 'Gemfile');
-		const lockfilePath = pjoin(path, 'Gemfile.lock');
-		const converterPath = resolve(__dirname, '../../', 'h11s/lockfile_converter.rb');
-		// RUBY 配置
-		
-		const rubyPath = workspace.getConfiguration('rubygems.context').get('ruby', getGemBin());
-		console.debug('ruby', rubyPath);
-		console.debug('gemfilePath', gemfilePath);
-		console.debug('lockfilePath', lockfilePath);
-		console.debug('h11sDirPath', converterPath);
-		
-		return new Promise((resolve, reject) => {
-			// /Users/am/.rvm/rubies/ruby-2.5.3/bin/ruby 
-			exec(`${rubyPath} ${converterPath} ${gemfilePath} ${lockfilePath}`, {
-				cwd: path,
-				windowsHide: true,
-				maxBuffer: 1024 * 1024 * 10
-			}, (err: any, stdout: string | Buffer, stderr: string | Buffer) => {
-				if (err) { console.error(err); return reject(err); }
-				if (stderr) { console.error(stderr); return reject(stderr); }
-
-				console.debug('data length', stdout.length);
-				try {
-					const data = JSON.parse(stdout.toString());
-					resolve(data);
-				} catch (error) {
-					reject(error);
-				}
-			});
-			
-		});
 	}
 
 	export async function getRubygems(gemPath: string): Promise<string[]> {
@@ -127,10 +100,7 @@ export namespace Utils {
 		return list;
 	}
 
-	export function containPath(path: string, otherPath: string): boolean {
-		const section = path.slice(0, otherPath.length);
-		return otherPath === section;
-	}
+
 
 
 	export async function getSpecification(projectPath: string): Promise<Specification[]> {
@@ -140,4 +110,8 @@ export namespace Utils {
 
 	export const fs = u.fs;
 	export const file_stat = FileStat;
+}
+
+export {
+	Path
 }

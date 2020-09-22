@@ -1,6 +1,6 @@
 import { Uri } from "vscode";
 import { join as pjoin } from 'path';
-import { GemEntry } from "../explorer/entry";
+import { GemEntry } from "../core/specification/spec_entry";
 import { Utils } from "../util";
 
 
@@ -9,8 +9,8 @@ export class GemFolder {
 
     constructor(public path: string, public global: boolean = false) { }
 
-    async load(map: Map<string, GemEntry> = new Map(), ): Promise<Map<string, GemEntry>>{
-        const entries = await this.build(); 
+    async load(map: Map<string, GemEntry> = new Map(),): Promise<Map<string, GemEntry>> {
+        const entries = await this.build();
         for (const entry of entries) {
             map.set(entry.name, entry);
         }
@@ -36,7 +36,7 @@ export class GemFolder {
     }
 }
 
-export class GemFolders{
+export class GemFolders {
     static map: Map<string, GemEntry> = new Map();
     static folders: Map<string, GemFolder> = new Map();
 

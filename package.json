@@ -64,25 +64,6 @@
 					"default": "ruby",
 					"markdownDescription": "Specifies ruby path of the extension executable",
 					"scope": "machine-overridable"
-				},
-				"rubygems.context.gemPath": {
-					"type": [
-						"array"
-					],
-					"items": {
-						"type": "string",
-						"description": "rubygems path"
-					},
-					"minItems": 1,
-					"uniqueItems": true,
-					"markdownDescription": "Specifies rubygems path of the extension, default auto use `GEM_PATH`",
-					"scope": "machine-overridable"
-				},
-				"rubygems.explore.autoSwitchLockfileFolder": {
-					"type": "boolean",
-					"default": true,
-					"markdownDescription": "Can auto switch `Gemfile.lock` by activation of TextEditor",
-					"scope": "resource"
 				}
 			}
 		}
@@ -104,15 +85,18 @@
 		"@types/node": "^12.12.51",
 		"@types/rimraf": "^2.0.4",
 		"@types/vscode": "^1.47.0",
-		"glob": "^7.1.5",
+		"@typescript-eslint/eslint-plugin": "^4.1.1",
+		"@typescript-eslint/parser": "^4.1.1",
+		"eslint": "^7.9.0",
+		"eslint-config-airbnb-typescript": "^10.0.0",
 		"mocha": "^6.2.3",
-		"tslint": "^5.20.0",
+		"prettier": "^2.1.2",
 		"typescript": "^3.9.7",
 		"vscode-test": "^1.4.0"
 	},
 	"dependencies": {
 		"lodash": "^4.17.19",
-		"mkdirp": "^0.5.5",
+		"mkdirp": "^1.0.4",
 		"open": "^7.1.0",
 		"rimraf": "^2.6.2"
 	}

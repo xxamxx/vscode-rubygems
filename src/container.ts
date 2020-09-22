@@ -1,124 +1,65 @@
-import { window, workspace, ExtensionContext, Uri, RelativePattern, WorkspaceFoldersChangeEvent, WorkspaceFolder, QuickPickItem, ConfigurationChangeEvent, TextEditor, TextDocument } from "vscode";
-import * as open from "open";
-import { LockfileFolders } from "./lib/lockfile_folder";
-import { GemFolders } from "./lib/gem_folder";
-import { RubygemsProvider } from "./provider/rubygems_provider";
-import { ADisposable } from './a_disposable';
+import { Uri, window } from "vscode";
+import { ADisposable } from './core/definition/a_disposable';
+import { Project } from "./core/project";
+import { Utils } from "./util";
+import { UriComparer } from "./util/comparer";
+import { SpecView } from "./view/specification/spec_view";
 
 
 export class Container extends ADisposable {
- 
-    static async getLockfileUris(workspaceFolders: Readonly<WorkspaceFolder[]>) {
-        let uris: Uri[] = [];
-        for (const workspaceFolder of workspaceFolders) {
-            let relativePattern = new RelativePattern(workspaceFolder, '**/Gemfile.lock');
-            const files = await workspace.findFiles(relativePattern);
+  private static singleton: Container;
+    /**
+     * 根据打活跃的编辑器选择对应的文件夹
+     */
+    static async getCurrentProject(): Promise<Project | undefined> {
+      const workspaceFolder = Utils.getCurrentWorkspaceFolder();
+      if (!workspaceFolder) return;
 
-            uris = uris.concat(files);
-        }
-        return uris;
+      const uris = await Project.findProjectUris([workspaceFolder]);
+      if (uris.length === 0) return;
+      if (uris.length === 1) return new Project(uris[0]);
+      let prj;
+      
+      // 当前活跃的编辑器
+      const editor = window.activeTextEditor;
+      if (editor) prj = uris.find(uri => UriComparer.contain(uri, editor.document.uri));
+
+      // 打开的编辑中选第一个
+      const visible = [];
+      for (const editor of window.visibleTextEditors) {
+        const uri = uris.find(uri => UriComparer.contain(uri, editor.document.uri));
+        if (uri) visible.push(uri);
+      }
+      if (visible.length) prj = visible[0];
+
+      if (!prj) return;
+
+      return new Project(prj);
     }
 
-    static getCurrentLockfileFolder() {
-        // 当前活跃的编辑器
-        const editor = window.activeTextEditor;
-        const lockfileFolder = editor ? LockfileFolders.match(editor.document.uri) : undefined;
-        if (lockfileFolder) { return lockfileFolder; }
+    static async init(){
+      if (this.singleton) return this.singleton;
 
-        const firstLockfileFolder = LockfileFolders.folders[0];
-
-        // 打开的编辑中选第一个
-        const lockfileFolders = window.visibleTextEditors.map(element => {
-            return LockfileFolders.match(element.document.uri);
-        });
-        const visibleDefaultLockfileFolder = lockfileFolders[0];
-
-        console.debug('getCurrentLockfileFolder', visibleDefaultLockfileFolder, firstLockfileFolder);
-
-        return visibleDefaultLockfileFolder || firstLockfileFolder;
+      const project = await this.getCurrentProject();
+      return this.singleton = new Container(new SpecView(project));
     }
     
-    constructor(public rubygemsProvider: RubygemsProvider) {
+    private constructor(public specview: SpecView) {
         super();
+        this.disposable.push(this.specview);
     }
 
-    setCurrentLockfileFolder() {
-        this.rubygemsProvider.lockfileFolder = Container.getCurrentLockfileFolder();
+    async setCurrentFolder(uri: Uri | undefined) {
+      let project;
+      if (uri) project = new Project(uri);
+      else project = await Container.getCurrentProject();
+      
+      if (!project) return;
+      this.specview.setProject(project);
     }
 
-    async openWebsite(url: string): Promise<void> {
-        console.debug('open website', url);
-        await open(url);
-    }
-    
-    async openResource(resource: Uri): Promise<void> {
-        console.debug('open resource', resource);
-        await window.showTextDocument(resource);
+    refresh() {
+        this.specview.refresh();
     }
 
-    async onWorkspaceFolderChanged(e: WorkspaceFoldersChangeEvent) {
-        console.log('onWorkspaceFolderChanged', e);
-        if (e.added.length) {
-            const uris = await Container.getLockfileUris((e.added as WorkspaceFolder[]));
-            await this.onLockfilesAdded(uris);
-        }
-
-        if (e.removed.length) {
-            const uris = await Container.getLockfileUris((e.removed as WorkspaceFolder[]));
-            await this.onLockfilesDeleted(uris);
-        }
-    }
-
-    async onLockfileChanged(uris: Uri[]) {
-        for (const uri of uris) {
-            await LockfileFolders.get(uri)?.reload();
-        }
-    }
-
-    async onConfigurationChanged(e: ConfigurationChangeEvent) {
-        console.debug('in configuration');
-        if (e.affectsConfiguration('rubygems.context.ruby') && e.affectsConfiguration('rubygems.context.gemPath')) {
-        }
-        await GemFolders.reload();
-        this.rubygemsProvider.refresh();
-    }
-
-    async onTextEditorActiveChanged(editor: TextEditor | undefined) {
-        console.debug('in text editor changed');
-        if (!editor) { return; }
-        this.onTextDocumentActivated(editor.document);
-    }
-
-    async onTextDocumentActivated(document: TextDocument | undefined) {
-        console.debug('in text document changed');
-        if (!document) { return; }
-        console.debug('editor event', document.uri.fsPath);
-        const lockfileFolder = LockfileFolders.match(document.uri);
-        if (lockfileFolder && !this.rubygemsProvider.lockfileFolder?.equal(lockfileFolder)) { 
-            this.rubygemsProvider.lockfileFolder = lockfileFolder;
-         }
-    }
-
-    async selectLockfileFolder(): Promise<string | undefined> {
-        const items: QuickPickItem[] = LockfileFolders.getQuickPickItems();
-        const item: QuickPickItem | undefined = await window.showQuickPick(items, {
-            matchOnDescription: true,
-            matchOnDetail: true,
-            ignoreFocusOut: true,
-            canPickMany: false,
-            placeHolder: 'Please Pick Lockfile Folder'
-        });
-        console.debug('pick workspace', item?.label);
-        return item?.label;
-    }
-
-    async changeLockfile() {
-        const folderName = await this.selectLockfileFolder();
-        console.debug('in select workspace', folderName);
-        if (!folderName) { return undefined; }
-        const lockfileFolder = LockfileFolders.find(folderName);
-        console.debug('lockfile folder', lockfileFolder);
-        
-        this.rubygemsProvider.lockfileFolder = lockfileFolder;
-    }
 }

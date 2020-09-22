@@ -1,21 +1,25 @@
 {
 	"compilerOptions": {
-		"module": "commonjs",
-		"target": "es6",
-		"outDir": "out",
+		"experimentalDecorators": true,
+		"forceConsistentCasingInFileNames": true,
 		"lib": [
-			"es6"
+			"es2018"
 		],
-		"sourceMap": true,
+		"module": "esnext",
+		"moduleResolution": "node",
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitReturns": true,
+		"noUnusedLocals": false,
+		"outDir": "dist",
+		"resolveJsonModule": true,
 		"rootDir": "src",
-		"strict": true   /* enable all strict type-checking options */
-		/* Additional Checks */
-		// "noImplicitReturns": true, /* Report error when not all code paths in function return a value. */
-		// "noFallthroughCasesInSwitch": true, /* Report errors for fallthrough cases in switch statement. */
-		// "noUnusedParameters": true,  /* Report errors on unused parameters. */
+		"sourceMap": true,
+		"strict": true,
+		"target": "es2018"
 	},
 	"exclude": [
 		"node_modules",
-		".vscode-test"
+		"test",
+		"src/webviews/apps"
 	]
 }

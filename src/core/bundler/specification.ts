@@ -1,7 +1,8 @@
+import { Spec } from "../spec";
 import { GemDependency} from './gem_dependency';
 import { StubSpecification } from './stub_specification';
 
-const DEFAULT_PLATFORM: string = 'ruby';
+const DEFAULT_PLATFORM = 'ruby';
 
 export interface Specification {
     name: string;
@@ -15,7 +16,11 @@ export interface Specification {
 
 export class Specification implements Specification {
 
-    constructor(payload: any) {
+    public static from_specifications(specifications: any[]): Specification[] {
+        return specifications.map((specification) => (new Specification(specification)));
+    }
+
+    public constructor(payload: any) {
         this.name = payload.name;
         this.version = payload.version;
         this.platform = payload.platform;
@@ -25,21 +30,24 @@ export class Specification implements Specification {
         this.stub = payload.stub ? new StubSpecification(payload.stub) : undefined;
     }
 
-    static from_specifications(specifications: any[]): Specification[] {
-        return specifications.map((specification) => (new Specification(specification)));
-    }
-
-    full_name(): string {
+    public full_name(): string {
         if (this.platform === DEFAULT_PLATFORM || !this.platform) { return `${this.name}-${this.version}`; }
         else { return `${this.name}-${this.version}-${this.platform}`; }
     }
 
-    match_name(name: string): boolean {
+    public match_name(name: string): boolean {
         return this.full_name() === name;
     }
-}
 
-export class SpecificationSet extends Set<Specification> {
-    // includes(name: string): boolean{
-    // }
+    public toSpec(){
+        return new Spec({
+            name: this.name,
+            version: this.version,
+            defaulted: false,
+            globally: true,
+            required: true,
+            path: '',
+            dir: '',
+        })
+    }
 }

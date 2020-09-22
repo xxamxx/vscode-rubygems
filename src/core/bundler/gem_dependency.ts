@@ -9,11 +9,11 @@ export interface GemDependency {
 
 export class GemDependency implements GemDependency {
     constructor(payload: any) {
-        this.name = payload.name;
-        this.type = payload.type;
-        this.prerelease = payload.prerelease;
-        this.version_requirements = payload.version_requirements;
-        this.requirement = new GemRequirement(payload.requirement);
+    this.name = payload.name;
+    this.type = payload.type;
+    this.prerelease = payload.prerelease;
+    this.version_requirements = payload.version_requirements;
+    this.requirement = new GemRequirement(payload.requirement);
     }
 
     static from_dependencies(dependencies: any[]): GemDependency[] {

@@ -1,0 +1,90 @@
+import { exec } from "child_process";
+import { basename, dirname, join as pjoin, resolve } from 'path';
+import { RelativePattern, Uri, workspace, WorkspaceFolder } from "vscode";
+import { UriComparer } from "../util/comparer";
+import * as bundler from "./bundler/index";
+import { Spec } from "./spec";
+
+
+export class Project {
+	static readonly RubyBinPath: string = pjoin(process.env.GEM_HOME || "", '/bin/ruby');
+	protected rubyPath: string = Project.RubyBinPath;
+
+  constructor(
+    public uri: Uri
+  ){
+	}
+
+	public name(){
+		return basename(this.uri.path);
+	}
+
+	public dirname(){
+		return dirname(this.uri.path);
+	}
+
+	public workspace(): WorkspaceFolder | undefined{
+		return workspace.getWorkspaceFolder(this.uri);
+	}
+
+	public equal(other: Project){
+		return UriComparer.equal(this.uri, other.uri);
+	}
+	
+	public setRubyPath(path: string = Project.RubyBinPath){
+		// RUBY 配置
+		// return workspace.getConfiguration('rubygems.context').get('ruby', this.rubyBin);
+		this.rubyPath = path;
+	}
+
+  public async getSpecs(): Promise<Spec[]> {
+    const data = await Project.parseDependents(this.uri.path || '', this.rubyPath);
+    const specifications = bundler.Specification.from_specifications(data);
+
+    return specifications.map((specification) => specification.toSpec());
+	}
+
+  private static async parseDependents(path: string, rubyPath: string): Promise<any[]> {
+		const ruby = rubyPath;
+		const gemfile = pjoin(path, 'Gemfile');
+		const lockfile = pjoin(path, 'Gemfile.lock');
+		const converter = resolve(__dirname, '../../', 'h11s/lockfile_converter.rb');
+		
+		console.debug('ruby', rubyPath);
+		console.debug('gemfilePath', gemfile);
+		console.debug('lockfilePath', lockfile);
+		console.debug('h11sDirPath', converter);
+		
+		return new Promise((resolve, reject) => {
+			// /Users/am/.rvm/rubies/ruby-2.5.3/bin/ruby 
+			exec(`${ruby} ${converter} ${gemfile} ${lockfile}`, {
+				cwd: path,
+				windowsHide: true,
+				maxBuffer: 1024 * 1024 * 10
+			}, (err: any, stdout: string | Buffer, stderr: string | Buffer) => {
+				if (err) { return reject(err); }
+				if (stderr) { return reject(stderr); }
+
+				try {
+					const data = JSON.parse(stdout.toString());
+					resolve(data);
+				} catch (error) {
+					reject(error);
+				}
+			});
+			
+		});
+	}
+
+	static async findProjectUris(workspaceFolders: Readonly<WorkspaceFolder[]>): Promise<Uri[]> {
+		let list: Uri[] = [];
+		for (const workspaceFolder of workspaceFolders) {
+				let relativePattern = new RelativePattern(workspaceFolder, '**/Gemfile.lock');
+				const files = await workspace.findFiles(relativePattern);
+
+				const uris = files.map((file) => Uri.parse(dirname(file.path)))
+				list = list.concat(uris);
+		}
+		return list;
+	}
+}

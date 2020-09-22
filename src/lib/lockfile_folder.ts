@@ -1,16 +1,16 @@
-import { Uri, workspace, QuickPickItem, WorkspaceFolder } from "vscode";
 import * as _ from "lodash";
 import { parse as pparse } from 'path';
-import { GemEntry } from "../explorer/entry";
-import { Specification } from "./ruby";
-import { Utils } from "../util";
+import { QuickPickItem, Uri, workspace, WorkspaceFolder } from "vscode";
 import { placeholder } from "../config/basic";
+import { Specification } from "../core/bundler";
+import { GemEntry } from "../core/specification/spec_entry";
+import { Utils } from "../util";
 
 export class LockfileFolder {
-    private specifications: Specification[];
     name: string;
     path: string;
     workspaceFolder: WorkspaceFolder | undefined;
+    private specifications: Specification[];
 
     constructor(public lockfile: Uri) {
         this.specifications = [];
@@ -23,7 +23,7 @@ export class LockfileFolder {
     contain(uri: Uri) {
         return Utils.containPath(uri.fsPath, this.path);
     }
-     
+
     be_contained(uri: Uri) {
         return Utils.containPath(this.lockfile.fsPath, uri.fsPath);
     }
@@ -44,7 +44,7 @@ export class LockfileFolder {
 
     async getEntries(gemMap: Map<string, GemEntry>): Promise<GemEntry[]> {
         console.debug('in lockfile get entries');
-        
+
         const entries: GemEntry[] = [];
         const specifications = await this.load();
         specifications.forEach((specification) => {
@@ -69,11 +69,11 @@ export class LockfileFolder {
 
 export class LockfileFolders {
     private static _folders: Map<string, LockfileFolder> = new Map();
-    static get folders() {
+    public static get folders() {
         return Array.from(this._folders.values());
     }
 
-    static async addFolders(uris: Uri[]) {
+    public static async addFolders(uris: Uri[]) {
         for (const uri of uris) {
             const folder = new LockfileFolder(uri);
             this._folders.set(uri.path, folder);
@@ -81,33 +81,99 @@ export class LockfileFolders {
         }
     }
 
-    static removeFolders(uris: Uri[]) {
+    public static removeFolders(uris: Uri[]) {
         for (const uri of uris) {
             const deleted = this._folders.delete(uri.path);
             console.debug(uri.path, deleted);
         }
     }
 
-    static get(uri: Uri | undefined) {
+    public static get(uri: Uri | undefined) {
         if (!uri) { return uri; }
         return this._folders.get(uri.path);
     }
 
-    static find(name: string) {
+    public static find(name: string) {
         return this.folders.find((folder) => name === folder.name);
     }
 
-    static match(uri: Uri) {
+    public static match(uri: Uri) {
         return this.folders.find((folder) => folder.contain(uri));
     }
 
-    static async reload() {
+    public static async reload() {
         for (const folder of this._folders.values()) {
             await folder.reload();
         }
     }
 
-    static getQuickPickItems(): QuickPickItem[] {
+    public static getQuickPickItems(): QuickPickItem[] {
         return this.folders.map((folder) => folder.getQuickPickItem());
+    }
+}
+
+
+export class LockfileFolderStorage {
+    private storage = new Map<string, LockfileFolder>();
+    private folderPaths = new Set();
+    private folderNames = new Set();
+
+
+    public constructor() {
+    }
+
+    // 加载
+    public load(uris: Uri[]) {
+        for (const uri of uris) {
+            const path = uri.fsPath;
+            this._load(path);
+        }
+    }
+
+    // 重载
+    public reload(uris: Uri[]) {
+        for (const uri of uris) {
+            const path = uri.fsPath;
+            this.storage.delete(path);
+            this._load(path);
+        }
+    }
+
+    // 移除
+    public remove(uris: Uri[]) {
+        for (const uri of uris) {
+            const path = uri.fsPath;
+            this._remove(path);
+        }
+    }
+
+    // 获取
+    public get(uri: Uri) {
+        const path = uri.fsPath;
+        this.storage.get(path);
+    }
+
+    // 匹配路径
+    public match(uri: Uri | string) {
+
+    }
+
+
+
+    private _load(path: string) {
+        const dir = pparse(path).dir;
+        const name = pparse(path).name;
+        const lockfileFolder = new LockfileFolder(path);
+        this.folderPaths.add(dir);
+        this.folderNames.add(name);
+        this.storage.set(path, lockfileFolder);
+    }
+
+    private _remove(path: string) {
+        const dir = pparse(path).dir;
+        const name = pparse(path).name;
+        this.folderPaths.delete(dir);
+        this.folderNames.delete(name);
+        this.storage.delete(path);
     }
 }
