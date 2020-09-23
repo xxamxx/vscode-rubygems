@@ -11,7 +11,7 @@ export namespace Utils {
     return workspace.workspaceFolders.find(folder => Path.contain(uri.fsPath, folder.uri.path));
   }
 
-  export function getCurrentWorkspaceFolder(): WorkspaceFolder | undefined {
+  export function getOpenWorkspaceFolder(): WorkspaceFolder | undefined {
     let workspaceFolder;
     // 当前活跃的编辑器
     const editor = window.activeTextEditor;
@@ -23,7 +23,7 @@ export namespace Utils {
       if (workspaceFolder) return workspaceFolder;
     }
 
-    return workspace.workspaceFolders ? workspace.workspaceFolders[0] : undefined;
+    return undefined;
   }
 
   export async function hasGemfile(path: string): Promise<boolean> {

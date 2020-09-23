@@ -1,4 +1,4 @@
-import { ExtensionContext, Uri, window } from 'vscode';
+import { ExtensionContext, Uri, window, workspace, WorkspaceFolder } from 'vscode';
 import { ADisposable } from './definition/a_disposable';
 import { Project } from './project';
 import { Utils } from './util';
@@ -13,10 +13,13 @@ export class Container extends ADisposable {
    * 根据打活跃的编辑器选择对应的文件夹
    */
   static async getCurrentProject(): Promise<Project | undefined> {
-    const workspaceFolder = Utils.getCurrentWorkspaceFolder();
-    if (!workspaceFolder) return;
+    const workspaceFolder = Utils.getOpenWorkspaceFolder();
+    if (!workspaceFolder && !workspace.workspaceFolders) return;
 
-    const uris = await Project.findProjectUris([workspaceFolder]);
+    // 先获取当前打开的workspace，可缩窄查找范围
+    // 没有打开的workspace，就查找所有的workspace
+    const workspaceFolders = workspaceFolder ? [workspaceFolder] : workspace.workspaceFolders as Readonly<WorkspaceFolder[]>;
+    const uris = await Project.findProjectUris(workspaceFolders);
     if (uris.length === 0) return;
     if (uris.length === 1) return new Project(uris[0]);
     let prj;
@@ -33,9 +36,8 @@ export class Container extends ADisposable {
     }
     if (visible.length) prj = visible[0];
 
-    if (!prj) return;
-
-    return new Project(prj);
+    //上面都没有合适的，默认选中首个可用项目
+    return new Project(prj || uris[0]);
   }
 
   static async init(context: ExtensionContext) {
