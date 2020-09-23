@@ -1,8 +1,8 @@
 import * as _ from 'lodash';
 import { TreeItem, TreeView, window } from 'vscode';
-import { ViewEmitter } from '../../core/definition/a_view_emitter';
-import { IEntry } from '../../core/definition/i_entry';
-import { Project } from '../../core/project';
+import { ViewEmitter } from '../../definition/a_view_emitter';
+import { IEntry } from '../../definition/i_entry';
+import { Project } from '../../project';
 import { SpecEntry } from './spec_entry';
 
 export class SpecView extends ViewEmitter {

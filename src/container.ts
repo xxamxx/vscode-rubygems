@@ -1,9 +1,9 @@
 import { ExtensionContext, Uri, window } from 'vscode';
-import { ADisposable } from './core/definition/a_disposable';
-import { Project } from './core/project';
+import { ADisposable } from './definition/a_disposable';
+import { Project } from './project';
 import { Utils } from './util';
 import { UriComparer } from './util/comparer';
-import { SpecView } from './view/specification/spec_view';
+import { SpecView } from './view/spec/spec_view';
 
 export class Container extends ADisposable {
   private static singleton: Container;

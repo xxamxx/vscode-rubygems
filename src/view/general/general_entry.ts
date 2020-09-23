@@ -1,7 +1,7 @@
 import * as _ from 'lodash';
 import { join as pjoin } from 'path';
 import { FileType, TreeItem, Uri } from 'vscode';
-import { IEntry } from '../../core/definition/i_entry';
+import { IEntry } from '../../definition/i_entry';
 import { Utils } from '../../util';
 import { GeneralItem } from './general_item';
 

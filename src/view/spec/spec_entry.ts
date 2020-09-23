@@ -1,7 +1,7 @@
 import * as _ from 'lodash';
 import { TreeItem } from 'vscode';
-import { SpecType } from '../../core/constant';
-import { Spec } from '../../core/spec';
+import { SpecType } from '../../constant';
+import { Spec } from '../../spec';
 import { GeneralEntry } from '../general/general_entry';
 import { SpecItem } from './spec_item';
 

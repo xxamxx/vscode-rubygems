@@ -1,9 +1,10 @@
 import { exec } from 'child_process';
-import { basename, dirname, join as pjoin, resolve } from 'path';
+import { basename, dirname, join as pjoin,resolve } from 'path';
 import { RelativePattern, Uri, workspace, WorkspaceFolder } from 'vscode';
-import { UriComparer } from '../util/comparer';
 import * as bundler from './bundler/index';
+import { Container } from './container';
 import { Spec } from './spec';
+import { UriComparer } from './util/comparer';
 
 export class Project {
   static readonly RubyBinPath: string = pjoin(process.env.GEM_HOME || '', '/bin/ruby');
@@ -39,7 +40,7 @@ export class Project {
     const ruby = rubyPath;
     const gemfile = pjoin(path, 'Gemfile');
     const lockfile = pjoin(path, 'Gemfile.lock');
-    const converter = resolve(__dirname, '../../', 'h11s/lockfile_converter.rb');
+    const converter = Container.context.asAbsolutePath('h11s/lockfile_converter.rb');
 
     console.debug('ruby', rubyPath);
     console.debug('gemfilePath', gemfile);

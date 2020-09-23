@@ -1,5 +1,5 @@
 import { FileType, TreeItem, TreeItemCollapsibleState, Uri } from 'vscode';
-import { IEntry } from '../../core/definition/i_entry';
+import { IEntry } from '../../definition/i_entry';
 
 export class GeneralItem extends TreeItem {
   public readonly command = { command: 'rubygems.explorer.openFile', title: 'Open File', arguments: [this.uri] };

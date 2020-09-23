@@ -1,8 +1,8 @@
 import * as _ from 'lodash';
 import { Command, TreeItem, TreeItemCollapsibleState, Uri, workspace } from 'vscode';
 import { Container } from '../../container';
-import { LocalFlag, SpecType } from '../../core/constant';
-import { Spec } from '../../core/spec';
+import { LocalFlag, SpecType } from '../../constant';
+import { Spec } from '../../spec';
 
 interface SpecItemOptions {
   uri: Uri, 

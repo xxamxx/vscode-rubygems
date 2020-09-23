@@ -10,8 +10,8 @@ import {
   workspace
 } from 'vscode';
 import { Container } from './container';
-import { ADisposable } from './core/definition/a_disposable';
-import { Project } from './core/project';
+import { ADisposable } from './definition/a_disposable';
+import { Project } from './project';
 
 export class Initialization extends ADisposable {
   private static singleton: Initialization;
