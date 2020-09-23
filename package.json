@@ -46,10 +46,6 @@
     },
     "commands": [
       {
-        "command": "rubygems.explorer.selectLockfileFolder",
-        "title": "Rubygems: Select LockfileFolder"
-      },
-      {
         "command": "rubygems.explorer.refresh",
         "title": "Rubygems: Refresh Explorer"
       }
