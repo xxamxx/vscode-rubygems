@@ -1,4 +1,7 @@
-require 'bundler'
+#!/usr/bin/env ruby
+
+require 'rubygems' unless defined?(Gem)
+require 'bundler/setup'
 require 'json'
 
 # 通过 BUNDLE_GEMFILE 写入lockfile对应的Gemfile文件

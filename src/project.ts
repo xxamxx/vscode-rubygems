@@ -29,27 +29,25 @@ export class Project {
 
   
   public async getSpecs(): Promise<Spec[]> {
-    const rubyPath = workspace.getConfiguration('rubygems.context').get('ruby', Project.RubyBinPath);
-    const data = await Project.parseDependents(this.uri.path || '', rubyPath);
+    // const rubyPath = workspace.getConfiguration('rubygems.context').get('ruby', Project.RubyBinPath);
+    const data = await Project.parseDependents(this.uri.path || '');
     const specifications = bundler.Specification.from_specifications(data);
 
     return specifications.map(specification => specification.toSpec());
   }
 
-  private static async parseDependents(path: string, rubyPath = Project.RubyBinPath): Promise<any[]> {
-    const ruby = rubyPath;
+  private static async parseDependents(path: string): Promise<any[]> {
     const gemfile = pjoin(path, 'Gemfile');
     const lockfile = pjoin(path, 'Gemfile.lock');
     const converter = Container.context.asAbsolutePath('h11s/lockfile_converter.rb');
 
-    console.debug('ruby', rubyPath);
     console.debug('gemfilePath', gemfile);
     console.debug('lockfilePath', lockfile);
     console.debug('h11sDirPath', converter);
 
     return new Promise((resolve, reject) => {
       // /Users/am/.rvm/rubies/ruby-2.5.3/bin/ruby
-      exec(`${ruby} ${converter} ${gemfile} ${lockfile}`,
+      exec(`bundle exec ${converter} ${gemfile} ${lockfile}`,
            {
              cwd: path,
              windowsHide: true,
