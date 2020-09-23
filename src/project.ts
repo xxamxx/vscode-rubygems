@@ -11,15 +11,15 @@ export class Project {
 
   constructor(public uri: Uri) {}
 
-  public name() {
+  public get name() {
     return basename(this.uri.path);
   }
 
-  public dirname() {
+  public get dirname() {
     return dirname(this.uri.path);
   }
 
-  public workspace(): WorkspaceFolder | undefined {
+  public get workspace(): WorkspaceFolder | undefined {
     return workspace.getWorkspaceFolder(this.uri);
   }
 

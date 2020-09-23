@@ -14,7 +14,7 @@ export class SpecView extends ViewEmitter {
     this.view = window.createTreeView('rubygems.explorer', { treeDataProvider: this });
     if (project) {
       this.project = project;
-      this.setViewTitle(project.workspace?.name);
+      this.setViewTitle(project.workspace?.name, this.project.name);
     }
 
     this.disposable.push(this.view);
@@ -23,12 +23,18 @@ export class SpecView extends ViewEmitter {
 
   setProject(project: Project) {
     this.project = project;
-    this.setViewTitle(project.workspace?.name);
+    this.setViewTitle(project.workspace?.name, this.project.name);
     this.refresh();
   }
 
-  setViewTitle(title = '') {
-    this.view.title = title ? 'RUBYGEMS ‣ ' + title : 'RUBYGEMS';
+  setViewTitle(workspaceName: string | undefined, folderName: string) {
+    let title = '';
+
+    if (!workspaceName) title = folderName
+    else if (workspaceName === folderName) title = workspaceName
+    else title = workspaceName + ' ‣ ' + folderName
+
+    this.view.title = title ? 'RUBYGEMS ∙ ' + title : 'RUBYGEMS';
   }
 
   async getTreeItem(element: IEntry): Promise<TreeItem> {
