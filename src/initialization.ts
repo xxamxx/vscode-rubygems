@@ -5,7 +5,6 @@ import {
   ExtensionContext,
   TextDocument,
   TextEditor,
-  Uri,
   window,
   workspace
 } from 'vscode';
@@ -77,10 +76,8 @@ export class Initialization extends ADisposable {
   }
 
   private async onTextEditorActiveChanged(editor: TextEditor | undefined) {
-    console.debug('in text editor changed');
-    if (!editor) {
-      return;
-    }
+    console.debug('open ', editor?.document.uri.path);
+    if (!editor?.document) return;
     this.onTextDocumentActivated(editor.document);
   }
 
