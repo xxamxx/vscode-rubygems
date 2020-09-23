@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/xxamxx/vscode-rubygems/issues"
   },
-  "icon": "image/icon.png",
+  "icon": "resources/image/icon.png",
   "galleryBanner": {
     "color": "#D34231",
     "theme": "light"

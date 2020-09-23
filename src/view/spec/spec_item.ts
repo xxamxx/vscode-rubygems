@@ -41,8 +41,8 @@ export class SpecItem extends TreeItem {
     this.description = value.description;
     this.tooltip = value.tooltip;
     this.iconPath = {
-      light: Container.context.asAbsolutePath('resources/light/' + svg),
-      dark: Container.context.asAbsolutePath('resources/dark/' + svg)
+      light: Container.context.asAbsolutePath('resources/icon/light/' + svg),
+      dark: Container.context.asAbsolutePath('resources/icon/dark/' + svg)
     };
   }
 
