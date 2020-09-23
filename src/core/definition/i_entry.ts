@@ -1,4 +1,4 @@
-import { FileType, TreeItem, Uri } from "vscode";
+import { FileType, TreeItem, Uri } from 'vscode';
 
 export interface IEntry {
   uri: Uri;

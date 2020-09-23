@@ -28,11 +28,11 @@ module.exports = {
         "SwitchCase": 1,
         "VariableDeclarator": "first",
         "FunctionDeclaration": {
-          "body": 2,
+          "body": 1,
           "parameters": "first"
         },
         "FunctionExpression": {
-          "body": 2,
+          "body": 1,
           "parameters": "first"
         },
         "CallExpression": {
@@ -43,6 +43,7 @@ module.exports = {
         "ImportDeclaration": "first",
         "flatTernaryExpressions": false
       }
-    ]
+    ],
+    "@typescript-eslint/no-namespace": "off",
   }
 };

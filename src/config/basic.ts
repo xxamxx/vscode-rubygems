@@ -1,8 +1,6 @@
-
-
 export const placeholder = {
-    char: '◼︎',
-    word: '◼︎◼︎◼︎',
-    line: '◼︎◼︎◼︎◼︎◼︎◼︎◼︎◼︎◼︎◼︎◼︎◼︎',
-    refer: '‣'
+  char: '◼︎',
+  word: '◼︎◼︎◼︎',
+  line: '◼︎◼︎◼︎◼︎◼︎◼︎◼︎◼︎◼︎◼︎◼︎◼︎',
+  refer: '‣'
 };

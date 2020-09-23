@@ -6,19 +6,20 @@ the extension be to autoload all folder of containing `Gemfile.lock` in the work
 ## Features
 
 feature
+
 - explore RubyGems by `Gemfile.lock`
 - switch LockfileFolder which when the active editor has changed
 - support multi LockfileFolder
 - switch LockfileFolder on change document
 - switch LockfileFolder on change document
-> Tip: LockfileFolder is a folder of containing `Gemfile.lock`.
+  > Tip: LockfileFolder is a folder of containing `Gemfile.lock`.
 
 ## Extension Settings
 
 This extension contributes the following settings:
 
-* `rubygems.explorer.selectLockfileFolder`: select LockfileFolder
-* `rubygems.explorer.refresh`: refresh current LockfileFolder
+- `rubygems.explorer.selectLockfileFolder`: select LockfileFolder
+- `rubygems.explorer.refresh`: refresh current LockfileFolder
 
 ## Known Issues
 

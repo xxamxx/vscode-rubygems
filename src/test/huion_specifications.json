@@ -11,7 +11,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/rake-13.0.1.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92c01e5e0>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a520b288>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -22,7 +22,7 @@
   },
   {
     "name": "concurrent-ruby",
-    "version": "1.1.5",
+    "version": "1.1.6",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [],
@@ -31,8 +31,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/concurrent-ruby-1.1.5.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9ae3b0>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/concurrent-ruby-1.1.6.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a5211f20>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -50,12 +50,22 @@
       {
         "name": "concurrent-ruby",
         "requirement": {
-          "requirements": [["~>", "1.0"]]
+          "requirements": [
+            [
+              "~>",
+              "1.0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "1.0"]]
+          "requirements": [
+            [
+              "~>",
+              "1.0"
+            ]
+          ]
         }
       }
     ],
@@ -65,7 +75,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/i18n-0.9.5.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e997e08>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51dab10>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -76,7 +86,7 @@
   },
   {
     "name": "minitest",
-    "version": "5.13.0",
+    "version": "5.14.1",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [],
@@ -85,8 +95,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/minitest-5.13.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e975fd8>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/minitest-5.14.1.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a7076f60>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -107,7 +117,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/thread_safe-0.3.6.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e97fc90>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51b0b08>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -118,19 +128,29 @@
   },
   {
     "name": "tzinfo",
-    "version": "1.2.6",
+    "version": "1.2.7",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [
       {
         "name": "thread_safe",
         "requirement": {
-          "requirements": [["~>", "0.1"]]
+          "requirements": [
+            [
+              "~>",
+              "0.1"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "0.1"]]
+          "requirements": [
+            [
+              "~>",
+              "0.1"
+            ]
+          ]
         }
       }
     ],
@@ -139,8 +159,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/tzinfo-1.2.6.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e99e320>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/tzinfo-1.2.7.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a70761a0>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -151,7 +171,7 @@
   },
   {
     "name": "zeitwerk",
-    "version": "2.2.2",
+    "version": "2.4.0",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [],
@@ -160,8 +180,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/zeitwerk-2.2.2.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e97d530>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/zeitwerk-2.4.0.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a7076ab0>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -172,7 +192,7 @@
   },
   {
     "name": "activesupport",
-    "version": "6.0.2.1",
+    "version": "6.0.3.2",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [
@@ -180,16 +200,28 @@
         "name": "concurrent-ruby",
         "requirement": {
           "requirements": [
-            ["~>", "1.0"],
-            [">=", "1.0.2"]
+            [
+              "~>",
+              "1.0"
+            ],
+            [
+              ">=",
+              "1.0.2"
+            ]
           ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
           "requirements": [
-            ["~>", "1.0"],
-            [">=", "1.0.2"]
+            [
+              "~>",
+              "1.0"
+            ],
+            [
+              ">=",
+              "1.0.2"
+            ]
           ]
         }
       },
@@ -197,50 +229,100 @@
         "name": "i18n",
         "requirement": {
           "requirements": [
-            [">=", "0.7"],
-            ["<", "2"]
+            [
+              ">=",
+              "0.7"
+            ],
+            [
+              "<",
+              "2"
+            ]
           ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
           "requirements": [
-            [">=", "0.7"],
-            ["<", "2"]
+            [
+              ">=",
+              "0.7"
+            ],
+            [
+              "<",
+              "2"
+            ]
           ]
         }
       },
       {
         "name": "minitest",
         "requirement": {
-          "requirements": [["~>", "5.1"]]
+          "requirements": [
+            [
+              "~>",
+              "5.1"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "5.1"]]
+          "requirements": [
+            [
+              "~>",
+              "5.1"
+            ]
+          ]
         }
       },
       {
         "name": "tzinfo",
         "requirement": {
-          "requirements": [["~>", "1.1"]]
+          "requirements": [
+            [
+              "~>",
+              "1.1"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "1.1"]]
+          "requirements": [
+            [
+              "~>",
+              "1.1"
+            ]
+          ]
         }
       },
       {
         "name": "zeitwerk",
         "requirement": {
-          "requirements": [["~>", "2.2"]]
+          "requirements": [
+            [
+              "~>",
+              "2.2"
+            ],
+            [
+              ">=",
+              "2.2.2"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "2.2"]]
+          "requirements": [
+            [
+              "~>",
+              "2.2"
+            ],
+            [
+              ">=",
+              "2.2.2"
+            ]
+          ]
         }
       }
     ],
@@ -249,8 +331,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/activesupport-6.0.2.1.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e97d0a8>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/activesupport-6.0.3.2.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a50ec730>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -271,7 +353,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/builder-3.2.4.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e99da10>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a707a110>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -292,7 +374,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/erubi-1.9.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9ac5d8>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a5945698>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -313,7 +395,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/mini_portile2-2.4.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e997070>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51da200>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -324,29 +406,39 @@
   },
   {
     "name": "nokogiri",
-    "version": "1.10.7",
+    "version": "1.10.10",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [
       {
         "name": "mini_portile2",
         "requirement": {
-          "requirements": [["~>", "2.4.0"]]
+          "requirements": [
+            [
+              "~>",
+              "2.4.0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "2.4.0"]]
+          "requirements": [
+            [
+              "~>",
+              "2.4.0"
+            ]
+          ]
         }
       }
     ],
     "stub": {
-      "extension_dir": "/Users/am/.rvm/gems/ruby-2.5.3/extensions/x86_64-darwin-19/2.5.0/nokogiri-1.10.7",
+      "extension_dir": "/Users/am/.rvm/gems/ruby-2.5.3/extensions/x86_64-darwin-19/2.5.0/nokogiri-1.10.10",
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/nokogiri-1.10.7.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e97e480>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/nokogiri-1.10.10.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51f8ac0>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -364,23 +456,43 @@
       {
         "name": "activesupport",
         "requirement": {
-          "requirements": [[">=", "4.2.0"]]
+          "requirements": [
+            [
+              ">=",
+              "4.2.0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "4.2.0"]]
+          "requirements": [
+            [
+              ">=",
+              "4.2.0"
+            ]
+          ]
         }
       },
       {
         "name": "nokogiri",
         "requirement": {
-          "requirements": [[">=", "1.6"]]
+          "requirements": [
+            [
+              ">=",
+              "1.6"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "1.6"]]
+          "requirements": [
+            [
+              ">=",
+              "1.6"
+            ]
+          ]
         }
       }
     ],
@@ -390,7 +502,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/rails-dom-testing-2.0.3.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92d083b60>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a50dd1b8>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -401,7 +513,7 @@
   },
   {
     "name": "crass",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [],
@@ -410,8 +522,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/crass-1.0.5.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9b71e0>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/crass-1.0.6.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51ea808>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -422,30 +534,50 @@
   },
   {
     "name": "loofah",
-    "version": "2.4.0",
+    "version": "2.6.0",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [
       {
         "name": "crass",
         "requirement": {
-          "requirements": [["~>", "1.0.2"]]
+          "requirements": [
+            [
+              "~>",
+              "1.0.2"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "1.0.2"]]
+          "requirements": [
+            [
+              "~>",
+              "1.0.2"
+            ]
+          ]
         }
       },
       {
         "name": "nokogiri",
         "requirement": {
-          "requirements": [[">=", "1.5.9"]]
+          "requirements": [
+            [
+              ">=",
+              "1.5.9"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "1.5.9"]]
+          "requirements": [
+            [
+              ">=",
+              "1.5.9"
+            ]
+          ]
         }
       }
     ],
@@ -454,8 +586,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/loofah-2.4.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e995cc0>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/loofah-2.6.0.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a5203240>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -473,12 +605,22 @@
       {
         "name": "loofah",
         "requirement": {
-          "requirements": [["~>", "2.3"]]
+          "requirements": [
+            [
+              "~>",
+              "2.3"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "2.3"]]
+          "requirements": [
+            [
+              "~>",
+              "2.3"
+            ]
+          ]
         }
       }
     ],
@@ -488,7 +630,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/rails-html-sanitizer-1.3.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92d81ee60>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a520a978>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -499,68 +641,120 @@
   },
   {
     "name": "actionview",
-    "version": "6.0.2.1",
+    "version": "6.0.3.2",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [
       {
         "name": "activesupport",
         "requirement": {
-          "requirements": [["=", "6.0.2.1"]]
-        },
-        "type": "runtime",
-        "prerelease": "false",
-        "version_requirements": {
-          "requirements": [["=", "6.0.2.1"]]
-        }
-      },
-      {
-        "name": "builder",
-        "requirement": {
-          "requirements": [["~>", "3.1"]]
-        },
-        "type": "runtime",
-        "prerelease": "false",
-        "version_requirements": {
-          "requirements": [["~>", "3.1"]]
-        }
-      },
-      {
-        "name": "erubi",
-        "requirement": {
-          "requirements": [["~>", "1.4"]]
-        },
-        "type": "runtime",
-        "prerelease": "false",
-        "version_requirements": {
-          "requirements": [["~>", "1.4"]]
-        }
-      },
-      {
-        "name": "rails-dom-testing",
-        "requirement": {
-          "requirements": [["~>", "2.0"]]
-        },
-        "type": "runtime",
-        "prerelease": "false",
-        "version_requirements": {
-          "requirements": [["~>", "2.0"]]
-        }
-      },
-      {
-        "name": "rails-html-sanitizer",
-        "requirement": {
           "requirements": [
-            ["~>", "1.1"],
-            [">=", "1.2.0"]
+            [
+              "=",
+              "6.0.3.2"
+            ]
           ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
           "requirements": [
-            ["~>", "1.1"],
-            [">=", "1.2.0"]
+            [
+              "=",
+              "6.0.3.2"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "builder",
+        "requirement": {
+          "requirements": [
+            [
+              "~>",
+              "3.1"
+            ]
+          ]
+        },
+        "type": "runtime",
+        "prerelease": "false",
+        "version_requirements": {
+          "requirements": [
+            [
+              "~>",
+              "3.1"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "erubi",
+        "requirement": {
+          "requirements": [
+            [
+              "~>",
+              "1.4"
+            ]
+          ]
+        },
+        "type": "runtime",
+        "prerelease": "false",
+        "version_requirements": {
+          "requirements": [
+            [
+              "~>",
+              "1.4"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "rails-dom-testing",
+        "requirement": {
+          "requirements": [
+            [
+              "~>",
+              "2.0"
+            ]
+          ]
+        },
+        "type": "runtime",
+        "prerelease": "false",
+        "version_requirements": {
+          "requirements": [
+            [
+              "~>",
+              "2.0"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "rails-html-sanitizer",
+        "requirement": {
+          "requirements": [
+            [
+              "~>",
+              "1.1"
+            ],
+            [
+              ">=",
+              "1.2.0"
+            ]
+          ]
+        },
+        "type": "runtime",
+        "prerelease": "false",
+        "version_requirements": {
+          "requirements": [
+            [
+              "~>",
+              "1.1"
+            ],
+            [
+              ">=",
+              "1.2.0"
+            ]
           ]
         }
       }
@@ -570,8 +764,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/actionview-6.0.2.1.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e996bc0>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/actionview-6.0.3.2.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a7075750>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -582,7 +776,7 @@
   },
   {
     "name": "rack",
-    "version": "2.0.8",
+    "version": "2.2.3",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [],
@@ -591,8 +785,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/rack-2.0.8.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e976460>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/rack-2.2.3.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a5211a20>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -611,16 +805,28 @@
         "name": "rack",
         "requirement": {
           "requirements": [
-            [">=", "1.0"],
-            ["<", "3"]
+            [
+              ">=",
+              "1.0"
+            ],
+            [
+              "<",
+              "3"
+            ]
           ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
           "requirements": [
-            [">=", "1.0"],
-            ["<", "3"]
+            [
+              ">=",
+              "1.0"
+            ],
+            [
+              "<",
+              "3"
+            ]
           ]
         }
       }
@@ -631,7 +837,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/rack-test-1.1.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92c0c1470>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a7074738>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -642,85 +848,149 @@
   },
   {
     "name": "actionpack",
-    "version": "6.0.2.1",
+    "version": "6.0.3.2",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [
       {
         "name": "actionview",
         "requirement": {
-          "requirements": [["=", "6.0.2.1"]]
+          "requirements": [
+            [
+              "=",
+              "6.0.3.2"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["=", "6.0.2.1"]]
+          "requirements": [
+            [
+              "=",
+              "6.0.3.2"
+            ]
+          ]
         }
       },
       {
         "name": "activesupport",
         "requirement": {
-          "requirements": [["=", "6.0.2.1"]]
+          "requirements": [
+            [
+              "=",
+              "6.0.3.2"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["=", "6.0.2.1"]]
+          "requirements": [
+            [
+              "=",
+              "6.0.3.2"
+            ]
+          ]
         }
       },
       {
         "name": "rack",
         "requirement": {
           "requirements": [
-            ["~>", "2.0"],
-            [">=", "2.0.8"]
+            [
+              "~>",
+              "2.0"
+            ],
+            [
+              ">=",
+              "2.0.8"
+            ]
           ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
           "requirements": [
-            ["~>", "2.0"],
-            [">=", "2.0.8"]
+            [
+              "~>",
+              "2.0"
+            ],
+            [
+              ">=",
+              "2.0.8"
+            ]
           ]
         }
       },
       {
         "name": "rack-test",
         "requirement": {
-          "requirements": [[">=", "0.6.3"]]
-        },
-        "type": "runtime",
-        "prerelease": "false",
-        "version_requirements": {
-          "requirements": [[">=", "0.6.3"]]
-        }
-      },
-      {
-        "name": "rails-dom-testing",
-        "requirement": {
-          "requirements": [["~>", "2.0"]]
-        },
-        "type": "runtime",
-        "prerelease": "false",
-        "version_requirements": {
-          "requirements": [["~>", "2.0"]]
-        }
-      },
-      {
-        "name": "rails-html-sanitizer",
-        "requirement": {
           "requirements": [
-            ["~>", "1.0"],
-            [">=", "1.2.0"]
+            [
+              ">=",
+              "0.6.3"
+            ]
           ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
           "requirements": [
-            ["~>", "1.0"],
-            [">=", "1.2.0"]
+            [
+              ">=",
+              "0.6.3"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "rails-dom-testing",
+        "requirement": {
+          "requirements": [
+            [
+              "~>",
+              "2.0"
+            ]
+          ]
+        },
+        "type": "runtime",
+        "prerelease": "false",
+        "version_requirements": {
+          "requirements": [
+            [
+              "~>",
+              "2.0"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "rails-html-sanitizer",
+        "requirement": {
+          "requirements": [
+            [
+              "~>",
+              "1.0"
+            ],
+            [
+              ">=",
+              "1.2.0"
+            ]
+          ]
+        },
+        "type": "runtime",
+        "prerelease": "false",
+        "version_requirements": {
+          "requirements": [
+            [
+              "~>",
+              "1.0"
+            ],
+            [
+              ">=",
+              "1.2.0"
+            ]
           ]
         }
       }
@@ -730,8 +1000,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/actionpack-6.0.2.1.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9751f0>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/actionpack-6.0.3.2.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a50e9030>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -742,30 +1012,50 @@
   },
   {
     "name": "active_utils",
-    "version": "3.3.16",
+    "version": "3.3.17",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [
       {
         "name": "activesupport",
         "requirement": {
-          "requirements": [[">=", "4.2"]]
+          "requirements": [
+            [
+              ">=",
+              "4.2"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "4.2"]]
+          "requirements": [
+            [
+              ">=",
+              "4.2"
+            ]
+          ]
         }
       },
       {
         "name": "i18n",
         "requirement": {
-          "requirements": [[">=", "0"]]
+          "requirements": [
+            [
+              ">=",
+              "0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "0"]]
+          "requirements": [
+            [
+              ">=",
+              "0"
+            ]
+          ]
         }
       }
     ],
@@ -774,8 +1064,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/active_utils-3.3.16.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9a6160>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/active_utils-3.3.17.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51e2d38>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -793,51 +1083,93 @@
       {
         "name": "activesupport",
         "requirement": {
-          "requirements": [[">=", "4.2"]]
+          "requirements": [
+            [
+              ">=",
+              "4.2"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "4.2"]]
+          "requirements": [
+            [
+              ">=",
+              "4.2"
+            ]
+          ]
         }
       },
       {
         "name": "builder",
         "requirement": {
           "requirements": [
-            [">=", "2.1.2"],
-            ["<", "4.0.0"]
+            [
+              ">=",
+              "2.1.2"
+            ],
+            [
+              "<",
+              "4.0.0"
+            ]
           ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
           "requirements": [
-            [">=", "2.1.2"],
-            ["<", "4.0.0"]
+            [
+              ">=",
+              "2.1.2"
+            ],
+            [
+              "<",
+              "4.0.0"
+            ]
           ]
         }
       },
       {
         "name": "i18n",
         "requirement": {
-          "requirements": [[">=", "0.6.9"]]
+          "requirements": [
+            [
+              ">=",
+              "0.6.9"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "0.6.9"]]
+          "requirements": [
+            [
+              ">=",
+              "0.6.9"
+            ]
+          ]
         }
       },
       {
         "name": "nokogiri",
         "requirement": {
-          "requirements": [["~>", "1.4"]]
+          "requirements": [
+            [
+              "~>",
+              "1.4"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "1.4"]]
+          "requirements": [
+            [
+              "~>",
+              "1.4"
+            ]
+          ]
         }
       }
     ],
@@ -847,7 +1179,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/activemerchant-1.95.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e976d98>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a50eea30>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -858,7 +1190,7 @@
   },
   {
     "name": "public_suffix",
-    "version": "4.0.3",
+    "version": "4.0.5",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [],
@@ -867,8 +1199,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/public_suffix-4.0.3.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9acf38>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/public_suffix-4.0.5.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51b91e0>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -887,16 +1219,28 @@
         "name": "public_suffix",
         "requirement": {
           "requirements": [
-            [">=", "2.0.2"],
-            ["<", "5.0"]
+            [
+              ">=",
+              "2.0.2"
+            ],
+            [
+              "<",
+              "5.0"
+            ]
           ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
           "requirements": [
-            [">=", "2.0.2"],
-            ["<", "5.0"]
+            [
+              ">=",
+              "2.0.2"
+            ],
+            [
+              "<",
+              "5.0"
+            ]
           ]
         }
       }
@@ -907,7 +1251,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/addressable-2.7.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9b5fe8>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a5213668>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -928,7 +1272,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/http-accept-1.7.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9b5458>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a5212d08>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -939,17 +1283,17 @@
   },
   {
     "name": "unf_ext",
-    "version": "0.0.7.6",
+    "version": "0.0.7.7",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [],
     "stub": {
-      "extension_dir": "/Users/am/.rvm/gems/ruby-2.5.3/extensions/x86_64-darwin-19/2.5.0/unf_ext-0.0.7.6",
+      "extension_dir": "/Users/am/.rvm/gems/ruby-2.5.3/extensions/x86_64-darwin-19/2.5.0/unf_ext-0.0.7.7",
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/unf_ext-0.0.7.6.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9b6ad8>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/unf_ext-0.0.7.7.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a5209ac8>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -967,12 +1311,22 @@
       {
         "name": "unf_ext",
         "requirement": {
-          "requirements": [[">=", "0"]]
+          "requirements": [
+            [
+              ">=",
+              "0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "0"]]
+          "requirements": [
+            [
+              ">=",
+              "0"
+            ]
+          ]
         }
       }
     ],
@@ -982,7 +1336,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/unf-0.1.4.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e99f0e0>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a596e200>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -1001,16 +1355,28 @@
         "name": "unf",
         "requirement": {
           "requirements": [
-            [">=", "0.0.5"],
-            ["<", "1.0.0"]
+            [
+              ">=",
+              "0.0.5"
+            ],
+            [
+              "<",
+              "1.0.0"
+            ]
           ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
           "requirements": [
-            [">=", "0.0.5"],
-            ["<", "1.0.0"]
+            [
+              ">=",
+              "0.0.5"
+            ],
+            [
+              "<",
+              "1.0.0"
+            ]
           ]
         }
       }
@@ -1021,7 +1387,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/domain_name-0.5.20190701.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e984a88>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51cac88>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -1039,12 +1405,22 @@
       {
         "name": "domain_name",
         "requirement": {
-          "requirements": [["~>", "0.5"]]
+          "requirements": [
+            [
+              "~>",
+              "0.5"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "0.5"]]
+          "requirements": [
+            [
+              "~>",
+              "0.5"
+            ]
+          ]
         }
       }
     ],
@@ -1054,7 +1430,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/http-cookie-1.0.3.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9b59d0>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a52131b8>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -1065,7 +1441,7 @@
   },
   {
     "name": "mime-types-data",
-    "version": "3.2019.1009",
+    "version": "3.2020.0512",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [],
@@ -1074,8 +1450,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/mime-types-data-3.2019.1009.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92d04e690>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/mime-types-data-3.2020.0512.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51d98a0>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -1093,12 +1469,22 @@
       {
         "name": "mime-types-data",
         "requirement": {
-          "requirements": [["~>", "3.2015"]]
+          "requirements": [
+            [
+              "~>",
+              "3.2015"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "3.2015"]]
+          "requirements": [
+            [
+              "~>",
+              "3.2015"
+            ]
+          ]
         }
       }
     ],
@@ -1108,7 +1494,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/mime-types-3.3.1.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e987940>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51b8740>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -1129,7 +1515,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/netrc-0.11.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e98cfd0>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a5045cf0>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -1148,16 +1534,28 @@
         "name": "http-accept",
         "requirement": {
           "requirements": [
-            [">=", "1.7.0"],
-            ["<", "2.0"]
+            [
+              ">=",
+              "1.7.0"
+            ],
+            [
+              "<",
+              "2.0"
+            ]
           ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
           "requirements": [
-            [">=", "1.7.0"],
-            ["<", "2.0"]
+            [
+              ">=",
+              "1.7.0"
+            ],
+            [
+              "<",
+              "2.0"
+            ]
           ]
         }
       },
@@ -1165,16 +1563,28 @@
         "name": "http-cookie",
         "requirement": {
           "requirements": [
-            [">=", "1.0.2"],
-            ["<", "2.0"]
+            [
+              ">=",
+              "1.0.2"
+            ],
+            [
+              "<",
+              "2.0"
+            ]
           ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
           "requirements": [
-            [">=", "1.0.2"],
-            ["<", "2.0"]
+            [
+              ">=",
+              "1.0.2"
+            ],
+            [
+              "<",
+              "2.0"
+            ]
           ]
         }
       },
@@ -1182,28 +1592,50 @@
         "name": "mime-types",
         "requirement": {
           "requirements": [
-            [">=", "1.16"],
-            ["<", "4.0"]
+            [
+              ">=",
+              "1.16"
+            ],
+            [
+              "<",
+              "4.0"
+            ]
           ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
           "requirements": [
-            [">=", "1.16"],
-            ["<", "4.0"]
+            [
+              ">=",
+              "1.16"
+            ],
+            [
+              "<",
+              "4.0"
+            ]
           ]
         }
       },
       {
         "name": "netrc",
         "requirement": {
-          "requirements": [["~>", "0.8"]]
+          "requirements": [
+            [
+              "~>",
+              "0.8"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "0.8"]]
+          "requirements": [
+            [
+              "~>",
+              "0.8"
+            ]
+          ]
         }
       }
     ],
@@ -1213,7 +1645,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/rest-client-2.1.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92c0c9580>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51dafc0>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -1231,23 +1663,43 @@
       {
         "name": "nokogiri",
         "requirement": {
-          "requirements": [["~>", "1.6"]]
+          "requirements": [
+            [
+              "~>",
+              "1.6"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "1.6"]]
+          "requirements": [
+            [
+              "~>",
+              "1.6"
+            ]
+          ]
         }
       },
       {
         "name": "rest-client",
         "requirement": {
-          "requirements": [["~>", "2.0"]]
+          "requirements": [
+            [
+              "~>",
+              "2.0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "2.0"]]
+          "requirements": [
+            [
+              "~>",
+              "2.0"
+            ]
+          ]
         }
       }
     ],
@@ -1257,7 +1709,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/aliyun-sdk-0.7.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9b5098>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51f07f8>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -1278,7 +1730,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/multipart-post-2.1.1.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9845d8>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51c9d88>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -1289,7 +1741,7 @@
   },
   {
     "name": "faraday",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [
@@ -1297,16 +1749,28 @@
         "name": "multipart-post",
         "requirement": {
           "requirements": [
-            [">=", "1.2"],
-            ["<", "3"]
+            [
+              ">=",
+              "1.2"
+            ],
+            [
+              "<",
+              "3"
+            ]
           ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
           "requirements": [
-            [">=", "1.2"],
-            ["<", "3"]
+            [
+              ">=",
+              "1.2"
+            ],
+            [
+              "<",
+              "3"
+            ]
           ]
         }
       }
@@ -1316,8 +1780,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/faraday-1.0.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92c0aa720>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/faraday-1.0.1.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51ebb68>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -1328,30 +1792,50 @@
   },
   {
     "name": "aliyunsdkcore",
-    "version": "0.0.13",
+    "version": "0.0.16",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [
       {
         "name": "activesupport",
         "requirement": {
-          "requirements": [[">=", "3.0.0"]]
+          "requirements": [
+            [
+              ">=",
+              "3.0.0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "3.0.0"]]
+          "requirements": [
+            [
+              ">=",
+              "3.0.0"
+            ]
+          ]
         }
       },
       {
         "name": "faraday",
         "requirement": {
-          "requirements": [[">=", "0.15.4"]]
+          "requirements": [
+            [
+              ">=",
+              "0.15.4"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "0.15.4"]]
+          "requirements": [
+            [
+              ">=",
+              "0.15.4"
+            ]
+          ]
         }
       }
     ],
@@ -1360,8 +1844,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/aliyunsdkcore-0.0.13.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9944d8>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/aliyunsdkcore-0.0.16.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a594eb80>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -1372,7 +1856,7 @@
   },
   {
     "name": "ast",
-    "version": "2.4.0",
+    "version": "2.4.1",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [],
@@ -1381,8 +1865,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/ast-2.4.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e975678>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/ast-2.4.1.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51ca210>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -1403,7 +1887,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/htmlentities-4.3.4.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9b4be8>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51f0348>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -1424,7 +1908,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/rubyzip-1.0.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92c0d91d8>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51ba810>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -1442,34 +1926,64 @@
       {
         "name": "htmlentities",
         "requirement": {
-          "requirements": [["~>", "4.3.1"]]
+          "requirements": [
+            [
+              "~>",
+              "4.3.1"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "4.3.1"]]
+          "requirements": [
+            [
+              "~>",
+              "4.3.1"
+            ]
+          ]
         }
       },
       {
         "name": "nokogiri",
         "requirement": {
-          "requirements": [[">=", "1.4.1"]]
+          "requirements": [
+            [
+              ">=",
+              "1.4.1"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "1.4.1"]]
+          "requirements": [
+            [
+              ">=",
+              "1.4.1"
+            ]
+          ]
         }
       },
       {
         "name": "rubyzip",
         "requirement": {
-          "requirements": [["~>", "1.0.0"]]
+          "requirements": [
+            [
+              "~>",
+              "1.0.0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "1.0.0"]]
+          "requirements": [
+            [
+              "~>",
+              "1.0.0"
+            ]
+          ]
         }
       }
     ],
@@ -1479,7 +1993,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/axlsx-2.0.1.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e97e9d0>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a50eab88>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -1500,7 +2014,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/bcrypt-3.1.13.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92c0ca390>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51db8f8>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -1521,7 +2035,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/braintreehttp-0.5.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e99cc78>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a5966028>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -1544,422 +2058,55 @@
     "spec_file": "",
     "gems_dir": "",
     "base_dir": "",
-    "loaded": "true",
-    "activated": "true",
-    "loaded_from": "/Users/am/.rvm/rubies/ruby-2.5.3/lib/ruby/gems/2.5.0/specifications/default/bundler-1.17.3.gemspec",
-    "original_platform": "",
+    "loaded": "false",
+    "activated": "false",
+    "loaded_from": "/Users/am/.rvm/rubies/ruby-2.5.3/lib/ruby/site_ruby/2.5.0/bundler/source",
+    "original_platform": "ruby",
     "installed_by_version": "",
     "autorequire": "",
-    "date": "2019-10-26 00:00:00 UTC",
-    "description": "Bundler manages an application's dependencies through its entire life, across many machines, systematically and repeatably",
-    "email": ["team@bundler.io"],
-    "homepage": "http://bundler.io",
+    "date": "",
+    "description": "",
+    "email": "",
+    "homepage": "",
     "name": "bundler",
     "post_install_message": "",
     "signing_key": "",
-    "summary": "The best way to manage your application's dependencies",
+    "summary": "",
     "version": "1.17.3",
     "authors": [
-      "André Arko",
-      "Samuel Giddins",
-      "Colby Swandale",
-      "Hiroshi Shibata",
-      "David Rodríguez",
-      "Grey Baker",
-      "Stephanie Morillo",
-      "Chris Morris",
-      "James Wen",
-      "Tim Moore",
-      "André Medeiros",
-      "Jessica Lynn Suttles",
-      "Terence Lee",
-      "Carl Lerche",
-      "Yehuda Katz"
+      "bundler team"
     ],
     "bindir": "exe",
     "cert_chain": [],
-    "dependencies": [
-      {
-        "name": "automatiek",
-        "requirement": {
-          "requirements": [["~>", "0.1.0"]]
-        },
-        "type": "development",
-        "prerelease": "false",
-        "version_requirements": {
-          "requirements": [["~>", "0.1.0"]]
-        }
-      },
-      {
-        "name": "mustache",
-        "requirement": {
-          "requirements": [["=", "0.99.6"]]
-        },
-        "type": "development",
-        "prerelease": "false",
-        "version_requirements": {
-          "requirements": [["=", "0.99.6"]]
-        }
-      },
-      {
-        "name": "rake",
-        "requirement": {
-          "requirements": [["~>", "10.0"]]
-        },
-        "type": "development",
-        "prerelease": "false",
-        "version_requirements": {
-          "requirements": [["~>", "10.0"]]
-        }
-      },
-      {
-        "name": "rdiscount",
-        "requirement": {
-          "requirements": [["~>", "2.2"]]
-        },
-        "type": "development",
-        "prerelease": "false",
-        "version_requirements": {
-          "requirements": [["~>", "2.2"]]
-        }
-      },
-      {
-        "name": "ronn",
-        "requirement": {
-          "requirements": [["~>", "0.7.3"]]
-        },
-        "type": "development",
-        "prerelease": "false",
-        "version_requirements": {
-          "requirements": [["~>", "0.7.3"]]
-        }
-      },
-      {
-        "name": "rspec",
-        "requirement": {
-          "requirements": [["~>", "3.6"]]
-        },
-        "type": "development",
-        "prerelease": "false",
-        "version_requirements": {
-          "requirements": [["~>", "3.6"]]
-        }
-      }
+    "dependencies": [],
+    "executables": [
+      "bundle"
     ],
-    "executables": ["bundle"],
     "extensions": [],
     "extra_rdoc_files": [],
-    "files": [
-      "CHANGELOG.md",
-      "CODE_OF_CONDUCT.md",
-      "CONTRIBUTING.md",
-      "LICENSE.md",
-      "README.md",
-      "exe/bundle",
-      "exe/bundle_ruby",
-      "exe/bundler",
-      "lib/bundler",
-      "lib/bundler.rb",
-      "lib/bundler/build_metadata.rb",
-      "lib/bundler/capistrano.rb",
-      "lib/bundler/cli",
-      "lib/bundler/cli.rb",
-      "lib/bundler/cli/add.rb",
-      "lib/bundler/cli/binstubs.rb",
-      "lib/bundler/cli/cache.rb",
-      "lib/bundler/cli/check.rb",
-      "lib/bundler/cli/clean.rb",
-      "lib/bundler/cli/common.rb",
-      "lib/bundler/cli/config.rb",
-      "lib/bundler/cli/console.rb",
-      "lib/bundler/cli/doctor.rb",
-      "lib/bundler/cli/exec.rb",
-      "lib/bundler/cli/gem.rb",
-      "lib/bundler/cli/info.rb",
-      "lib/bundler/cli/init.rb",
-      "lib/bundler/cli/inject.rb",
-      "lib/bundler/cli/install.rb",
-      "lib/bundler/cli/issue.rb",
-      "lib/bundler/cli/list.rb",
-      "lib/bundler/cli/lock.rb",
-      "lib/bundler/cli/open.rb",
-      "lib/bundler/cli/outdated.rb",
-      "lib/bundler/cli/package.rb",
-      "lib/bundler/cli/platform.rb",
-      "lib/bundler/cli/plugin.rb",
-      "lib/bundler/cli/pristine.rb",
-      "lib/bundler/cli/remove.rb",
-      "lib/bundler/cli/show.rb",
-      "lib/bundler/cli/update.rb",
-      "lib/bundler/cli/viz.rb",
-      "lib/bundler/compact_index_client",
-      "lib/bundler/compact_index_client.rb",
-      "lib/bundler/compact_index_client/cache.rb",
-      "lib/bundler/compact_index_client/updater.rb",
-      "lib/bundler/compatibility_guard.rb",
-      "lib/bundler/constants.rb",
-      "lib/bundler/current_ruby.rb",
-      "lib/bundler/definition.rb",
-      "lib/bundler/dep_proxy.rb",
-      "lib/bundler/dependency.rb",
-      "lib/bundler/deployment.rb",
-      "lib/bundler/deprecate.rb",
-      "lib/bundler/dsl.rb",
-      "lib/bundler/endpoint_specification.rb",
-      "lib/bundler/env.rb",
-      "lib/bundler/environment_preserver.rb",
-      "lib/bundler/errors.rb",
-      "lib/bundler/feature_flag.rb",
-      "lib/bundler/fetcher",
-      "lib/bundler/fetcher.rb",
-      "lib/bundler/fetcher/base.rb",
-      "lib/bundler/fetcher/compact_index.rb",
-      "lib/bundler/fetcher/dependency.rb",
-      "lib/bundler/fetcher/downloader.rb",
-      "lib/bundler/fetcher/index.rb",
-      "lib/bundler/friendly_errors.rb",
-      "lib/bundler/gem_helper.rb",
-      "lib/bundler/gem_helpers.rb",
-      "lib/bundler/gem_remote_fetcher.rb",
-      "lib/bundler/gem_tasks.rb",
-      "lib/bundler/gem_version_promoter.rb",
-      "lib/bundler/gemdeps.rb",
-      "lib/bundler/graph.rb",
-      "lib/bundler/index.rb",
-      "lib/bundler/injector.rb",
-      "lib/bundler/inline.rb",
-      "lib/bundler/installer",
-      "lib/bundler/installer.rb",
-      "lib/bundler/installer/gem_installer.rb",
-      "lib/bundler/installer/parallel_installer.rb",
-      "lib/bundler/installer/standalone.rb",
-      "lib/bundler/lazy_specification.rb",
-      "lib/bundler/lockfile_generator.rb",
-      "lib/bundler/lockfile_parser.rb",
-      "lib/bundler/match_platform.rb",
-      "lib/bundler/mirror.rb",
-      "lib/bundler/plugin",
-      "lib/bundler/plugin.rb",
-      "lib/bundler/plugin/api",
-      "lib/bundler/plugin/api.rb",
-      "lib/bundler/plugin/api/source.rb",
-      "lib/bundler/plugin/dsl.rb",
-      "lib/bundler/plugin/events.rb",
-      "lib/bundler/plugin/index.rb",
-      "lib/bundler/plugin/installer",
-      "lib/bundler/plugin/installer.rb",
-      "lib/bundler/plugin/installer/git.rb",
-      "lib/bundler/plugin/installer/rubygems.rb",
-      "lib/bundler/plugin/source_list.rb",
-      "lib/bundler/process_lock.rb",
-      "lib/bundler/psyched_yaml.rb",
-      "lib/bundler/remote_specification.rb",
-      "lib/bundler/resolver",
-      "lib/bundler/resolver.rb",
-      "lib/bundler/resolver/spec_group.rb",
-      "lib/bundler/retry.rb",
-      "lib/bundler/ruby_dsl.rb",
-      "lib/bundler/ruby_version.rb",
-      "lib/bundler/rubygems_ext.rb",
-      "lib/bundler/rubygems_gem_installer.rb",
-      "lib/bundler/rubygems_integration.rb",
-      "lib/bundler/runtime.rb",
-      "lib/bundler/settings",
-      "lib/bundler/settings.rb",
-      "lib/bundler/settings/validator.rb",
-      "lib/bundler/setup.rb",
-      "lib/bundler/shared_helpers.rb",
-      "lib/bundler/similarity_detector.rb",
-      "lib/bundler/source",
-      "lib/bundler/source.rb",
-      "lib/bundler/source/gemspec.rb",
-      "lib/bundler/source/git",
-      "lib/bundler/source/git.rb",
-      "lib/bundler/source/git/git_proxy.rb",
-      "lib/bundler/source/metadata.rb",
-      "lib/bundler/source/path",
-      "lib/bundler/source/path.rb",
-      "lib/bundler/source/path/installer.rb",
-      "lib/bundler/source/rubygems",
-      "lib/bundler/source/rubygems.rb",
-      "lib/bundler/source/rubygems/remote.rb",
-      "lib/bundler/source_list.rb",
-      "lib/bundler/spec_set.rb",
-      "lib/bundler/ssl_certs",
-      "lib/bundler/ssl_certs/certificate_manager.rb",
-      "lib/bundler/ssl_certs/index.rubygems.org",
-      "lib/bundler/ssl_certs/index.rubygems.org/GlobalSignRootCA.pem",
-      "lib/bundler/ssl_certs/rubygems.global.ssl.fastly.net",
-      "lib/bundler/ssl_certs/rubygems.global.ssl.fastly.net/DigiCertHighAssuranceEVRootCA.pem",
-      "lib/bundler/ssl_certs/rubygems.org",
-      "lib/bundler/ssl_certs/rubygems.org/AddTrustExternalCARoot.pem",
-      "lib/bundler/stub_specification.rb",
-      "lib/bundler/templates",
-      "lib/bundler/templates/Executable",
-      "lib/bundler/templates/Executable.bundler",
-      "lib/bundler/templates/Executable.standalone",
-      "lib/bundler/templates/Gemfile",
-      "lib/bundler/templates/gems.rb",
-      "lib/bundler/templates/newgem",
-      "lib/bundler/templates/newgem/CODE_OF_CONDUCT.md.tt",
-      "lib/bundler/templates/newgem/Gemfile.tt",
-      "lib/bundler/templates/newgem/LICENSE.txt.tt",
-      "lib/bundler/templates/newgem/README.md.tt",
-      "lib/bundler/templates/newgem/Rakefile.tt",
-      "lib/bundler/templates/newgem/bin",
-      "lib/bundler/templates/newgem/bin/console.tt",
-      "lib/bundler/templates/newgem/bin/setup.tt",
-      "lib/bundler/templates/newgem/exe",
-      "lib/bundler/templates/newgem/exe/newgem.tt",
-      "lib/bundler/templates/newgem/ext",
-      "lib/bundler/templates/newgem/ext/newgem",
-      "lib/bundler/templates/newgem/ext/newgem/extconf.rb.tt",
-      "lib/bundler/templates/newgem/ext/newgem/newgem.c.tt",
-      "lib/bundler/templates/newgem/ext/newgem/newgem.h.tt",
-      "lib/bundler/templates/newgem/gitignore.tt",
-      "lib/bundler/templates/newgem/lib",
-      "lib/bundler/templates/newgem/lib/newgem",
-      "lib/bundler/templates/newgem/lib/newgem.rb.tt",
-      "lib/bundler/templates/newgem/lib/newgem/version.rb.tt",
-      "lib/bundler/templates/newgem/newgem.gemspec.tt",
-      "lib/bundler/templates/newgem/rspec.tt",
-      "lib/bundler/templates/newgem/spec",
-      "lib/bundler/templates/newgem/spec/newgem_spec.rb.tt",
-      "lib/bundler/templates/newgem/spec/spec_helper.rb.tt",
-      "lib/bundler/templates/newgem/test",
-      "lib/bundler/templates/newgem/test/newgem_test.rb.tt",
-      "lib/bundler/templates/newgem/test/test_helper.rb.tt",
-      "lib/bundler/templates/newgem/travis.yml.tt",
-      "lib/bundler/ui",
-      "lib/bundler/ui.rb",
-      "lib/bundler/ui/rg_proxy.rb",
-      "lib/bundler/ui/shell.rb",
-      "lib/bundler/ui/silent.rb",
-      "lib/bundler/uri_credentials_filter.rb",
-      "lib/bundler/vendor",
-      "lib/bundler/vendor/fileutils",
-      "lib/bundler/vendor/fileutils/lib",
-      "lib/bundler/vendor/fileutils/lib/fileutils.rb",
-      "lib/bundler/vendor/molinillo",
-      "lib/bundler/vendor/molinillo/lib",
-      "lib/bundler/vendor/molinillo/lib/molinillo",
-      "lib/bundler/vendor/molinillo/lib/molinillo.rb",
-      "lib/bundler/vendor/molinillo/lib/molinillo/compatibility.rb",
-      "lib/bundler/vendor/molinillo/lib/molinillo/delegates",
-      "lib/bundler/vendor/molinillo/lib/molinillo/delegates/resolution_state.rb",
-      "lib/bundler/vendor/molinillo/lib/molinillo/delegates/specification_provider.rb",
-      "lib/bundler/vendor/molinillo/lib/molinillo/dependency_graph",
-      "lib/bundler/vendor/molinillo/lib/molinillo/dependency_graph.rb",
-      "lib/bundler/vendor/molinillo/lib/molinillo/dependency_graph/action.rb",
-      "lib/bundler/vendor/molinillo/lib/molinillo/dependency_graph/add_edge_no_circular.rb",
-      "lib/bundler/vendor/molinillo/lib/molinillo/dependency_graph/add_vertex.rb",
-      "lib/bundler/vendor/molinillo/lib/molinillo/dependency_graph/delete_edge.rb",
-      "lib/bundler/vendor/molinillo/lib/molinillo/dependency_graph/detach_vertex_named.rb",
-      "lib/bundler/vendor/molinillo/lib/molinillo/dependency_graph/log.rb",
-      "lib/bundler/vendor/molinillo/lib/molinillo/dependency_graph/set_payload.rb",
-      "lib/bundler/vendor/molinillo/lib/molinillo/dependency_graph/tag.rb",
-      "lib/bundler/vendor/molinillo/lib/molinillo/dependency_graph/vertex.rb",
-      "lib/bundler/vendor/molinillo/lib/molinillo/errors.rb",
-      "lib/bundler/vendor/molinillo/lib/molinillo/gem_metadata.rb",
-      "lib/bundler/vendor/molinillo/lib/molinillo/modules",
-      "lib/bundler/vendor/molinillo/lib/molinillo/modules/specification_provider.rb",
-      "lib/bundler/vendor/molinillo/lib/molinillo/modules/ui.rb",
-      "lib/bundler/vendor/molinillo/lib/molinillo/resolution.rb",
-      "lib/bundler/vendor/molinillo/lib/molinillo/resolver.rb",
-      "lib/bundler/vendor/molinillo/lib/molinillo/state.rb",
-      "lib/bundler/vendor/net-http-persistent",
-      "lib/bundler/vendor/net-http-persistent/lib",
-      "lib/bundler/vendor/net-http-persistent/lib/net",
-      "lib/bundler/vendor/net-http-persistent/lib/net/http",
-      "lib/bundler/vendor/net-http-persistent/lib/net/http/faster.rb",
-      "lib/bundler/vendor/net-http-persistent/lib/net/http/persistent",
-      "lib/bundler/vendor/net-http-persistent/lib/net/http/persistent.rb",
-      "lib/bundler/vendor/net-http-persistent/lib/net/http/persistent/ssl_reuse.rb",
-      "lib/bundler/vendor/thor",
-      "lib/bundler/vendor/thor/lib",
-      "lib/bundler/vendor/thor/lib/thor",
-      "lib/bundler/vendor/thor/lib/thor.rb",
-      "lib/bundler/vendor/thor/lib/thor/actions",
-      "lib/bundler/vendor/thor/lib/thor/actions.rb",
-      "lib/bundler/vendor/thor/lib/thor/actions/create_file.rb",
-      "lib/bundler/vendor/thor/lib/thor/actions/create_link.rb",
-      "lib/bundler/vendor/thor/lib/thor/actions/directory.rb",
-      "lib/bundler/vendor/thor/lib/thor/actions/empty_directory.rb",
-      "lib/bundler/vendor/thor/lib/thor/actions/file_manipulation.rb",
-      "lib/bundler/vendor/thor/lib/thor/actions/inject_into_file.rb",
-      "lib/bundler/vendor/thor/lib/thor/base.rb",
-      "lib/bundler/vendor/thor/lib/thor/command.rb",
-      "lib/bundler/vendor/thor/lib/thor/core_ext",
-      "lib/bundler/vendor/thor/lib/thor/core_ext/hash_with_indifferent_access.rb",
-      "lib/bundler/vendor/thor/lib/thor/core_ext/io_binary_read.rb",
-      "lib/bundler/vendor/thor/lib/thor/core_ext/ordered_hash.rb",
-      "lib/bundler/vendor/thor/lib/thor/error.rb",
-      "lib/bundler/vendor/thor/lib/thor/group.rb",
-      "lib/bundler/vendor/thor/lib/thor/invocation.rb",
-      "lib/bundler/vendor/thor/lib/thor/line_editor",
-      "lib/bundler/vendor/thor/lib/thor/line_editor.rb",
-      "lib/bundler/vendor/thor/lib/thor/line_editor/basic.rb",
-      "lib/bundler/vendor/thor/lib/thor/line_editor/readline.rb",
-      "lib/bundler/vendor/thor/lib/thor/parser",
-      "lib/bundler/vendor/thor/lib/thor/parser.rb",
-      "lib/bundler/vendor/thor/lib/thor/parser/argument.rb",
-      "lib/bundler/vendor/thor/lib/thor/parser/arguments.rb",
-      "lib/bundler/vendor/thor/lib/thor/parser/option.rb",
-      "lib/bundler/vendor/thor/lib/thor/parser/options.rb",
-      "lib/bundler/vendor/thor/lib/thor/rake_compat.rb",
-      "lib/bundler/vendor/thor/lib/thor/runner.rb",
-      "lib/bundler/vendor/thor/lib/thor/shell",
-      "lib/bundler/vendor/thor/lib/thor/shell.rb",
-      "lib/bundler/vendor/thor/lib/thor/shell/basic.rb",
-      "lib/bundler/vendor/thor/lib/thor/shell/color.rb",
-      "lib/bundler/vendor/thor/lib/thor/shell/html.rb",
-      "lib/bundler/vendor/thor/lib/thor/util.rb",
-      "lib/bundler/vendor/thor/lib/thor/version.rb",
-      "lib/bundler/vendored_fileutils.rb",
-      "lib/bundler/vendored_molinillo.rb",
-      "lib/bundler/vendored_persistent.rb",
-      "lib/bundler/vendored_thor.rb",
-      "lib/bundler/version.rb",
-      "lib/bundler/version_ranges.rb",
-      "lib/bundler/vlad.rb",
-      "lib/bundler/worker.rb",
-      "lib/bundler/yaml_serializer.rb",
-      "man/bundle-add.ronn",
-      "man/bundle-binstubs.ronn",
-      "man/bundle-check.ronn",
-      "man/bundle-clean.ronn",
-      "man/bundle-config.ronn",
-      "man/bundle-doctor.ronn",
-      "man/bundle-exec.ronn",
-      "man/bundle-gem.ronn",
-      "man/bundle-info.ronn",
-      "man/bundle-init.ronn",
-      "man/bundle-inject.ronn",
-      "man/bundle-install.ronn",
-      "man/bundle-list.ronn",
-      "man/bundle-lock.ronn",
-      "man/bundle-open.ronn",
-      "man/bundle-outdated.ronn",
-      "man/bundle-package.ronn",
-      "man/bundle-platform.ronn",
-      "man/bundle-pristine.ronn",
-      "man/bundle-remove.ronn",
-      "man/bundle-show.ronn",
-      "man/bundle-update.ronn",
-      "man/bundle-viz.ronn",
-      "man/bundle.ronn",
-      "man/gemfile.5.ronn"
-    ],
-    "licenses": ["MIT"],
-    "metadata": "{\"bug_tracker_uri\"=>\"http://github.com/bundler/bundler/issues\", \"changelog_uri\"=>\"https://github.com/bundler/bundler/blob/master/CHANGELOG.md\", \"homepage_uri\"=>\"https://bundler.io/\", \"source_code_uri\"=>\"http://github.com/bundler/bundler/\"}",
+    "files": [],
+    "licenses": [],
+    "metadata": "{}",
     "platform": "ruby",
     "rdoc_options": [],
-    "require_paths": ["lib"],
+    "require_paths": [
+      "lib"
+    ],
     "required_ruby_version": {
-      "requirements": [[">=", "1.8.7"]]
+      "requirements": [
+        [
+          ">=",
+          "0"
+        ]
+      ]
     },
     "required_rubygems_version": {
-      "requirements": [[">=", "1.3.6"]]
+      "requirements": [
+        [
+          ">=",
+          "0"
+        ]
+      ]
     },
     "requirements": [],
     "rubygems_version": "3.0.6",
@@ -1978,12 +2125,22 @@
       {
         "name": "activesupport",
         "requirement": {
-          "requirements": [[">=", "3.0.0"]]
+          "requirements": [
+            [
+              ">=",
+              "3.0.0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "3.0.0"]]
+          "requirements": [
+            [
+              ">=",
+              "3.0.0"
+            ]
+          ]
         }
       }
     ],
@@ -1993,7 +2150,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/carmen-1.1.3.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e99fea0>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a7074288>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -2004,7 +2161,7 @@
   },
   {
     "name": "connection_pool",
-    "version": "2.2.2",
+    "version": "2.2.3",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [],
@@ -2013,8 +2170,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/connection_pool-2.2.2.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9afbc0>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/connection_pool-2.2.3.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a707f390>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -2025,7 +2182,7 @@
   },
   {
     "name": "i18n_data",
-    "version": "0.8.0",
+    "version": "0.10.0",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [],
@@ -2034,8 +2191,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/i18n_data-0.8.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92c0b88e8>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/i18n_data-0.10.0.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a5965948>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -2056,7 +2213,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/sixarm_ruby_unaccent-1.2.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9853e8>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a50fc180>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -2077,7 +2234,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/unicode_utils-1.4.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9b4e18>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a52123d0>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -2088,41 +2245,71 @@
   },
   {
     "name": "countries",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [
       {
         "name": "i18n_data",
         "requirement": {
-          "requirements": [["~>", "0.8.0"]]
+          "requirements": [
+            [
+              "~>",
+              "0.10.0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "0.8.0"]]
+          "requirements": [
+            [
+              "~>",
+              "0.10.0"
+            ]
+          ]
         }
       },
       {
         "name": "sixarm_ruby_unaccent",
         "requirement": {
-          "requirements": [["~>", "1.1"]]
+          "requirements": [
+            [
+              "~>",
+              "1.1"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "1.1"]]
+          "requirements": [
+            [
+              "~>",
+              "1.1"
+            ]
+          ]
         }
       },
       {
         "name": "unicode_utils",
         "requirement": {
-          "requirements": [["~>", "1.4"]]
+          "requirements": [
+            [
+              "~>",
+              "1.4"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "1.4"]]
+          "requirements": [
+            [
+              "~>",
+              "1.4"
+            ]
+          ]
         }
       }
     ],
@@ -2131,8 +2318,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/countries-3.0.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e99fa18>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/countries-3.0.1.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51d8d10>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -2153,7 +2340,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/debase-ruby_core_source-0.10.9.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9861d0>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a50ff4c0>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -2171,12 +2358,22 @@
       {
         "name": "debase-ruby_core_source",
         "requirement": {
-          "requirements": [[">=", "0.10.2"]]
+          "requirements": [
+            [
+              ">=",
+              "0.10.2"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "0.10.2"]]
+          "requirements": [
+            [
+              ">=",
+              "0.10.2"
+            ]
+          ]
         }
       }
     ],
@@ -2186,7 +2383,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/debase-0.2.4.1.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9b65d8>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a5213af0>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -2197,7 +2394,7 @@
   },
   {
     "name": "diff-lcs",
-    "version": "1.3",
+    "version": "1.4.4",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [],
@@ -2206,8 +2403,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/diff-lcs-1.3.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92d073e68>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/diff-lcs-1.4.4.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a50d67a0>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -2228,7 +2425,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/http-form_data-2.3.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92d814780>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a520a4c8>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -2239,17 +2436,17 @@
   },
   {
     "name": "ffi",
-    "version": "1.12.2",
+    "version": "1.13.1",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [],
     "stub": {
-      "extension_dir": "/Users/am/.rvm/gems/ruby-2.5.3/extensions/x86_64-darwin-19/2.5.0/ffi-1.12.2",
+      "extension_dir": "/Users/am/.rvm/gems/ruby-2.5.3/extensions/x86_64-darwin-19/2.5.0/ffi-1.13.1",
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/ffi-1.12.2.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e987dc8>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/ffi-1.13.1.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51b1648>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -2267,23 +2464,43 @@
       {
         "name": "ffi",
         "requirement": {
-          "requirements": [[">=", "1.0.0"]]
+          "requirements": [
+            [
+              ">=",
+              "1.0.0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "1.0.0"]]
+          "requirements": [
+            [
+              ">=",
+              "1.0.0"
+            ]
+          ]
         }
       },
       {
         "name": "rake",
         "requirement": {
-          "requirements": [[">=", "0"]]
+          "requirements": [
+            [
+              ">=",
+              "0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "0"]]
+          "requirements": [
+            [
+              ">=",
+              "0"
+            ]
+          ]
         }
       }
     ],
@@ -2293,7 +2510,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/ffi-compiler-1.0.1.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9af710>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51e1a78>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -2312,16 +2529,28 @@
         "name": "ffi-compiler",
         "requirement": {
           "requirements": [
-            [">=", "1.0"],
-            ["<", "2.0"]
+            [
+              ">=",
+              "1.0"
+            ],
+            [
+              "<",
+              "2.0"
+            ]
           ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
           "requirements": [
-            [">=", "1.0"],
-            ["<", "2.0"]
+            [
+              ">=",
+              "1.0"
+            ],
+            [
+              "<",
+              "2.0"
+            ]
           ]
         }
       }
@@ -2332,7 +2561,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/http-parser-1.2.1.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92d099d70>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51f94e8>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -2350,45 +2579,85 @@
       {
         "name": "addressable",
         "requirement": {
-          "requirements": [["~>", "2.3"]]
+          "requirements": [
+            [
+              "~>",
+              "2.3"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "2.3"]]
+          "requirements": [
+            [
+              "~>",
+              "2.3"
+            ]
+          ]
         }
       },
       {
         "name": "http-cookie",
         "requirement": {
-          "requirements": [["~>", "1.0"]]
+          "requirements": [
+            [
+              "~>",
+              "1.0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "1.0"]]
+          "requirements": [
+            [
+              "~>",
+              "1.0"
+            ]
+          ]
         }
       },
       {
         "name": "http-form_data",
         "requirement": {
-          "requirements": [["~>", "2.2"]]
+          "requirements": [
+            [
+              "~>",
+              "2.2"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "2.2"]]
+          "requirements": [
+            [
+              "~>",
+              "2.2"
+            ]
+          ]
         }
       },
       {
         "name": "http-parser",
         "requirement": {
-          "requirements": [["~>", "1.2.0"]]
+          "requirements": [
+            [
+              "~>",
+              "1.2.0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "1.2.0"]]
+          "requirements": [
+            [
+              "~>",
+              "1.2.0"
+            ]
+          ]
         }
       }
     ],
@@ -2398,7 +2667,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/http-4.4.1.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e98d908>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51d06d8>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -2416,23 +2685,43 @@
       {
         "name": "concurrent-ruby",
         "requirement": {
-          "requirements": [["~>", "1.0"]]
+          "requirements": [
+            [
+              "~>",
+              "1.0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "1.0"]]
+          "requirements": [
+            [
+              "~>",
+              "1.0"
+            ]
+          ]
         }
       },
       {
         "name": "http",
         "requirement": {
-          "requirements": [[">=", "3.0"]]
+          "requirements": [
+            [
+              ">=",
+              "3.0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "3.0"]]
+          "requirements": [
+            [
+              ">=",
+              "3.0"
+            ]
+          ]
         }
       }
     ],
@@ -2442,7 +2731,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/elastic-apm-3.3.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e987490>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51c31e0>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -2453,7 +2742,7 @@
   },
   {
     "name": "multi_json",
-    "version": "1.14.1",
+    "version": "1.15.0",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [],
@@ -2462,8 +2751,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/multi_json-1.14.1.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92d091cb0>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/multi_json-1.15.0.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51ea380>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -2481,12 +2770,22 @@
       {
         "name": "multi_json",
         "requirement": {
-          "requirements": [[">=", "0"]]
+          "requirements": [
+            [
+              ">=",
+              "0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "0"]]
+          "requirements": [
+            [
+              ">=",
+              "0"
+            ]
+          ]
         }
       }
     ],
@@ -2496,7 +2795,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/elasticsearch-api-5.0.5.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92d089a88>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a50deae0>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -2514,23 +2813,43 @@
       {
         "name": "faraday",
         "requirement": {
-          "requirements": [[">=", "0"]]
+          "requirements": [
+            [
+              ">=",
+              "0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "0"]]
+          "requirements": [
+            [
+              ">=",
+              "0"
+            ]
+          ]
         }
       },
       {
         "name": "multi_json",
         "requirement": {
-          "requirements": [[">=", "0"]]
+          "requirements": [
+            [
+              ">=",
+              "0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "0"]]
+          "requirements": [
+            [
+              ">=",
+              "0"
+            ]
+          ]
         }
       }
     ],
@@ -2540,7 +2859,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/elasticsearch-transport-5.0.5.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e994028>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a70752a0>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -2558,23 +2877,43 @@
       {
         "name": "elasticsearch-api",
         "requirement": {
-          "requirements": [["=", "5.0.5"]]
+          "requirements": [
+            [
+              "=",
+              "5.0.5"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["=", "5.0.5"]]
+          "requirements": [
+            [
+              "=",
+              "5.0.5"
+            ]
+          ]
         }
       },
       {
         "name": "elasticsearch-transport",
         "requirement": {
-          "requirements": [["=", "5.0.5"]]
+          "requirements": [
+            [
+              "=",
+              "5.0.5"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["=", "5.0.5"]]
+          "requirements": [
+            [
+              "=",
+              "5.0.5"
+            ]
+          ]
         }
       }
     ],
@@ -2584,7 +2923,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/elasticsearch-5.0.5.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9ae860>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a594d3e8>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -2605,7 +2944,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/elasticsearch-dsl-0.1.4.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9b5610>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51f1dd8>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -2616,19 +2955,29 @@
   },
   {
     "name": "et-orbi",
-    "version": "1.2.2",
+    "version": "1.2.4",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [
       {
         "name": "tzinfo",
         "requirement": {
-          "requirements": [[">=", "0"]]
+          "requirements": [
+            [
+              ">=",
+              "0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "0"]]
+          "requirements": [
+            [
+              ">=",
+              "0"
+            ]
+          ]
         }
       }
     ],
@@ -2637,8 +2986,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/et-orbi-1.2.2.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9a4928>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/et-orbi-1.2.4.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51c98d8>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -2649,7 +2998,7 @@
   },
   {
     "name": "raabro",
-    "version": "1.1.6",
+    "version": "1.3.1",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [],
@@ -2658,8 +3007,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/raabro-1.1.6.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e997980>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/raabro-1.3.1.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a7076628>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -2670,7 +3019,7 @@
   },
   {
     "name": "fugit",
-    "version": "1.3.3",
+    "version": "1.3.6",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [
@@ -2678,28 +3027,50 @@
         "name": "et-orbi",
         "requirement": {
           "requirements": [
-            ["~>", "1.1"],
-            [">=", "1.1.8"]
+            [
+              "~>",
+              "1.1"
+            ],
+            [
+              ">=",
+              "1.1.8"
+            ]
           ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
           "requirements": [
-            ["~>", "1.1"],
-            [">=", "1.1.8"]
+            [
+              "~>",
+              "1.1"
+            ],
+            [
+              ">=",
+              "1.1.8"
+            ]
           ]
         }
       },
       {
         "name": "raabro",
         "requirement": {
-          "requirements": [["~>", "1.1"]]
+          "requirements": [
+            [
+              "~>",
+              "1.3"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "1.1"]]
+          "requirements": [
+            [
+              "~>",
+              "1.3"
+            ]
+          ]
         }
       }
     ],
@@ -2708,8 +3079,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/fugit-1.3.3.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92d0a0170>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/fugit-1.3.6.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51c0c10>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -2720,7 +3091,7 @@
   },
   {
     "name": "hashie",
-    "version": "3.6.0",
+    "version": "4.1.0",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [],
@@ -2729,29 +3100,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/hashie-3.6.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9a5800>",
-      "name": "",
-      "spec": "",
-      "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
-      "gems_dir": "/Users/am/.rvm/gems/ruby-2.5.3/gems",
-      "default_gem": "false"
-    },
-    "source": "rubygems repository https://rubygems.org/ or installed locally"
-  },
-  {
-    "name": "jaro_winkler",
-    "version": "1.5.4",
-    "platform": "ruby",
-    "spec_fetcher": "",
-    "dependencies": [],
-    "stub": {
-      "extension_dir": "/Users/am/.rvm/gems/ruby-2.5.3/extensions/x86_64-darwin-19/2.5.0/jaro_winkler-1.5.4",
-      "full_gem_path": "",
-      "gem_dir": "",
-      "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/jaro_winkler-1.5.4.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e996620>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/hashie-4.1.0.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51b2ae8>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -2772,7 +3122,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/jwt-2.2.1.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9b4288>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a50e6a88>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -2793,7 +3143,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/mini_mime-1.0.2.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92f08f2d8>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a5200d10>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -2811,12 +3161,22 @@
       {
         "name": "mini_mime",
         "requirement": {
-          "requirements": [[">=", "0.1.1"]]
+          "requirements": [
+            [
+              ">=",
+              "0.1.1"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "0.1.1"]]
+          "requirements": [
+            [
+              ">=",
+              "0.1.1"
+            ]
+          ]
         }
       }
     ],
@@ -2826,7 +3186,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/mail-2.7.1.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e985d20>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a50fe3b8>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -2847,7 +3207,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/maxmind-db-1.0.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e98fe60>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51c8640>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -2868,7 +3228,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/moneta-1.0.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9768e8>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a50ee440>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -2887,16 +3247,28 @@
         "name": "i18n",
         "requirement": {
           "requirements": [
-            [">=", "0.6.4"],
-            ["<=", "2"]
+            [
+              ">=",
+              "0.6.4"
+            ],
+            [
+              "<=",
+              "2"
+            ]
           ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
           "requirements": [
-            [">=", "0.6.4"],
-            ["<=", "2"]
+            [
+              ">=",
+              "0.6.4"
+            ],
+            [
+              "<=",
+              "2"
+            ]
           ]
         }
       }
@@ -2907,7 +3279,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/money-6.13.4.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9b6c90>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a5208510>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -2928,7 +3300,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/multi_xml-0.6.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9a6610>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a595d310>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -2939,7 +3311,7 @@
   },
   {
     "name": "ruby2_keywords",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [],
@@ -2948,8 +3320,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/ruby2_keywords-0.0.1.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e97c608>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/ruby2_keywords-0.0.2.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51dbe70>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -2967,12 +3339,22 @@
       {
         "name": "ruby2_keywords",
         "requirement": {
-          "requirements": [["~>", "0.0.1"]]
+          "requirements": [
+            [
+              "~>",
+              "0.0.1"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "0.0.1"]]
+          "requirements": [
+            [
+              "~>",
+              "0.0.1"
+            ]
+          ]
         }
       }
     ],
@@ -2982,7 +3364,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/mustermann-1.1.1.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92f0744d8>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a5200860>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -3003,7 +3385,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/oauth-0.5.4.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9a7880>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a595f728>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -3014,7 +3396,7 @@
   },
   {
     "name": "oauth2",
-    "version": "1.4.2",
+    "version": "1.4.4",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [
@@ -3022,16 +3404,28 @@
         "name": "faraday",
         "requirement": {
           "requirements": [
-            [">=", "0.8"],
-            ["<", "2.0"]
+            [
+              ">=",
+              "0.8"
+            ],
+            [
+              "<",
+              "2.0"
+            ]
           ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
           "requirements": [
-            [">=", "0.8"],
-            ["<", "2.0"]
+            [
+              ">=",
+              "0.8"
+            ],
+            [
+              "<",
+              "2.0"
+            ]
           ]
         }
       },
@@ -3039,55 +3433,99 @@
         "name": "jwt",
         "requirement": {
           "requirements": [
-            [">=", "1.0"],
-            ["<", "3.0"]
+            [
+              ">=",
+              "1.0"
+            ],
+            [
+              "<",
+              "3.0"
+            ]
           ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
           "requirements": [
-            [">=", "1.0"],
-            ["<", "3.0"]
+            [
+              ">=",
+              "1.0"
+            ],
+            [
+              "<",
+              "3.0"
+            ]
           ]
         }
       },
       {
         "name": "multi_json",
         "requirement": {
-          "requirements": [["~>", "1.3"]]
-        },
-        "type": "runtime",
-        "prerelease": "false",
-        "version_requirements": {
-          "requirements": [["~>", "1.3"]]
-        }
-      },
-      {
-        "name": "multi_xml",
-        "requirement": {
-          "requirements": [["~>", "0.5"]]
-        },
-        "type": "runtime",
-        "prerelease": "false",
-        "version_requirements": {
-          "requirements": [["~>", "0.5"]]
-        }
-      },
-      {
-        "name": "rack",
-        "requirement": {
           "requirements": [
-            [">=", "1.2"],
-            ["<", "3"]
+            [
+              "~>",
+              "1.3"
+            ]
           ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
           "requirements": [
-            [">=", "1.2"],
-            ["<", "3"]
+            [
+              "~>",
+              "1.3"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "multi_xml",
+        "requirement": {
+          "requirements": [
+            [
+              "~>",
+              "0.5"
+            ]
+          ]
+        },
+        "type": "runtime",
+        "prerelease": "false",
+        "version_requirements": {
+          "requirements": [
+            [
+              "~>",
+              "0.5"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "rack",
+        "requirement": {
+          "requirements": [
+            [
+              ">=",
+              "1.2"
+            ],
+            [
+              "<",
+              "3"
+            ]
+          ]
+        },
+        "type": "runtime",
+        "prerelease": "false",
+        "version_requirements": {
+          "requirements": [
+            [
+              ">=",
+              "1.2"
+            ],
+            [
+              "<",
+              "3"
+            ]
           ]
         }
       }
@@ -3097,8 +3535,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/oauth2-1.4.2.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e99c7c8>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/oauth2-1.4.4.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a50de130>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -3116,84 +3554,156 @@
       {
         "name": "actionpack",
         "requirement": {
-          "requirements": [[">=", "5.2.3"]]
+          "requirements": [
+            [
+              ">=",
+              "5.2.3"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "5.2.3"]]
+          "requirements": [
+            [
+              ">=",
+              "5.2.3"
+            ]
+          ]
         }
       },
       {
         "name": "actionview",
         "requirement": {
-          "requirements": [[">=", "5.1.6.2"]]
+          "requirements": [
+            [
+              ">=",
+              "5.1.6.2"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "5.1.6.2"]]
+          "requirements": [
+            [
+              ">=",
+              "5.1.6.2"
+            ]
+          ]
         }
       },
       {
         "name": "active_utils",
         "requirement": {
-          "requirements": [["~>", "3.3.0"]]
+          "requirements": [
+            [
+              "~>",
+              "3.3.0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "3.3.0"]]
+          "requirements": [
+            [
+              "~>",
+              "3.3.0"
+            ]
+          ]
         }
       },
       {
         "name": "activesupport",
         "requirement": {
-          "requirements": [[">=", "5.2.3"]]
+          "requirements": [
+            [
+              ">=",
+              "5.2.3"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "5.2.3"]]
+          "requirements": [
+            [
+              ">=",
+              "5.2.3"
+            ]
+          ]
         }
       },
       {
         "name": "builder",
         "requirement": {
           "requirements": [
-            [">=", "2.1.2"],
-            ["<", "4.0.0"]
+            [
+              ">=",
+              "2.1.2"
+            ],
+            [
+              "<",
+              "4.0.0"
+            ]
           ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
           "requirements": [
-            [">=", "2.1.2"],
-            ["<", "4.0.0"]
+            [
+              ">=",
+              "2.1.2"
+            ],
+            [
+              "<",
+              "4.0.0"
+            ]
           ]
         }
       },
       {
         "name": "i18n",
         "requirement": {
-          "requirements": [[">=", "0.6.6"]]
+          "requirements": [
+            [
+              ">=",
+              "0.6.6"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "0.6.6"]]
+          "requirements": [
+            [
+              ">=",
+              "0.6.6"
+            ]
+          ]
         }
       },
       {
         "name": "nokogiri",
         "requirement": {
-          "requirements": [[">=", "1.8.5"]]
+          "requirements": [
+            [
+              ">=",
+              "1.8.5"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "1.8.5"]]
+          "requirements": [
+            [
+              ">=",
+              "1.8.5"
+            ]
+          ]
         }
       }
     ],
@@ -3203,7 +3713,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/offsite_payments-2.7.19.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92c0a5a68>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51fb0b8>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -3214,7 +3724,7 @@
   },
   {
     "name": "omniauth",
-    "version": "1.9.0",
+    "version": "1.9.1",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [
@@ -3222,16 +3732,20 @@
         "name": "hashie",
         "requirement": {
           "requirements": [
-            [">=", "3.4.6"],
-            ["<", "3.7.0"]
+            [
+              ">=",
+              "3.4.6"
+            ]
           ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
           "requirements": [
-            [">=", "3.4.6"],
-            ["<", "3.7.0"]
+            [
+              ">=",
+              "3.4.6"
+            ]
           ]
         }
       },
@@ -3239,16 +3753,28 @@
         "name": "rack",
         "requirement": {
           "requirements": [
-            [">=", "1.6.2"],
-            ["<", "3"]
+            [
+              ">=",
+              "1.6.2"
+            ],
+            [
+              "<",
+              "3"
+            ]
           ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
           "requirements": [
-            [">=", "1.6.2"],
-            ["<", "3"]
+            [
+              ">=",
+              "1.6.2"
+            ],
+            [
+              "<",
+              "3"
+            ]
           ]
         }
       }
@@ -3258,8 +3784,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/omniauth-1.9.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9a4018>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/omniauth-1.9.1.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a594c088>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -3277,23 +3803,43 @@
       {
         "name": "oauth2",
         "requirement": {
-          "requirements": [["~>", "1.1"]]
+          "requirements": [
+            [
+              "~>",
+              "1.1"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "1.1"]]
+          "requirements": [
+            [
+              "~>",
+              "1.1"
+            ]
+          ]
         }
       },
       {
         "name": "omniauth",
         "requirement": {
-          "requirements": [["~>", "1.9"]]
+          "requirements": [
+            [
+              "~>",
+              "1.9"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "1.9"]]
+          "requirements": [
+            [
+              "~>",
+              "1.9"
+            ]
+          ]
         }
       }
     ],
@@ -3303,7 +3849,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/omniauth-oauth2-1.6.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e986fe0>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51c2d30>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -3314,19 +3860,29 @@
   },
   {
     "name": "omniauth-facebook",
-    "version": "5.0.0",
+    "version": "6.0.0",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [
       {
         "name": "omniauth-oauth2",
         "requirement": {
-          "requirements": [["~>", "1.2"]]
+          "requirements": [
+            [
+              "~>",
+              "1.2"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "1.2"]]
+          "requirements": [
+            [
+              "~>",
+              "1.2"
+            ]
+          ]
         }
       }
     ],
@@ -3335,8 +3891,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/omniauth-facebook-5.0.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e98ddb8>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/omniauth-facebook-6.0.0.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a50f77e8>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -3354,34 +3910,64 @@
       {
         "name": "jwt",
         "requirement": {
-          "requirements": [[">=", "2.0"]]
+          "requirements": [
+            [
+              ">=",
+              "2.0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "2.0"]]
+          "requirements": [
+            [
+              ">=",
+              "2.0"
+            ]
+          ]
         }
       },
       {
         "name": "omniauth",
         "requirement": {
-          "requirements": [[">=", "1.1.1"]]
+          "requirements": [
+            [
+              ">=",
+              "1.1.1"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "1.1.1"]]
+          "requirements": [
+            [
+              ">=",
+              "1.1.1"
+            ]
+          ]
         }
       },
       {
         "name": "omniauth-oauth2",
         "requirement": {
-          "requirements": [[">=", "1.6"]]
+          "requirements": [
+            [
+              ">=",
+              "1.6"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "1.6"]]
+          "requirements": [
+            [
+              ">=",
+              "1.6"
+            ]
+          ]
         }
       }
     ],
@@ -3391,7 +3977,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/omniauth-google-oauth2-0.8.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e98ebc8>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51d2f50>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -3409,23 +3995,43 @@
       {
         "name": "omniauth",
         "requirement": {
-          "requirements": [["~>", "1"]]
+          "requirements": [
+            [
+              "~>",
+              "1"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "1"]]
+          "requirements": [
+            [
+              "~>",
+              "1"
+            ]
+          ]
         }
       },
       {
         "name": "omniauth-oauth2",
         "requirement": {
-          "requirements": [["~>", "1"]]
+          "requirements": [
+            [
+              "~>",
+              "1"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "1"]]
+          "requirements": [
+            [
+              "~>",
+              "1"
+            ]
+          ]
         }
       }
     ],
@@ -3435,7 +4041,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/omniauth-instagram-1.3.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e984128>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51c9450>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -3453,23 +4059,43 @@
       {
         "name": "oauth",
         "requirement": {
-          "requirements": [[">=", "0"]]
+          "requirements": [
+            [
+              ">=",
+              "0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "0"]]
+          "requirements": [
+            [
+              ">=",
+              "0"
+            ]
+          ]
         }
       },
       {
         "name": "omniauth",
         "requirement": {
-          "requirements": [["~>", "1.0"]]
+          "requirements": [
+            [
+              "~>",
+              "1.0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "1.0"]]
+          "requirements": [
+            [
+              "~>",
+              "1.0"
+            ]
+          ]
         }
       }
     ],
@@ -3479,7 +4105,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/omniauth-oauth-1.1.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e98f078>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51d38b0>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -3497,23 +4123,43 @@
       {
         "name": "omniauth-oauth",
         "requirement": {
-          "requirements": [["~>", "1.1"]]
+          "requirements": [
+            [
+              "~>",
+              "1.1"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "1.1"]]
+          "requirements": [
+            [
+              "~>",
+              "1.1"
+            ]
+          ]
         }
       },
       {
         "name": "rack",
         "requirement": {
-          "requirements": [[">=", "0"]]
+          "requirements": [
+            [
+              ">=",
+              "0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "0"]]
+          "requirements": [
+            [
+              ">=",
+              "0"
+            ]
+          ]
         }
       }
     ],
@@ -3523,7 +4169,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/omniauth-twitter-1.4.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92d0a9db0>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51b2070>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -3544,7 +4190,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/padrino-support-0.14.4.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9adf00>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51eb618>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -3562,12 +4208,22 @@
       {
         "name": "rack",
         "requirement": {
-          "requirements": [[">=", "0"]]
+          "requirements": [
+            [
+              ">=",
+              "0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "0"]]
+          "requirements": [
+            [
+              ">=",
+              "0"
+            ]
+          ]
         }
       }
     ],
@@ -3577,7 +4233,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/rack-protection-2.0.8.1.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9a73f8>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a595f110>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -3598,7 +4254,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/tilt-2.0.10.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9b5a98>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51f2710>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -3616,45 +4272,85 @@
       {
         "name": "mustermann",
         "requirement": {
-          "requirements": [["~>", "1.0"]]
+          "requirements": [
+            [
+              "~>",
+              "1.0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "1.0"]]
+          "requirements": [
+            [
+              "~>",
+              "1.0"
+            ]
+          ]
         }
       },
       {
         "name": "rack",
         "requirement": {
-          "requirements": [["~>", "2.0"]]
+          "requirements": [
+            [
+              "~>",
+              "2.0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "2.0"]]
+          "requirements": [
+            [
+              "~>",
+              "2.0"
+            ]
+          ]
         }
       },
       {
         "name": "rack-protection",
         "requirement": {
-          "requirements": [["=", "2.0.8.1"]]
+          "requirements": [
+            [
+              "=",
+              "2.0.8.1"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["=", "2.0.8.1"]]
+          "requirements": [
+            [
+              "=",
+              "2.0.8.1"
+            ]
+          ]
         }
       },
       {
         "name": "tilt",
         "requirement": {
-          "requirements": [["~>", "2.0"]]
+          "requirements": [
+            [
+              "~>",
+              "2.0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "2.0"]]
+          "requirements": [
+            [
+              "~>",
+              "2.0"
+            ]
+          ]
         }
       }
     ],
@@ -3664,7 +4360,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/sinatra-2.0.8.1.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e99e7d0>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a707b3d0>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -3685,7 +4381,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/thor-0.20.3.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9b48a0>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a5210198>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -3703,34 +4399,64 @@
       {
         "name": "padrino-support",
         "requirement": {
-          "requirements": [["=", "0.14.4"]]
+          "requirements": [
+            [
+              "=",
+              "0.14.4"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["=", "0.14.4"]]
+          "requirements": [
+            [
+              "=",
+              "0.14.4"
+            ]
+          ]
         }
       },
       {
         "name": "sinatra",
         "requirement": {
-          "requirements": [[">=", "2.0.0"]]
+          "requirements": [
+            [
+              ">=",
+              "2.0.0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "2.0.0"]]
+          "requirements": [
+            [
+              ">=",
+              "2.0.0"
+            ]
+          ]
         }
       },
       {
         "name": "thor",
         "requirement": {
-          "requirements": [["~>", "0.18"]]
+          "requirements": [
+            [
+              "~>",
+              "0.18"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "0.18"]]
+          "requirements": [
+            [
+              "~>",
+              "0.18"
+            ]
+          ]
         }
       }
     ],
@@ -3740,7 +4466,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/padrino-core-0.14.4.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e97f7e0>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51b0658>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -3759,44 +4485,78 @@
         "name": "i18n",
         "requirement": {
           "requirements": [
-            ["~>", "0.6"],
-            [">=", "0.6.7"]
+            [
+              "~>",
+              "0.6"
+            ],
+            [
+              ">=",
+              "0.6.7"
+            ]
           ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
           "requirements": [
-            ["~>", "0.6"],
-            [">=", "0.6.7"]
+            [
+              "~>",
+              "0.6"
+            ],
+            [
+              ">=",
+              "0.6.7"
+            ]
           ]
         }
       },
       {
         "name": "padrino-support",
         "requirement": {
-          "requirements": [["=", "0.14.4"]]
-        },
-        "type": "runtime",
-        "prerelease": "false",
-        "version_requirements": {
-          "requirements": [["=", "0.14.4"]]
-        }
-      },
-      {
-        "name": "tilt",
-        "requirement": {
           "requirements": [
-            [">=", "1.4.1"],
-            ["<", "3"]
+            [
+              "=",
+              "0.14.4"
+            ]
           ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
           "requirements": [
-            [">=", "1.4.1"],
-            ["<", "3"]
+            [
+              "=",
+              "0.14.4"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "tilt",
+        "requirement": {
+          "requirements": [
+            [
+              ">=",
+              "1.4.1"
+            ],
+            [
+              "<",
+              "3"
+            ]
+          ]
+        },
+        "type": "runtime",
+        "prerelease": "false",
+        "version_requirements": {
+          "requirements": [
+            [
+              ">=",
+              "1.4.1"
+            ],
+            [
+              "<",
+              "3"
+            ]
           ]
         }
       }
@@ -3807,7 +4567,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/padrino-helpers-0.14.4.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92c0a8448>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51e2888>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -3825,23 +4585,43 @@
       {
         "name": "padrino-core",
         "requirement": {
-          "requirements": [["=", "0.14.4"]]
+          "requirements": [
+            [
+              "=",
+              "0.14.4"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["=", "0.14.4"]]
+          "requirements": [
+            [
+              "=",
+              "0.14.4"
+            ]
+          ]
         }
       },
       {
         "name": "padrino-helpers",
         "requirement": {
-          "requirements": [["=", "0.14.4"]]
+          "requirements": [
+            [
+              "=",
+              "0.14.4"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["=", "0.14.4"]]
+          "requirements": [
+            [
+              "=",
+              "0.14.4"
+            ]
+          ]
         }
       }
     ],
@@ -3851,7 +4631,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/padrino-admin-0.14.4.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e985898>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a50fd5d0>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -3869,34 +4649,64 @@
       {
         "name": "moneta",
         "requirement": {
-          "requirements": [["~>", "1.0.0"]]
+          "requirements": [
+            [
+              "~>",
+              "1.0.0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "1.0.0"]]
+          "requirements": [
+            [
+              "~>",
+              "1.0.0"
+            ]
+          ]
         }
       },
       {
         "name": "padrino-core",
         "requirement": {
-          "requirements": [["=", "0.14.4"]]
+          "requirements": [
+            [
+              "=",
+              "0.14.4"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["=", "0.14.4"]]
+          "requirements": [
+            [
+              "=",
+              "0.14.4"
+            ]
+          ]
         }
       },
       {
         "name": "padrino-helpers",
         "requirement": {
-          "requirements": [["=", "0.14.4"]]
+          "requirements": [
+            [
+              "=",
+              "0.14.4"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["=", "0.14.4"]]
+          "requirements": [
+            [
+              "=",
+              "0.14.4"
+            ]
+          ]
         }
       }
     ],
@@ -3906,7 +4716,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/padrino-cache-0.14.4.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9aca88>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a59467c8>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -3924,23 +4734,43 @@
       {
         "name": "bundler",
         "requirement": {
-          "requirements": [["~>", "1.0"]]
+          "requirements": [
+            [
+              "~>",
+              "1.0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "1.0"]]
+          "requirements": [
+            [
+              "~>",
+              "1.0"
+            ]
+          ]
         }
       },
       {
         "name": "padrino-core",
         "requirement": {
-          "requirements": [["=", "0.14.4"]]
+          "requirements": [
+            [
+              "=",
+              "0.14.4"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["=", "0.14.4"]]
+          "requirements": [
+            [
+              "=",
+              "0.14.4"
+            ]
+          ]
         }
       }
     ],
@@ -3950,7 +4780,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/padrino-gen-0.14.4.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9a5cb0>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a707e288>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -3968,34 +4798,64 @@
       {
         "name": "mail",
         "requirement": {
-          "requirements": [["~>", "2.5"]]
+          "requirements": [
+            [
+              "~>",
+              "2.5"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "2.5"]]
+          "requirements": [
+            [
+              "~>",
+              "2.5"
+            ]
+          ]
         }
       },
       {
         "name": "mime-types",
         "requirement": {
-          "requirements": [["<", "4"]]
+          "requirements": [
+            [
+              "<",
+              "4"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["<", "4"]]
+          "requirements": [
+            [
+              "<",
+              "4"
+            ]
+          ]
         }
       },
       {
         "name": "padrino-core",
         "requirement": {
-          "requirements": [["=", "0.14.4"]]
+          "requirements": [
+            [
+              "=",
+              "0.14.4"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["=", "0.14.4"]]
+          "requirements": [
+            [
+              "=",
+              "0.14.4"
+            ]
+          ]
         }
       }
     ],
@@ -4005,7 +4865,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/padrino-mailer-0.14.4.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e986b30>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51c1d40>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -4023,78 +4883,148 @@
       {
         "name": "padrino-admin",
         "requirement": {
-          "requirements": [["=", "0.14.4"]]
+          "requirements": [
+            [
+              "=",
+              "0.14.4"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["=", "0.14.4"]]
+          "requirements": [
+            [
+              "=",
+              "0.14.4"
+            ]
+          ]
         }
       },
       {
         "name": "padrino-cache",
         "requirement": {
-          "requirements": [["=", "0.14.4"]]
+          "requirements": [
+            [
+              "=",
+              "0.14.4"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["=", "0.14.4"]]
+          "requirements": [
+            [
+              "=",
+              "0.14.4"
+            ]
+          ]
         }
       },
       {
         "name": "padrino-core",
         "requirement": {
-          "requirements": [["=", "0.14.4"]]
+          "requirements": [
+            [
+              "=",
+              "0.14.4"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["=", "0.14.4"]]
+          "requirements": [
+            [
+              "=",
+              "0.14.4"
+            ]
+          ]
         }
       },
       {
         "name": "padrino-gen",
         "requirement": {
-          "requirements": [["=", "0.14.4"]]
+          "requirements": [
+            [
+              "=",
+              "0.14.4"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["=", "0.14.4"]]
+          "requirements": [
+            [
+              "=",
+              "0.14.4"
+            ]
+          ]
         }
       },
       {
         "name": "padrino-helpers",
         "requirement": {
-          "requirements": [["=", "0.14.4"]]
+          "requirements": [
+            [
+              "=",
+              "0.14.4"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["=", "0.14.4"]]
+          "requirements": [
+            [
+              "=",
+              "0.14.4"
+            ]
+          ]
         }
       },
       {
         "name": "padrino-mailer",
         "requirement": {
-          "requirements": [["=", "0.14.4"]]
+          "requirements": [
+            [
+              "=",
+              "0.14.4"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["=", "0.14.4"]]
+          "requirements": [
+            [
+              "=",
+              "0.14.4"
+            ]
+          ]
         }
       },
       {
         "name": "padrino-support",
         "requirement": {
-          "requirements": [["=", "0.14.4"]]
+          "requirements": [
+            [
+              "=",
+              "0.14.4"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["=", "0.14.4"]]
+          "requirements": [
+            [
+              "=",
+              "0.14.4"
+            ]
+          ]
         }
       }
     ],
@@ -4104,7 +5034,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/padrino-0.14.4.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e99d100>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a5966d98>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -4115,7 +5045,7 @@
   },
   {
     "name": "parallel",
-    "version": "1.19.1",
+    "version": "1.19.2",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [],
@@ -4124,8 +5054,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/parallel-1.19.1.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9ac150>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/parallel-1.19.2.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a520bbe8>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -4136,19 +5066,29 @@
   },
   {
     "name": "parser",
-    "version": "2.7.0.1",
+    "version": "2.7.1.4",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [
       {
         "name": "ast",
         "requirement": {
-          "requirements": [["~>", "2.4.0"]]
+          "requirements": [
+            [
+              "~>",
+              "2.4.1"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "2.4.0"]]
+          "requirements": [
+            [
+              "~>",
+              "2.4.1"
+            ]
+          ]
         }
       }
     ],
@@ -4157,8 +5097,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/parser-2.7.0.1.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9a44a0>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/parser-2.7.1.4.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a5104ce0>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -4176,12 +5116,22 @@
       {
         "name": "braintreehttp",
         "requirement": {
-          "requirements": [["~>", "0.5"]]
+          "requirements": [
+            [
+              "~>",
+              "0.5"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "0.5"]]
+          "requirements": [
+            [
+              "~>",
+              "0.5"
+            ]
+          ]
         }
       }
     ],
@@ -4191,7 +5141,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/paypal-checkout-sdk-1.0.2.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92c07e170>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a520b738>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -4202,7 +5152,7 @@
   },
   {
     "name": "uuidtools",
-    "version": "2.1.5",
+    "version": "2.2.0",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [],
@@ -4211,8 +5161,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/uuidtools-2.1.5.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92f064bc8>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/uuidtools-2.2.0.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a52036f0>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -4233,7 +5183,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/xml-simple-1.1.5.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e97ee80>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a50eb308>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -4251,34 +5201,64 @@
       {
         "name": "multi_json",
         "requirement": {
-          "requirements": [["~>", "1.0"]]
+          "requirements": [
+            [
+              "~>",
+              "1.0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "1.0"]]
+          "requirements": [
+            [
+              "~>",
+              "1.0"
+            ]
+          ]
         }
       },
       {
         "name": "uuidtools",
         "requirement": {
-          "requirements": [["~>", "2.1"]]
+          "requirements": [
+            [
+              "~>",
+              "2.1"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "2.1"]]
+          "requirements": [
+            [
+              "~>",
+              "2.1"
+            ]
+          ]
         }
       },
       {
         "name": "xml-simple",
         "requirement": {
-          "requirements": [[">=", "0"]]
+          "requirements": [
+            [
+              ">=",
+              "0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "0"]]
+          "requirements": [
+            [
+              ">=",
+              "0"
+            ]
+          ]
         }
       }
     ],
@@ -4288,7 +5268,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/paypal-sdk-rest-1.4.3.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9b77d0>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a52089c0>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -4299,17 +5279,17 @@
   },
   {
     "name": "pg",
-    "version": "1.2.1",
+    "version": "1.2.3",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [],
     "stub": {
-      "extension_dir": "/Users/am/.rvm/gems/ruby-2.5.3/extensions/x86_64-darwin-19/2.5.0/pg-1.2.1",
+      "extension_dir": "/Users/am/.rvm/gems/ruby-2.5.3/extensions/x86_64-darwin-19/2.5.0/pg-1.2.3",
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/pg-1.2.1.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92d068900>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/pg-1.2.3.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a7084fe8>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -4330,7 +5310,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/puma-3.12.1.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9af170>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51e0a60>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -4351,7 +5331,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/rainbow-3.0.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9974f8>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51da688>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -4362,7 +5342,7 @@
   },
   {
     "name": "redis",
-    "version": "4.1.3",
+    "version": "4.2.1",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [],
@@ -4371,8 +5351,50 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/redis-4.1.3.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9953b0>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/redis-4.2.1.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a520ae00>",
+      "name": "",
+      "spec": "",
+      "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
+      "gems_dir": "/Users/am/.rvm/gems/ruby-2.5.3/gems",
+      "default_gem": "false"
+    },
+    "source": "rubygems repository https://rubygems.org/ or installed locally"
+  },
+  {
+    "name": "regexp_parser",
+    "version": "1.7.1",
+    "platform": "ruby",
+    "spec_fetcher": "",
+    "dependencies": [],
+    "stub": {
+      "extension_dir": "",
+      "full_gem_path": "",
+      "gem_dir": "",
+      "ignored": "",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/regexp_parser-1.7.1.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51db470>",
+      "name": "",
+      "spec": "",
+      "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
+      "gems_dir": "/Users/am/.rvm/gems/ruby-2.5.3/gems",
+      "default_gem": "false"
+    },
+    "source": "rubygems repository https://rubygems.org/ or installed locally"
+  },
+  {
+    "name": "rexml",
+    "version": "3.2.4",
+    "platform": "ruby",
+    "spec_fetcher": "",
+    "dependencies": [],
+    "stub": {
+      "extension_dir": "",
+      "full_gem_path": "",
+      "gem_dir": "",
+      "ignored": "",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/rexml-3.2.4.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a7084570>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -4390,12 +5412,22 @@
       {
         "name": "addressable",
         "requirement": {
-          "requirements": [["~>", "2.5"]]
+          "requirements": [
+            [
+              "~>",
+              "2.5"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "2.5"]]
+          "requirements": [
+            [
+              "~>",
+              "2.5"
+            ]
+          ]
         }
       }
     ],
@@ -4405,7 +5437,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/rotp-5.1.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e98f500>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a50f5ba0>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -4416,7 +5448,7 @@
   },
   {
     "name": "rspec-support",
-    "version": "3.9.2",
+    "version": "3.9.3",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [],
@@ -4425,8 +5457,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/rspec-support-3.9.2.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e98f9b0>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/rspec-support-3.9.3.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51b2f98>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -4437,19 +5469,29 @@
   },
   {
     "name": "rspec-core",
-    "version": "3.9.1",
+    "version": "3.9.2",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [
       {
         "name": "rspec-support",
         "requirement": {
-          "requirements": [["~>", "3.9.1"]]
+          "requirements": [
+            [
+              "~>",
+              "3.9.3"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "3.9.1"]]
+          "requirements": [
+            [
+              "~>",
+              "3.9.3"
+            ]
+          ]
         }
       }
     ],
@@ -4458,8 +5500,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/rspec-core-3.9.1.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9b6628>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/rspec-core-3.9.2.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a707d810>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -4470,7 +5512,7 @@
   },
   {
     "name": "rspec-expectations",
-    "version": "3.9.0",
+    "version": "3.9.2",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [
@@ -4478,28 +5520,50 @@
         "name": "diff-lcs",
         "requirement": {
           "requirements": [
-            [">=", "1.2.0"],
-            ["<", "2.0"]
+            [
+              ">=",
+              "1.2.0"
+            ],
+            [
+              "<",
+              "2.0"
+            ]
           ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
           "requirements": [
-            [">=", "1.2.0"],
-            ["<", "2.0"]
+            [
+              ">=",
+              "1.2.0"
+            ],
+            [
+              "<",
+              "2.0"
+            ]
           ]
         }
       },
       {
         "name": "rspec-support",
         "requirement": {
-          "requirements": [["~>", "3.9.0"]]
+          "requirements": [
+            [
+              "~>",
+              "3.9.0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "3.9.0"]]
+          "requirements": [
+            [
+              "~>",
+              "3.9.0"
+            ]
+          ]
         }
       }
     ],
@@ -4508,8 +5572,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/rspec-expectations-3.9.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9b4738>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/rspec-expectations-3.9.2.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51e23d8>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -4528,28 +5592,50 @@
         "name": "diff-lcs",
         "requirement": {
           "requirements": [
-            [">=", "1.2.0"],
-            ["<", "2.0"]
+            [
+              ">=",
+              "1.2.0"
+            ],
+            [
+              "<",
+              "2.0"
+            ]
           ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
           "requirements": [
-            [">=", "1.2.0"],
-            ["<", "2.0"]
+            [
+              ">=",
+              "1.2.0"
+            ],
+            [
+              "<",
+              "2.0"
+            ]
           ]
         }
       },
       {
         "name": "rspec-support",
         "requirement": {
-          "requirements": [["~>", "3.9.0"]]
+          "requirements": [
+            [
+              "~>",
+              "3.9.0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "3.9.0"]]
+          "requirements": [
+            [
+              "~>",
+              "3.9.0"
+            ]
+          ]
         }
       }
     ],
@@ -4559,7 +5645,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/rspec-mocks-3.9.1.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e98d480>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51d0250>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -4577,34 +5663,64 @@
       {
         "name": "rspec-core",
         "requirement": {
-          "requirements": [["~>", "3.9.0"]]
+          "requirements": [
+            [
+              "~>",
+              "3.9.0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "3.9.0"]]
+          "requirements": [
+            [
+              "~>",
+              "3.9.0"
+            ]
+          ]
         }
       },
       {
         "name": "rspec-expectations",
         "requirement": {
-          "requirements": [["~>", "3.9.0"]]
+          "requirements": [
+            [
+              "~>",
+              "3.9.0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "3.9.0"]]
+          "requirements": [
+            [
+              "~>",
+              "3.9.0"
+            ]
+          ]
         }
       },
       {
         "name": "rspec-mocks",
         "requirement": {
-          "requirements": [["~>", "3.9.0"]]
+          "requirements": [
+            [
+              "~>",
+              "3.9.0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "3.9.0"]]
+          "requirements": [
+            [
+              "~>",
+              "3.9.0"
+            ]
+          ]
         }
       }
     ],
@@ -4614,7 +5730,50 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/rspec-3.9.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e995838>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a7077f78>",
+      "name": "",
+      "spec": "",
+      "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
+      "gems_dir": "/Users/am/.rvm/gems/ruby-2.5.3/gems",
+      "default_gem": "false"
+    },
+    "source": "rubygems repository https://rubygems.org/ or installed locally"
+  },
+  {
+    "name": "rubocop-ast",
+    "version": "0.1.0",
+    "platform": "ruby",
+    "spec_fetcher": "",
+    "dependencies": [
+      {
+        "name": "parser",
+        "requirement": {
+          "requirements": [
+            [
+              ">=",
+              "2.7.0.1"
+            ]
+          ]
+        },
+        "type": "runtime",
+        "prerelease": "false",
+        "version_requirements": {
+          "requirements": [
+            [
+              ">=",
+              "2.7.0.1"
+            ]
+          ]
+        }
+      }
+    ],
+    "stub": {
+      "extension_dir": "",
+      "full_gem_path": "",
+      "gem_dir": "",
+      "ignored": "",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/rubocop-ast-0.1.0.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51f9038>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -4635,7 +5794,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/ruby-progressbar-1.10.1.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9b7e60>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51f3f98>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -4646,7 +5805,7 @@
   },
   {
     "name": "unicode-display_width",
-    "version": "1.6.0",
+    "version": "1.7.0",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [],
@@ -4655,8 +5814,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/unicode-display_width-1.6.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e97dfd0>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/unicode-display_width-1.7.0.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51d9d50>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -4667,85 +5826,199 @@
   },
   {
     "name": "rubocop",
-    "version": "0.79.0",
+    "version": "0.88.0",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [
       {
-        "name": "jaro_winkler",
-        "requirement": {
-          "requirements": [["~>", "1.5.1"]]
-        },
-        "type": "runtime",
-        "prerelease": "false",
-        "version_requirements": {
-          "requirements": [["~>", "1.5.1"]]
-        }
-      },
-      {
         "name": "parallel",
         "requirement": {
-          "requirements": [["~>", "1.10"]]
+          "requirements": [
+            [
+              "~>",
+              "1.10"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "1.10"]]
+          "requirements": [
+            [
+              "~>",
+              "1.10"
+            ]
+          ]
         }
       },
       {
         "name": "parser",
         "requirement": {
-          "requirements": [[">=", "2.7.0.1"]]
+          "requirements": [
+            [
+              ">=",
+              "2.7.1.1"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "2.7.0.1"]]
+          "requirements": [
+            [
+              ">=",
+              "2.7.1.1"
+            ]
+          ]
         }
       },
       {
         "name": "rainbow",
         "requirement": {
           "requirements": [
-            [">=", "2.2.2"],
-            ["<", "4.0"]
+            [
+              ">=",
+              "2.2.2"
+            ],
+            [
+              "<",
+              "4.0"
+            ]
           ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
           "requirements": [
-            [">=", "2.2.2"],
-            ["<", "4.0"]
+            [
+              ">=",
+              "2.2.2"
+            ],
+            [
+              "<",
+              "4.0"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "regexp_parser",
+        "requirement": {
+          "requirements": [
+            [
+              ">=",
+              "1.7"
+            ]
+          ]
+        },
+        "type": "runtime",
+        "prerelease": "false",
+        "version_requirements": {
+          "requirements": [
+            [
+              ">=",
+              "1.7"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "rexml",
+        "requirement": {
+          "requirements": [
+            [
+              ">=",
+              "0"
+            ]
+          ]
+        },
+        "type": "runtime",
+        "prerelease": "false",
+        "version_requirements": {
+          "requirements": [
+            [
+              ">=",
+              "0"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "rubocop-ast",
+        "requirement": {
+          "requirements": [
+            [
+              ">=",
+              "0.1.0"
+            ],
+            [
+              "<",
+              "1.0"
+            ]
+          ]
+        },
+        "type": "runtime",
+        "prerelease": "false",
+        "version_requirements": {
+          "requirements": [
+            [
+              ">=",
+              "0.1.0"
+            ],
+            [
+              "<",
+              "1.0"
+            ]
           ]
         }
       },
       {
         "name": "ruby-progressbar",
         "requirement": {
-          "requirements": [["~>", "1.7"]]
-        },
-        "type": "runtime",
-        "prerelease": "false",
-        "version_requirements": {
-          "requirements": [["~>", "1.7"]]
-        }
-      },
-      {
-        "name": "unicode-display_width",
-        "requirement": {
           "requirements": [
-            [">=", "1.4.0"],
-            ["<", "1.7"]
+            [
+              "~>",
+              "1.7"
+            ]
           ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
           "requirements": [
-            [">=", "1.4.0"],
-            ["<", "1.7"]
+            [
+              "~>",
+              "1.7"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "unicode-display_width",
+        "requirement": {
+          "requirements": [
+            [
+              ">=",
+              "1.4.0"
+            ],
+            [
+              "<",
+              "2.0"
+            ]
+          ]
+        },
+        "type": "runtime",
+        "prerelease": "false",
+        "version_requirements": {
+          "requirements": [
+            [
+              ">=",
+              "1.4.0"
+            ],
+            [
+              "<",
+              "2.0"
+            ]
           ]
         }
       }
@@ -4755,8 +6028,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/rubocop-0.79.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e99f568>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/rubocop-0.88.0.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a5964b88>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -4767,29 +6040,39 @@
   },
   {
     "name": "ruby-debug-ide",
-    "version": "0.7.0",
+    "version": "0.7.2",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [
       {
         "name": "rake",
         "requirement": {
-          "requirements": [[">=", "0.8.1"]]
+          "requirements": [
+            [
+              ">=",
+              "0.8.1"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "0.8.1"]]
+          "requirements": [
+            [
+              ">=",
+              "0.8.1"
+            ]
+          ]
         }
       }
     ],
     "stub": {
-      "extension_dir": "/Users/am/.rvm/gems/ruby-2.5.3/extensions/x86_64-darwin-19/2.5.0/ruby-debug-ide-0.7.0",
+      "extension_dir": "/Users/am/.rvm/gems/ruby-2.5.3/extensions/x86_64-darwin-19/2.5.0/ruby-debug-ide-0.7.2",
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/ruby-debug-ide-0.7.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e826678>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/ruby-debug-ide-0.7.2.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a7084020>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -4800,7 +6083,7 @@
   },
   {
     "name": "ruby_http_client",
-    "version": "3.3.0",
+    "version": "3.5.0",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [],
@@ -4809,8 +6092,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/ruby_http_client-3.3.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92c0d0fb0>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/ruby_http_client-3.5.0.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a50eba38>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -4821,7 +6104,7 @@
   },
   {
     "name": "secure_headers",
-    "version": "6.1.1",
+    "version": "6.3.1",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [],
@@ -4830,8 +6113,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/secure_headers-6.1.1.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92c0a7bb0>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/secure_headers-6.3.1.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51d16c8>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -4842,19 +6125,29 @@
   },
   {
     "name": "sendgrid-ruby",
-    "version": "6.0.1",
+    "version": "6.3.2",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [
       {
         "name": "ruby_http_client",
         "requirement": {
-          "requirements": [["~>", "3.3.0"]]
+          "requirements": [
+            [
+              "~>",
+              "3.4"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "3.3.0"]]
+          "requirements": [
+            [
+              "~>",
+              "3.4"
+            ]
+          ]
         }
       }
     ],
@@ -4863,8 +6156,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/sendgrid-ruby-6.0.1.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9a6f48>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/sendgrid-ruby-6.3.2.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51bb738>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -4875,7 +6168,7 @@
   },
   {
     "name": "sequel",
-    "version": "5.28.0",
+    "version": "5.34.0",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [],
@@ -4884,8 +6177,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/sequel-5.28.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e99de98>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/sequel-5.34.0.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a5957ca8>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -4906,7 +6199,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/settingslogic-2.0.9.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e984f38>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51cbb88>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -4917,52 +6210,71 @@
   },
   {
     "name": "sidekiq",
-    "version": "6.0.4",
+    "version": "6.1.0",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [
       {
         "name": "connection_pool",
         "requirement": {
-          "requirements": [[">=", "2.2.2"]]
+          "requirements": [
+            [
+              ">=",
+              "2.2.2"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "2.2.2"]]
+          "requirements": [
+            [
+              ">=",
+              "2.2.2"
+            ]
+          ]
         }
       },
       {
         "name": "rack",
         "requirement": {
-          "requirements": [[">=", "2.0.0"]]
+          "requirements": [
+            [
+              "~>",
+              "2.0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "2.0.0"]]
-        }
-      },
-      {
-        "name": "rack-protection",
-        "requirement": {
-          "requirements": [[">=", "2.0.0"]]
-        },
-        "type": "runtime",
-        "prerelease": "false",
-        "version_requirements": {
-          "requirements": [[">=", "2.0.0"]]
+          "requirements": [
+            [
+              "~>",
+              "2.0"
+            ]
+          ]
         }
       },
       {
         "name": "redis",
         "requirement": {
-          "requirements": [[">=", "4.1.0"]]
+          "requirements": [
+            [
+              ">=",
+              "4.2.0"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "4.1.0"]]
+          "requirements": [
+            [
+              ">=",
+              "4.2.0"
+            ]
+          ]
         }
       }
     ],
@@ -4971,8 +6283,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/sidekiq-6.0.4.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9a4db0>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/sidekiq-6.1.0.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51bbbc0>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -4983,30 +6295,50 @@
   },
   {
     "name": "sidekiq-cron",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "platform": "ruby",
     "spec_fetcher": "",
     "dependencies": [
       {
         "name": "fugit",
         "requirement": {
-          "requirements": [["~>", "1.1"]]
+          "requirements": [
+            [
+              "~>",
+              "1.1"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [["~>", "1.1"]]
+          "requirements": [
+            [
+              "~>",
+              "1.1"
+            ]
+          ]
         }
       },
       {
         "name": "sidekiq",
         "requirement": {
-          "requirements": [[">=", "4.2.1"]]
+          "requirements": [
+            [
+              ">=",
+              "4.2.1"
+            ]
+          ]
         },
         "type": "runtime",
         "prerelease": "false",
         "version_requirements": {
-          "requirements": [[">=", "4.2.1"]]
+          "requirements": [
+            [
+              ">=",
+              "4.2.1"
+            ]
+          ]
         }
       }
     ],
@@ -5015,8 +6347,8 @@
       "full_gem_path": "",
       "gem_dir": "",
       "ignored": "",
-      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/sidekiq-cron-1.1.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e9b7d48>",
+      "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/sidekiq-cron-1.2.0.gemspec",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51d3400>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",
@@ -5037,7 +6369,7 @@
       "gem_dir": "",
       "ignored": "",
       "loaded_from": "/Users/am/.rvm/gems/ruby-2.5.3/specifications/state_machines-0.5.0.gemspec",
-      "data": "#<Gem::StubSpecification::StubLine:0x00007fb92e996170>",
+      "data": "#<Gem::StubSpecification::StubLine:0x00007fe3a51d83b0>",
       "name": "",
       "spec": "",
       "base_dir": "/Users/am/.rvm/gems/ruby-2.5.3",

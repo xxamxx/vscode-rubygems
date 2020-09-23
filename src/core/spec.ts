@@ -1,39 +1,47 @@
 import { Uri } from 'vscode';
+import { DEFAULT_PLATFORM, SpecType } from './constant';
 
 export interface SpecOption {
-    name: string;
-    version: string;
-    defaulted: boolean;
-    globally: boolean;
-    required: boolean;
-    dir: string;
-    path: string;
+  name: string;
+  version: string;
+  platform: string;
+  defaulted: boolean;
+  localness: boolean;
+  type: SpecType;
+  dir: string;
+  path: string;
 }
 
 export class Spec {
-    public readonly fullname: string;
-    public readonly defaulted: boolean = false;
-    public readonly globally: boolean = false;
-    public readonly required: boolean = false;
-    public readonly dir: string;
-    public readonly uri: Uri;
+  public readonly name: string;
+  public readonly version: string;
+  public readonly platform: string;
+  public readonly defaulted: boolean = false;
+  public readonly localness: boolean = false;
+  public readonly type: SpecType = SpecType.Requirement;
+  public readonly dir: string;
+  public readonly uri: Uri;
 
-    constructor(value: SpecOption) {
-        this.fullname = value.name;
-        this.defaulted = value.defaulted;
-        this.globally = value.globally;
-        this.required = value.required;
-        this.dir = value.dir;
-        this.uri = Uri.parse(value.path);
+  static fullname(name: string, version: string, platform: string | undefined): string{
+    if (platform === DEFAULT_PLATFORM || !platform) {
+      return `${name}-${version}`;
+    } else {
+      return `${name}-${version}-${platform}`;
     }
+  }
 
-    get name(){
-        const lastIndex = this.fullname.lastIndexOf('-');
-        return this.fullname.slice(0, lastIndex);
-    }
+  constructor(value: SpecOption) {
+    this.name = value.name;
+    this.version = value.version;
+    this.platform = value.platform;
+    this.defaulted = value.defaulted;
+    this.localness = value.localness;
+    this.type = value.type;
+    this.dir = value.dir;
+    this.uri = Uri.parse(value.path);
+  }
 
-    get version(){
-        const lastIndex = this.fullname.lastIndexOf('-');
-        return this.fullname.substring(lastIndex + 1);
-    }
+  get fullname(): string{
+    return Spec.fullname(this.name, this.version, this.platform);
+  }
 }
