@@ -4,7 +4,6 @@ dist/webviews/main.js
 emoji/**
 images/docs/**
 images/**/*.pdn
-node_modules/**
 src/**
 test/**
 *.map
