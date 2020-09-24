@@ -18,7 +18,9 @@ export class Container extends ADisposable {
 
     // 先获取当前打开的workspace，可缩窄查找范围
     // 没有打开的workspace，就查找所有的workspace
-    const workspaceFolders = workspaceFolder ? [workspaceFolder] : workspace.workspaceFolders as Readonly<WorkspaceFolder[]>;
+    const workspaceFolders = workspaceFolder
+      ? [workspaceFolder]
+      : (workspace.workspaceFolders as Readonly<WorkspaceFolder[]>);
     const uris = await Project.findProjectUris(workspaceFolders);
     if (uris.length === 0) return;
     if (uris.length === 1) return new Project(uris[0]);

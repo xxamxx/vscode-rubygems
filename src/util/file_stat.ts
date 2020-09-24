@@ -8,10 +8,10 @@ export class FileStat implements vscode.FileStat {
     return this.fsStat.isFile()
       ? vscode.FileType.File
       : this.fsStat.isDirectory()
-        ? vscode.FileType.Directory
-        : this.fsStat.isSymbolicLink()
-          ? vscode.FileType.SymbolicLink
-          : vscode.FileType.Unknown;
+      ? vscode.FileType.Directory
+      : this.fsStat.isSymbolicLink()
+      ? vscode.FileType.SymbolicLink
+      : vscode.FileType.Unknown;
   }
 
   get isFile(): boolean | undefined {

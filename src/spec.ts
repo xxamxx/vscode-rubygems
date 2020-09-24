@@ -22,7 +22,7 @@ export class Spec {
   public readonly dir: string;
   public readonly uri: Uri;
 
-  static fullname(name: string, version: string, platform: string | undefined): string{
+  static fullname(name: string, version: string, platform: string | undefined): string {
     if (platform === DEFAULT_PLATFORM || !platform) {
       return `${name}-${version}`;
     } else {
@@ -41,7 +41,7 @@ export class Spec {
     this.uri = Uri.parse(value.path);
   }
 
-  get fullname(): string{
+  get fullname(): string {
     return Spec.fullname(this.name, this.version, this.platform);
   }
 }

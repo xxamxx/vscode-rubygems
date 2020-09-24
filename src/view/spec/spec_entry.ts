@@ -11,9 +11,11 @@ export class SpecEntry extends GeneralEntry {
   }
 
   static sort(entries: SpecEntry[]): SpecEntry[] {
-    return _.chain(entries).sortBy((entry) => {
-      return (entry.spec.type === SpecType.Requirement ? '0' : '1') + entry.name 
-    }).value();
+    return _.chain(entries)
+      .sortBy(entry => {
+        return (entry.spec.type === SpecType.Requirement ? '0' : '1') + entry.name;
+      })
+      .value();
   }
 
   constructor(public readonly spec: Spec) {

@@ -30,9 +30,9 @@ export class SpecView extends ViewEmitter {
   setViewTitle(workspaceName: string | undefined, folderName: string) {
     let title = '';
 
-    if (!workspaceName) title = folderName
-    else if (workspaceName === folderName) title = workspaceName
-    else title = workspaceName + ' ‣ ' + folderName
+    if (!workspaceName) title = folderName;
+    else if (workspaceName === folderName) title = workspaceName;
+    else title = workspaceName + ' ‣ ' + folderName;
 
     this.view.title = title ? 'RUBYGEMS ∙ ' + title : 'RUBYGEMS';
   }
@@ -51,7 +51,7 @@ export class SpecView extends ViewEmitter {
     if (!this.project) return [];
 
     const specs = await this.project.getSpecs();
-    
+
     const entries: SpecEntry[] = specs.map(spec => new SpecEntry(spec));
     return SpecEntry.sort(entries);
   }

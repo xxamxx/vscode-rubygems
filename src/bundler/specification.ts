@@ -35,16 +35,12 @@ export class Specification implements Specification {
     this.spec_fetcher = payload.spec_fetcher;
     this.source = payload.source;
     this.dependencies = GemDependency.from_dependencies(payload.dependencies);
-    try {
-      this.stub = new StubSpecification(payload.stub);
-    } catch (error) {
-      console.error(error)
-    }
+    this.stub = new StubSpecification(payload.stub);
   }
 
   public toSpec() {
     const fullname = Spec.fullname(this.name, this.version, this.platform);
-    const localness = this.stub.gems_dir.includes('/vendor/bundle/')
+    const localness = this.stub.gems_dir.includes('/vendor/bundle/');
     return new Spec({
       name: this.name,
       version: this.version,

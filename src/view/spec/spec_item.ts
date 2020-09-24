@@ -5,14 +5,13 @@ import { LocalFlag, SpecType } from '../../constant';
 import { Spec } from '../../spec';
 
 interface SpecItemOptions {
-  uri: Uri, 
-  label: string, 
-  fullname: string,
-  description: string, 
-  tooltip: string, 
-  type: SpecType
+  uri: Uri;
+  label: string;
+  fullname: string;
+  description: string;
+  tooltip: string;
+  type: SpecType;
 }
-
 
 export class SpecItem extends TreeItem {
   public readonly type: SpecType = SpecType.Requirement;
@@ -22,17 +21,17 @@ export class SpecItem extends TreeItem {
     const label = spec.name;
     const description = spec.localness ? `${spec.version} - ${LocalFlag}` : spec.version;
     const tooltip = spec.fullname + (spec.localness ? ' - ' + LocalFlag : '');
-    
+
     return new SpecItem({
       uri: spec.uri,
       type: spec.type,
       fullname: spec.fullname,
       label,
       description,
-      tooltip,
+      tooltip
     });
   }
-  
+
   constructor(value: SpecItemOptions) {
     super(value.uri, TreeItemCollapsibleState.Collapsed);
     const svg = value.type === SpecType.Requirement ? 'spec.svg' : 'dependency.svg';

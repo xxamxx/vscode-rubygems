@@ -1,5 +1,5 @@
 import { exec } from 'child_process';
-import { basename, dirname, join as pjoin,resolve } from 'path';
+import { basename, dirname, join as pjoin, resolve } from 'path';
 import { RelativePattern, Uri, workspace, WorkspaceFolder } from 'vscode';
 import * as bundler from './bundler/index';
 import { Container } from './container';
@@ -27,7 +27,6 @@ export class Project {
     return UriComparer.equal(this.uri, other.uri);
   }
 
-  
   public async getSpecs(): Promise<Spec[]> {
     // const rubyPath = workspace.getConfiguration('rubygems.context').get('ruby', Project.RubyBinPath);
     const data = await Project.parseDependents(this.uri.path || '');
@@ -47,25 +46,24 @@ export class Project {
 
     return new Promise((resolve, reject) => {
       // /Users/am/.rvm/rubies/ruby-2.5.3/bin/ruby
-      exec(`bundle exec ${converter} ${gemfile} ${lockfile}`,
-           {
-             cwd: path,
-             windowsHide: true,
-             maxBuffer: 1024 * 1024 * 10
-           },
-           (err: any, stdout: string | Buffer, stderr: string | Buffer) => {
-             if (err) return reject(err);
-             if (stderr) return reject(stderr);
+      exec(
+        `bundle exec ${converter} ${gemfile} ${lockfile}`,
+        {
+          cwd: path,
+          windowsHide: true,
+          maxBuffer: 1024 * 1024 * 10
+        },
+        (err: any, stdout: string | Buffer, stderr: string | Buffer) => {
+          if (err) return reject(err);
+          if (stderr) return reject(stderr);
 
-             try {
-            
-               const data = JSON.parse(stdout.toString());
-               resolve(data);
-            
-             } catch (error) {
-               reject(error);
-             }
-           }
+          try {
+            const data = JSON.parse(stdout.toString());
+            resolve(data);
+          } catch (error) {
+            reject(error);
+          }
+        }
       );
     });
   }

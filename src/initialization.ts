@@ -37,8 +37,12 @@ export class Initialization extends ADisposable {
 
   async registerCommand() {
     // - 注册命令
-    this.disposable.push( commands.registerCommand('rubygems.explorer.refresh', () => this.container.specview.refresh()) );
-    this.disposable.push( commands.registerCommand('rubygems.explorer.openFile', async resource => window.showTextDocument(resource)) );
+    this.disposable.push(
+      commands.registerCommand('rubygems.explorer.refresh', () => this.container.specview.refresh())
+    );
+    this.disposable.push(
+      commands.registerCommand('rubygems.explorer.openFile', async resource => window.showTextDocument(resource))
+    );
     // this.disposable.push(commands.registerCommand('rubygems.explorer.openWebsite', url => this.openWebsite(url)));
     // this.disposable.push(commands.registerCommand('rubygems.explorer.selectLockfileFolder', () => this.pickLockfileFolder()));
   }
