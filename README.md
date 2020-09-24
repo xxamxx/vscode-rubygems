@@ -3,6 +3,8 @@
 The is Rubygems Explorer, it can browser rubygems source codes of your project by `Gemfile.lock`.
 the extension be to autoload all folder of containing `Gemfile.lock` in the workspaces.
 
+![explorer](./resources/screenshots/001.png "explorer")
+
 ## Features
 
 feature
