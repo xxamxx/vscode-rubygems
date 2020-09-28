@@ -1,27 +1,20 @@
 # Vscode-Rubygems README
 
 The is Rubygems Explorer, it can browser rubygems source codes of your project by `Gemfile.lock`.
-the extension be to autoload all folder of containing `Gemfile.lock` in the workspaces.
 
-![explorer](./resources/screenshots/001.png "explorer")
+![explorer](https://raw.githubusercontent.com/xxamxx/vscode-rubygems/develop/resources/screenshots/001.png "explorer")
 
 ## Features
 
 feature
 
-- explore RubyGems by `Gemfile.lock`
-- switch LockfileFolder which when the active editor has changed
-- support multi LockfileFolder
-- switch LockfileFolder on change document
-- switch LockfileFolder on change document
-  > Tip: LockfileFolder is a folder of containing `Gemfile.lock`.
+- Explore RubyGems by `Gemfile.lock`
+- Support Multi-root Workspaces
 
 ## Extension Settings
 
 This extension contributes the following settings:
 
-- `rubygems.explorer.selectLockfileFolder`: select LockfileFolder
-- `rubygems.explorer.refresh`: refresh current LockfileFolder
 
 ## Known Issues
 

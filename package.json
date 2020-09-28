@@ -2,7 +2,7 @@
   "name": "vscode-rubygems",
   "displayName": "Rubygems",
   "description": "The Rubygems Explorer can browser rubygems source codes of your project by `Gemfile.lock`",
-  "version": "0.1.0-beta",
+  "version": "1.0.1",
   "main": "./dist/extension.js",
   "license": "MIT",
   "engines": {
@@ -58,7 +58,7 @@
   },
   "icon": "resources/image/icon.png",
   "galleryBanner": {
-    "color": "#D34231",
+    "color": "#ffffff",
     "theme": "light"
   },
   "activationEvents": [
@@ -80,7 +80,7 @@
     "commands": [
       {
         "command": "rubygems.explorer.refresh",
-        "title": "Rubygems: Refresh Explorer"
+        "title": "Rubygems: reload current libraries and dependencies"
       }
     ],
     "menus": {},
@@ -88,12 +88,6 @@
       "type": "object",
       "title": "Rubygems",
       "properties": {
-        "rubygems.context.ruby": {
-          "type": "string",
-          "default": "ruby",
-          "markdownDescription": "Specifies ruby path of the extension executable",
-          "scope": "machine-overridable"
-        }
       }
     }
   }
