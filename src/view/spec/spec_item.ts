@@ -11,13 +11,14 @@ interface SpecItemOptions {
   description: string;
   tooltip: string;
   type: SpecType;
+  collapsibleState?: TreeItemCollapsibleState;
 }
 
 export class SpecItem extends TreeItem {
   public readonly type: SpecType = SpecType.Requirement;
   // command = { command: 'gemsExplorer.openOnRubyGems', title: "Open the Gem on RubyGems", arguments: [this.label], };
 
-  static from(spec: Spec): SpecItem {
+  static from(spec: Spec, collapsibleState: TreeItemCollapsibleState | undefined = undefined): SpecItem {
     const label = spec.name;
     const description = spec.localness ? `${spec.version} - ${LocalFlag}` : spec.version;
     const tooltip = spec.fullname + (spec.localness ? ' - ' + LocalFlag : '');
@@ -28,12 +29,13 @@ export class SpecItem extends TreeItem {
       fullname: spec.fullname,
       label,
       description,
-      tooltip
+      tooltip,
+      collapsibleState
     });
   }
 
   constructor(value: SpecItemOptions) {
-    super(value.uri, TreeItemCollapsibleState.Collapsed);
+    super(value.uri, value.collapsibleState || TreeItemCollapsibleState.Collapsed);
     const svg = value.type === SpecType.Requirement ? 'spec.svg' : 'dependency.svg';
     this.contextValue = value.fullname;
     this.label = value.label;

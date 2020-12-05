@@ -1,5 +1,5 @@
 import * as _ from 'lodash';
-import { TreeItem } from 'vscode';
+import { TreeItem, TreeItemCollapsibleState } from 'vscode';
 import { SpecType } from '../../constant';
 import { Spec } from '../../spec';
 import { GeneralEntry } from '../general/general_entry';
@@ -22,7 +22,7 @@ export class SpecEntry extends GeneralEntry {
     super(spec.uri, spec.name);
   }
 
-  getTreeItem(): TreeItem {
-    return SpecItem.from(this.spec);
+  getTreeItem(collapsibleState: TreeItemCollapsibleState | undefined = undefined): TreeItem {
+    return SpecItem.from(this.spec, collapsibleState);
   }
 }

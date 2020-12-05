@@ -1,5 +1,6 @@
 import * as _ from 'lodash';
-import { TreeItem, TreeView, window } from 'vscode';
+import { basename } from 'path';
+import { TreeItem, TreeView, window, TextDocument, TreeItemCollapsibleState } from 'vscode';
 import { ViewEmitter } from '../../definition/a_view_emitter';
 import { IEntry } from '../../definition/i_entry';
 import { Project } from '../../project';
@@ -7,6 +8,7 @@ import { SpecEntry } from './spec_entry';
 
 export class SpecView extends ViewEmitter {
   private view: TreeView<IEntry>;
+  private activedDocument: TextDocument | undefined;
 
   constructor(private project: Project | undefined) {
     super();
@@ -38,7 +40,8 @@ export class SpecView extends ViewEmitter {
   }
 
   async getTreeItem(element: IEntry): Promise<TreeItem> {
-    return element.getTreeItem();
+    const collapsibleState = this.shouldExpand(element) ? TreeItemCollapsibleState.Expanded : TreeItemCollapsibleState.Collapsed 
+    return (element as SpecEntry).getTreeItem(collapsibleState);
   }
 
   async getChildren(element?: IEntry): Promise<IEntry[]> {
@@ -54,5 +57,12 @@ export class SpecView extends ViewEmitter {
 
     const entries: SpecEntry[] = specs.map(spec => new SpecEntry(spec));
     return SpecEntry.sort(entries);
+  }
+
+  private shouldExpand(entry: IEntry, document: TextDocument | undefined = this.activedDocument){
+    if (document == undefined) return false 
+
+    const path = basename(document.uri.fsPath)
+    return path.includes(entry.uri.fsPath)
   }
 }
