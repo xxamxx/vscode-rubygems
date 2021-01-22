@@ -87,10 +87,15 @@ export class Initialization extends ADisposable {
 
   private async onTextDocumentActivated(document: TextDocument | undefined) {
     if (!document) return;
-    const workspaceFolder = workspace.getWorkspaceFolder(document.uri);
-    if (!workspaceFolder) return;
 
+    // set current gemfile project folder
+    const workspaceFolder = workspace.getWorkspaceFolder(document.uri);
+    if (workspaceFolder) {
     const uris = await Project.findProjectUris([workspaceFolder]);
     this.container.setCurrentFolder(uris[0]);
+  }
+    
+    // reveal entry by document
+    this.container.specview.reveal(document.uri)
   }
 }

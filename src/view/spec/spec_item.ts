@@ -18,7 +18,7 @@ export class SpecItem extends TreeItem {
   public readonly type: SpecType = SpecType.Requirement;
   // command = { command: 'gemsExplorer.openOnRubyGems', title: "Open the Gem on RubyGems", arguments: [this.label], };
 
-  static from(spec: Spec, collapsibleState: TreeItemCollapsibleState | undefined = undefined): SpecItem {
+  static from(spec: Spec): SpecItem {
     const label = spec.name;
     const description = spec.localness ? `${spec.version} - ${LocalFlag}` : spec.version;
     const tooltip = spec.fullname + (spec.localness ? ' - ' + LocalFlag : '');
@@ -30,7 +30,6 @@ export class SpecItem extends TreeItem {
       label,
       description,
       tooltip,
-      collapsibleState
     });
   }
 

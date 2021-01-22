@@ -1,13 +1,17 @@
 import { exec } from 'child_process';
-import { basename, dirname, join as pjoin, resolve } from 'path';
+import { basename, dirname, join as pjoin } from 'path';
 import { RelativePattern, Uri, workspace, WorkspaceFolder } from 'vscode';
 import * as bundler from './bundler/index';
 import { Container } from './container';
 import { Spec } from './spec';
 import { UriComparer } from './util/comparer';
+import { SpecEntry } from './view/spec/spec_entry';
+import { Path } from './util/path';
 
 export class Project {
   static readonly RubyBinPath: string = pjoin(process.env.GEM_HOME || '', '/bin/ruby');
+  private entries: SpecEntry[] = []
+  private specs: Spec[] = []
 
   constructor(public uri: Uri) {}
 
@@ -27,12 +31,25 @@ export class Project {
     return UriComparer.equal(this.uri, other.uri);
   }
 
-  public async getSpecs(): Promise<Spec[]> {
+  public findSpecEntry(path: string): SpecEntry | undefined{
+    return this.entries.find(entry => Path.contain(entry.uri.fsPath, path))
+  }
+
+  public async getSpecEntries(options = {cache: true}): Promise<SpecEntry[]>{
+    if(options.cache && this.entries.length) return this.entries
+
+    const specs = await this.getSpecs();
+    return this.entries = specs.map(spec => new SpecEntry(spec));
+  }
+
+  public async getSpecs(options = {cache: true}): Promise<Spec[]> {
+    if(options.cache && this.specs.length) return this.specs
+    
     // const rubyPath = workspace.getConfiguration('rubygems.context').get('ruby', Project.RubyBinPath);
     const data = await Project.parseDependents(this.uri.path || '');
     const specifications = bundler.Specification.from_specifications(data);
 
-    return specifications.map(specification => specification.toSpec());
+    return this.specs = specifications.map(specification => specification.toSpec());
   }
 
   private static async parseDependents(path: string): Promise<any[]> {

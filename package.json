@@ -30,9 +30,9 @@
   "devDependencies": {
     "@types/lodash": "^4.14.158",
     "@types/mkdirp": "^0.5.2",
-    "@types/rimraf": "^2.0.4",
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.12.51",
+    "@types/rimraf": "^2.0.4",
     "@types/vscode": "^1.47.0",
     "@typescript-eslint/eslint-plugin": "^4.1.1",
     "@typescript-eslint/parser": "^4.1.1",
@@ -41,6 +41,7 @@
     "mocha": "^6.2.3",
     "prettier": "^2.1.2",
     "typescript": "^3.9.7",
+    "vsce": "^1.81.1",
     "vscode-test": "^1.4.0"
   },
   "publisher": "xxamxx",
@@ -87,8 +88,7 @@
     "configuration": {
       "type": "object",
       "title": "Rubygems",
-      "properties": {
-      }
+      "properties": {}
     }
   }
 }
