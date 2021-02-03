@@ -11,6 +11,7 @@ import {
 import { Container } from './container';
 import { ADisposable } from './definition/a_disposable';
 import { Project } from './project';
+import Storage from './storage';
 
 export class Initialization extends ADisposable {
   private static singleton: Initialization;
@@ -18,6 +19,7 @@ export class Initialization extends ADisposable {
   static async init(context: ExtensionContext) {
     if (this.singleton) return this.singleton;
 
+    Storage.initState(context)
     const container = await Container.init(context);
     const initialization = new Initialization(container);
     await initialization.registerAll();
