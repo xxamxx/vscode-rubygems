@@ -43,8 +43,14 @@ export class Initialization extends ADisposable {
     this.disposable.push(
       commands.registerCommand('rubygems.explorer.openFile', async resource => window.showTextDocument(resource))
     );
-    // this.disposable.push(commands.registerCommand('rubygems.explorer.openWebsite', url => this.openWebsite(url)));
-    // this.disposable.push(commands.registerCommand('rubygems.explorer.selectLockfileFolder', () => this.pickLockfileFolder()));
+    
+    // this.disposable.push(commands.registerCommand('rubygems.explorer.search', url => this.openWebsite(url)));
+    // this.disposable.push(commands.registerCommand('rubygems.explorer.filter-reqs', url => this.openWebsite(url)));
+    // this.disposable.push(commands.registerCommand('rubygems.explorer.filter-deps', url => this.openWebsite(url)));
+    // this.disposable.push(commands.registerCommand('rubygems.explorer.focus', url => this.openWebsite(url)));
+    // this.disposable.push(commands.registerCommand('rubygems.explorer.all-collapsed', url => this.openWebsite(url)));
+    // this.disposable.push(commands.registerCommand('rubygems.explorer.open-rubygems-website', url => this.openWebsite(url)));
+    // // this.disposable.push(commands.registerCommand('rubygems.explorer.selectLockfileFolder', () => this.pickLockfileFolder()));
   }
 
   async registerWatcher() {
@@ -84,7 +90,7 @@ export class Initialization extends ADisposable {
     if (!editor?.document) return;
     this.onTextDocumentActivated(editor.document);
   }
-
+  
   private async onTextDocumentActivated(document: TextDocument | undefined) {
     if (!document) return;
     const workspaceFolder = workspace.getWorkspaceFolder(document.uri);
