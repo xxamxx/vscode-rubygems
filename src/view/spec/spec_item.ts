@@ -14,6 +14,7 @@ interface SpecItemOptions {
 }
 
 export class SpecItem extends TreeItem {
+  public readonly contextValue: string = 'rubygems.specitem';
   public readonly type: SpecType = SpecType.Requirement;
   // command = { command: 'gemsExplorer.openOnRubyGems', title: "Open the Gem on RubyGems", arguments: [this.label], };
 
@@ -56,7 +57,7 @@ export class SpecItem extends TreeItem {
     if (!url) return;
 
     return {
-      command: 'rubygems.explorer.openWebsite',
+      command: 'rubygems.command.open-rubygems-website',
       title: 'Open Gem On Website',
       arguments: [url.replace('${name}', this.label || '')]
     };

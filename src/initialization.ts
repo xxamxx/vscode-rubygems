@@ -38,18 +38,16 @@ export class Initialization extends ADisposable {
   async registerCommand() {
     // - 注册命令
     this.disposable.push(
-      commands.registerCommand('rubygems.explorer.refresh', () => this.container.specview.refresh())
-    );
-    this.disposable.push(
-      commands.registerCommand('rubygems.explorer.openFile', async resource => window.showTextDocument(resource))
+      commands.registerCommand('rubygems.command.refresh', () => this.container.specview.refresh()),
+      commands.registerCommand('rubygems.command.openFile', async resource => window.showTextDocument(resource)),
+      commands.registerCommand('rubygems.command.open-rubygems-website', url => this.openWebsite(url)),
+      commands.registerCommand('rubygems.command.search', (...args) => console.log(args)),
+      commands.registerCommand('rubygems.command.filter-reqs', (...args) => console.log(args)),
+      commands.registerCommand('rubygems.command.filter-deps', (...args) => console.log(args)),
+      commands.registerCommand('rubygems.command.focus', (...args) => console.log(args)),
+      commands.registerCommand('rubygems.command.all-collapsed', (...args) => console.log(args)),
     );
     
-    // this.disposable.push(commands.registerCommand('rubygems.explorer.search', url => this.openWebsite(url)));
-    // this.disposable.push(commands.registerCommand('rubygems.explorer.filter-reqs', url => this.openWebsite(url)));
-    // this.disposable.push(commands.registerCommand('rubygems.explorer.filter-deps', url => this.openWebsite(url)));
-    // this.disposable.push(commands.registerCommand('rubygems.explorer.focus', url => this.openWebsite(url)));
-    // this.disposable.push(commands.registerCommand('rubygems.explorer.all-collapsed', url => this.openWebsite(url)));
-    // this.disposable.push(commands.registerCommand('rubygems.explorer.open-rubygems-website', url => this.openWebsite(url)));
     // // this.disposable.push(commands.registerCommand('rubygems.explorer.selectLockfileFolder', () => this.pickLockfileFolder()));
   }
 
@@ -75,7 +73,6 @@ export class Initialization extends ADisposable {
   }
 
   private async openWebsite(url: string): Promise<void> {
-    console.debug('open website', url);
     await open(url);
   }
 

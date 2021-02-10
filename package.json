@@ -80,56 +80,71 @@
     "menus": {
       "view/title": [
         {
-          "command": "rubygems.explorer.refresh",
-          "when": "view == rubygems.explorer",
-          "alt": "Refresh Explorer"
+          "alt": "rubygems.command.refresh"
         },
         {
-          "command": "rubygems.explorer.all-collapsed",
           "when": "view == rubygems.explorer",
-          "alt": "Collapse Folders in Explorer",
+          "alt": "rubygems.command.all-collapsed",
           "group": "navigation"
         },
         {
-          "command": "rubygems.explorer.focus",
           "when": "view == rubygems.explorer",
-          "alt": "Focus Item in Explorer",
+          "alt": "rubygems.command.focus",
           "group": "navigation"
         }
       ],
       "view/item/context": [
         {
-          "command": "rubygems.explorer.open-rubygems-website",
-          "when": "view == rubygems.explorer && viewItem == dependency",
-          "alt": "Open Rubygems on Website",
+          "alt": "rubygems.command.open-rubygems-website",
           "group": "inline"
         },
         {
-          "command": "rubygems.explorer.filter-deps",
-          "when": "view == rubygems.explorer && viewItem == dependency",
-          "alt": "Filter Dependencies in Explorer",
+          "alt": "rubygems.command.filter-deps",
+          "when": "view == rubygems.explorer && viewItem == rubygems.specitem && listHasSelectionOrFocus",
           "group": "inline"
         },
         {
-          "command": "rubygems.explorer.filter-reqs",
-          "when": "view == rubygems.explorer && viewItem == dependency",
-          "alt": "Filter Requirements in Explorer",
+          "alt": "rubygems.command.filter-reqs",
+          "when": "view == rubygems.explorer && viewItem == rubygems.specitem && listHasSelectionOrFocus",
           "group": "inline"
         }
       ]
     },
     "commands": [
       {
-        "command": "rubygems.explorer.refresh",
+        "command": "rubygems.command.refresh",
+        "icon": "${refresh}",
         "title": "Rubygems: reload current libraries and dependencies"
       },
       {
-        "command": "rubygems.explorer.all-collapsed",
+        "command": "rubygems.command.all-collapsed",
+        "icon": "${collapse-all}",
         "title": "Rubygems: determines all items is collapsed"
       },
       {
-        "command": "rubygems.explorer.search",
+        "command": "rubygems.command.focus",
+        "icon": "${record}",
+        "title": "Rubygems: focus rubygems item "
+      },
+      {
+        "command": "rubygems.command.filter-deps",
+        "icon": "${list-filter}",
         "title": "Rubygems: search rubygems on the view"
+      },
+      {
+        "command": "rubygems.command.filter-reqs",
+        "icon": "${list-filter}",
+        "title": "Rubygems: search rubygems on the view"
+      },
+      {
+        "command": "rubygems.command.search",
+        "icon": "${list-filter}",
+        "title": "Rubygems: search rubygems on the view"
+      },
+      {
+        "command": "rubygems.command.open-rubygems-website",
+        "icon": "${live-share}",
+        "title": "Rubygems: open rubygems on website"
       }
     ],
     "configuration": {
