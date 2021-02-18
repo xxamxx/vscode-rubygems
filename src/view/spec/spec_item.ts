@@ -11,6 +11,7 @@ interface SpecItemOptions {
   description: string;
   tooltip: string;
   type: SpecType;
+  collapsibleState?: TreeItemCollapsibleState;
 }
 
 export class SpecItem extends TreeItem {
@@ -28,12 +29,12 @@ export class SpecItem extends TreeItem {
       fullname: spec.fullname,
       label,
       description,
-      tooltip
+      tooltip,
     });
   }
 
   constructor(value: SpecItemOptions) {
-    super(value.uri, TreeItemCollapsibleState.Collapsed);
+    super(value.uri, value.collapsibleState || TreeItemCollapsibleState.Collapsed);
     const svg = value.type === SpecType.Requirement ? 'spec.svg' : 'dependency.svg';
     this.contextValue = value.fullname;
     this.label = value.label;

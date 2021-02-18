@@ -1,12 +1,15 @@
 import * as _ from 'lodash';
-import { TreeItem, TreeView, window } from 'vscode';
+import { basename } from 'path';
+import { TreeItem, TreeView, window, FileType, Uri } from 'vscode';
 import { ViewEmitter } from '../../definition/a_view_emitter';
 import { IEntry } from '../../definition/i_entry';
 import { Project } from '../../project';
+import { Path } from '../../util';
+import { GeneralEntry } from '../general/general_entry';
 import { SpecEntry } from './spec_entry';
 
 export class SpecView extends ViewEmitter {
-  private view: TreeView<IEntry>;
+  public view: TreeView<IEntry>;
 
   constructor(private project: Project | undefined) {
     super();
@@ -47,12 +50,27 @@ export class SpecView extends ViewEmitter {
     return this.getRoot();
   }
 
+  async getParent(element: GeneralEntry): Promise<GeneralEntry | undefined>{
+    const specs = await this.project?.getSpecs();
+    if (!specs || specs.length <= 0) return undefined;
+
+    const parent = element.getParent(specs);
+    return parent
+  }
+
   async getRoot(): Promise<IEntry[]> {
     if (!this.project) return [];
 
-    const specs = await this.project.getSpecs();
-
-    const entries: SpecEntry[] = specs.map(spec => new SpecEntry(spec));
+    const entries = await this.project.getSpecEntries();
     return SpecEntry.sort(entries);
+  }
+
+  async reveal(uri: Uri){
+    const entries = await this.project?.getSpecEntries();
+    const hasSpecEntry = !!entries?.find(entry => Path.contain(entry.uri.path, uri.path))
+    if (!hasSpecEntry) return
+    
+    const entry = new GeneralEntry(uri, basename(uri.path), FileType.File);
+    await this.view.reveal(entry, {select: true, focus: true, expand: 3})
   }
 }
