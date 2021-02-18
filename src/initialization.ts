@@ -1,4 +1,4 @@
-import * as open from 'open';
+
 import {
   commands,
   ConfigurationChangeEvent,
@@ -11,6 +11,7 @@ import {
 import { Container } from './container';
 import { ADisposable } from './definition/a_disposable';
 import { Project } from './project';
+import { SpecEntry } from './view/spec/spec_entry';
 
 export class Initialization extends ADisposable {
   private static singleton: Initialization;
@@ -40,7 +41,7 @@ export class Initialization extends ADisposable {
     this.disposable.push(
       commands.registerCommand('rubygems.command.refresh', () => this.container.specview.refresh()),
       commands.registerCommand('rubygems.command.open-file', async resource => window.showTextDocument(resource)),
-      commands.registerCommand('rubygems.command.open-rubygems-website', url => this.openWebsite(url)),
+      commands.registerCommand('rubygems.command.open-rubygems-website', async (entry: SpecEntry) => (entry && entry.openWebsite())),
       commands.registerCommand('rubygems.command.search', (...args) => console.log(args)),
       commands.registerCommand('rubygems.command.filter-reqs', (...args) => console.log(args)),
       commands.registerCommand('rubygems.command.filter-deps', (...args) => console.log(args)),
@@ -72,10 +73,6 @@ export class Initialization extends ADisposable {
     this.disposable.push(window.registerTreeDataProvider('rubygems.explorer', this.container.specview));
   }
 
-  private async openWebsite(url: string): Promise<void> {
-    await open(url);
-  }
-
   private async onConfigurationChanged(e: ConfigurationChangeEvent) {
     if (e.affectsConfiguration('rubygems.context.ruby')) {
       this.container.refresh();
@@ -83,7 +80,7 @@ export class Initialization extends ADisposable {
   }
 
   private async onTextEditorActiveChanged(editor: TextEditor | undefined) {
-    console.debug('open ', editor?.document.uri.path);
+    console.debug('open document', editor?.document.uri.path);
     if (!editor?.document) return;
     this.onTextDocumentActivated(editor.document);
   }

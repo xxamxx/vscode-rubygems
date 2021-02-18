@@ -1,5 +1,5 @@
 import * as _ from 'lodash';
-import { Command, TreeItem, TreeItemCollapsibleState, Uri, workspace } from 'vscode';
+import { TreeItem, TreeItemCollapsibleState, Uri } from 'vscode';
 import { Container } from '../../container';
 import { LocalFlag, SpecType } from '../../constant';
 import { Spec } from '../../spec';
@@ -44,20 +44,4 @@ export class SpecItem extends TreeItem {
     };
   }
 
-  // "rubygems.explore.website": {
-  //     "type": "string",
-  //     "default": "https://rubygems.org/gems/${name}",
-  //     "markdownDescription": "Open this gem in the website. ps: be replace `${name}`",
-  //     "scope": "resource";
-  // },
-  get command(): Command | undefined {
-    const url: string | undefined = workspace.getConfiguration('rubygems.explore').get('website');
-    if (!url) return;
-
-    return {
-      command: 'rubygems.command.open-rubygems-website',
-      title: 'Open Gem On Website',
-      arguments: [url.replace('${name}', this.label || '')]
-    };
-  }
 }
