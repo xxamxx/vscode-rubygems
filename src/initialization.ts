@@ -39,7 +39,7 @@ export class Initialization extends ADisposable {
     // - 注册命令
     this.disposable.push(
       commands.registerCommand('rubygems.command.refresh', () => this.container.specview.refresh()),
-      commands.registerCommand('rubygems.command.openFile', async resource => window.showTextDocument(resource)),
+      commands.registerCommand('rubygems.command.open-file', async resource => window.showTextDocument(resource)),
       commands.registerCommand('rubygems.command.open-rubygems-website', url => this.openWebsite(url)),
       commands.registerCommand('rubygems.command.search', (...args) => console.log(args)),
       commands.registerCommand('rubygems.command.filter-reqs', (...args) => console.log(args)),

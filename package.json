@@ -1,7 +1,7 @@
 {
   "name": "vscode-rubygems",
   "displayName": "Rubygems",
-  "description": "The Rubygems Explorer can browser rubygems source codes of your project by `Gemfile.lock`",
+  "description": "The Rubygems Explorer can browser RubyGems source codes of your project by `Gemfile.lock`",
   "version": "1.0.1",
   "main": "./dist/extension.js",
   "license": "MIT",
@@ -80,32 +80,34 @@
     "menus": {
       "view/title": [
         {
-          "alt": "rubygems.command.refresh"
+          "command": "rubygems.command.refresh",
+          "when": "view == rubygems.explorer"
         },
         {
+          "command": "rubygems.command.all-collapsed",
           "when": "view == rubygems.explorer",
-          "alt": "rubygems.command.all-collapsed",
           "group": "navigation"
         },
         {
+          "command": "rubygems.command.focus",
           "when": "view == rubygems.explorer",
-          "alt": "rubygems.command.focus",
           "group": "navigation"
         }
       ],
       "view/item/context": [
         {
-          "alt": "rubygems.command.open-rubygems-website",
+          "command": "rubygems.command.open-rubygems-website",
+          "when": "view == rubygems.explorer && viewItem == rubygems.explorer.specitem",
           "group": "inline"
         },
         {
-          "alt": "rubygems.command.filter-deps",
-          "when": "view == rubygems.explorer && viewItem == rubygems.specitem && listHasSelectionOrFocus",
+          "command": "rubygems.command.filter-deps",
+          "when": "view == rubygems.explorer && viewItem == rubygems.explorer.specitem",
           "group": "inline"
         },
         {
-          "alt": "rubygems.command.filter-reqs",
-          "when": "view == rubygems.explorer && viewItem == rubygems.specitem && listHasSelectionOrFocus",
+          "command": "rubygems.command.filter-reqs",
+          "when": "view == rubygems.explorer && viewItem == rubygems.explorer.specitem",
           "group": "inline"
         }
       ]
@@ -113,38 +115,45 @@
     "commands": [
       {
         "command": "rubygems.command.refresh",
-        "icon": "${refresh}",
-        "title": "Rubygems: reload current libraries and dependencies"
+        "icon": "$(refresh)",
+        "category": "Rubygems",
+        "title": "Reload RubyGems"
       },
       {
         "command": "rubygems.command.all-collapsed",
-        "icon": "${collapse-all}",
-        "title": "Rubygems: determines all items is collapsed"
+        "icon": "$(collapse-all)",
+        "category": "Rubygems",
+        "title": "Collapsed"
       },
       {
         "command": "rubygems.command.focus",
-        "icon": "${record}",
-        "title": "Rubygems: focus rubygems item "
+        "icon": "$(record)",
+        "category": "Rubygems",
+        "title": "Focus"
       },
       {
         "command": "rubygems.command.filter-deps",
-        "icon": "${list-filter}",
-        "title": "Rubygems: search rubygems on the view"
+        "icon": "$(filter)",
+        "category": "Rubygems",
+        "title": "Filter Dependentcies"
       },
       {
         "command": "rubygems.command.filter-reqs",
-        "icon": "${list-filter}",
-        "title": "Rubygems: search rubygems on the view"
+        "icon": "$(list-filter)",
+        "category": "Rubygems",
+        "title": "Filter Requirements"
       },
       {
         "command": "rubygems.command.search",
-        "icon": "${list-filter}",
-        "title": "Rubygems: search rubygems on the view"
+        "icon": "$(search)",
+        "category": "Rubygems",
+        "title": "Search"
       },
       {
         "command": "rubygems.command.open-rubygems-website",
-        "icon": "${live-share}",
-        "title": "Rubygems: open rubygems on website"
+        "icon": "$(link-external)",
+        "category": "Rubygems",
+        "title": "Open RubyGems Website"
       }
     ],
     "configuration": {

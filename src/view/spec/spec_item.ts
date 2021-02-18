@@ -14,9 +14,8 @@ interface SpecItemOptions {
 }
 
 export class SpecItem extends TreeItem {
-  public readonly contextValue: string = 'rubygems.specitem';
+  public readonly contextValue: string = 'rubygems.explorer.specitem';
   public readonly type: SpecType = SpecType.Requirement;
-  // command = { command: 'gemsExplorer.openOnRubyGems', title: "Open the Gem on RubyGems", arguments: [this.label], };
 
   static from(spec: Spec): SpecItem {
     const label = spec.name;
@@ -36,7 +35,6 @@ export class SpecItem extends TreeItem {
   constructor(value: SpecItemOptions) {
     super(value.uri, TreeItemCollapsibleState.Collapsed);
     const svg = value.type === SpecType.Requirement ? 'spec.svg' : 'dependency.svg';
-    this.contextValue = value.fullname;
     this.label = value.label;
     this.description = value.description;
     this.tooltip = value.tooltip;
