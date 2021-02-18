@@ -160,6 +160,12 @@
       "type": "object",
       "title": "Rubygems",
       "properties": {
+        "rubygems.other.website": {
+					"type": "string",
+					"default": "https://rubygems.org/search?query=${name}",
+					"markdownDescription": "The Ruby community’s gem hosting service.",
+					"scope": "resource"
+				}
       }
     }
   }
