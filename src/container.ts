@@ -1,8 +1,10 @@
+
 import { ExtensionContext, Uri, window, workspace, WorkspaceFolder } from 'vscode';
 import { ADisposable } from './definition/a_disposable';
 import { Project } from './project';
 import { Utils } from './util';
 import { UriComparer } from './util/comparer';
+import { SpecItem } from './view/spec/spec_item';
 import { SpecView } from './view/spec/spec_view';
 
 export class Container extends ADisposable {

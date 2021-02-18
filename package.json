@@ -1,7 +1,7 @@
 {
   "name": "vscode-rubygems",
   "displayName": "Rubygems",
-  "description": "The Rubygems Explorer can browser rubygems source codes of your project by `Gemfile.lock`",
+  "description": "The Rubygems Explorer can browser RubyGems source codes of your project by `Gemfile.lock`",
   "version": "1.0.1",
   "main": "./dist/extension.js",
   "license": "MIT",
@@ -78,17 +78,96 @@
         }
       ]
     },
+    "menus": {
+      "view/title": [
+        {
+          "command": "rubygems.command.refresh",
+          "when": "view == rubygems.explorer"
+        },
+        {
+          "command": "rubygems.command.all-collapsed",
+          "when": "view == rubygems.explorer",
+          "group": "navigation"
+        },
+        {
+          "command": "rubygems.command.focus",
+          "when": "view == rubygems.explorer",
+          "group": "navigation"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "rubygems.command.open-rubygems-website",
+          "when": "view == rubygems.explorer && viewItem == rubygems.explorer.specitem",
+          "group": "inline"
+        },
+        {
+          "command": "rubygems.command.filter-deps",
+          "when": "view == rubygems.explorer && viewItem == rubygems.explorer.specitem",
+          "group": "inline"
+        },
+        {
+          "command": "rubygems.command.filter-reqs",
+          "when": "view == rubygems.explorer && viewItem == rubygems.explorer.specitem",
+          "group": "inline"
+        }
+      ]
+    },
     "commands": [
       {
-        "command": "rubygems.explorer.refresh",
-        "title": "Rubygems: reload current libraries and dependencies"
+        "command": "rubygems.command.refresh",
+        "icon": "$(refresh)",
+        "category": "Rubygems",
+        "title": "Reload RubyGems"
+      },
+      {
+        "command": "rubygems.command.all-collapsed",
+        "icon": "$(collapse-all)",
+        "category": "Rubygems",
+        "title": "Collapsed"
+      },
+      {
+        "command": "rubygems.command.focus",
+        "icon": "$(record)",
+        "category": "Rubygems",
+        "title": "Focus"
+      },
+      {
+        "command": "rubygems.command.filter-deps",
+        "icon": "$(filter)",
+        "category": "Rubygems",
+        "title": "Filter Dependentcies"
+      },
+      {
+        "command": "rubygems.command.filter-reqs",
+        "icon": "$(list-filter)",
+        "category": "Rubygems",
+        "title": "Filter Requirements"
+      },
+      {
+        "command": "rubygems.command.search",
+        "icon": "$(search)",
+        "category": "Rubygems",
+        "title": "Search"
+      },
+      {
+        "command": "rubygems.command.open-rubygems-website",
+        "icon": "$(link-external)",
+        "category": "Rubygems",
+        "title": "Open RubyGems Website"
       }
     ],
-    "menus": {},
     "configuration": {
       "type": "object",
       "title": "Rubygems",
-      "properties": {}
+      "properties": {
+        "rubygems.other.website": {
+					"type": "string",
+					"default": "https://rubygems.org/search?query=${name}",
+					"markdownDescription": "The Ruby community’s gem hosting service.",
+					"scope": "resource"
+				}
+      }
     }
   }
 }

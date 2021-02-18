@@ -16,7 +16,7 @@
       "skipFiles": ["<node_internals>/**", "**/node_modules/**", "**/resources/app/out/vs/**"],
       "smartStep": true,
       "sourceMaps": true,
-      "preLaunchTask": "npm: watch"
+      "preLaunchTask": "build"
     },
     {
       "name": "Launch Rubygems (Sandbox)",

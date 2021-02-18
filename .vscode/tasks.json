@@ -17,8 +17,9 @@
   },
   "tasks": [
     {
+      "label": "build",
       "type": "npm",
-      "script": "build",
+      "script": "compile",
       "group": "build"
     },
     {
