@@ -1,13 +1,13 @@
 import * as _ from 'lodash';
 import { basename } from 'path';
 import { TreeItem, TreeView, window, FileType, Uri } from 'vscode';
-import { ViewEmitter } from '../../definition/a_view_emitter';
-import { IEntry } from '../../definition/i_entry';
+import { ViewEmitter } from '../../definition/a-view-emitter';
+import { IEntry } from '../../definition/i-entry';
 import { Project } from '../../project';
 import { UriComparer } from '../../util/comparer';
 import { choicePriorityFileUri } from '../../util/gem-util';
-import { GeneralEntry } from '../general/general_entry';
-import { SpecEntry } from './spec_entry';
+import { GeneralEntry } from '../general/general-entry';
+import { SpecEntry } from './spec-entry';
 
 export class SpecView extends ViewEmitter {
   public view: TreeView<IEntry>;

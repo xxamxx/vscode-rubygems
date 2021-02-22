@@ -5,7 +5,7 @@ import * as bundler from './bundler/index';
 import { Container } from './container';
 import { Spec } from './spec';
 import { UriComparer } from './util/comparer';
-import { SpecEntry } from './view/spec/spec_entry';
+import { SpecEntry } from './view/spec/spec-entry';
 import { Filepath } from './util/filepath';
 import { DefineFile } from './constant';
 
@@ -58,9 +58,9 @@ export class Project {
     const lockfile = pjoin(path, DefineFile.Lockfile);
     const converter = Container.context.asAbsolutePath('h11s/lockfile_converter.rb');
 
-    console.debug('gemfilePath', gemfile);
-    console.debug('lockfilePath', lockfile);
-    console.debug('h11sDirPath', converter);
+    console.debug('Gemfile Path:', gemfile);
+    console.debug('Lockfile Path:', lockfile);
+    console.debug('H11s Dir Path:', converter);
 
     return new Promise((resolve, reject) => {
       // /Users/am/.rvm/rubies/ruby-2.5.3/bin/ruby

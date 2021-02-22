@@ -1,11 +1,11 @@
 
 import _ = require('lodash');
 import { ExtensionContext, Uri, workspace, WorkspaceFolder } from 'vscode';
-import { ADisposable } from './definition/a_disposable';
+import { ADisposable } from './definition/a-disposable';
 import { Project } from './project';
 import { Utils } from './util';
 import { getSameActiveTextEditor, getSamedirActiveTextEditor, getCurrentTextEditors } from './util/vscode-util';
-import { SpecView } from './view/spec/spec_view';
+import { SpecView } from './view/spec/spec-view';
 
 export class Container extends ADisposable {
   private static singleton: Container;

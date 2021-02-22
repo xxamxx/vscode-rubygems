@@ -1,3 +1,3 @@
 export * from './specification';
-export * from './stub_specification';
-export * from './gem_dependency';
+export * from './stub-specification';
+export * from './gem-dependency';

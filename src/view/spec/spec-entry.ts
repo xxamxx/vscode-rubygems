@@ -3,8 +3,8 @@ import * as _ from 'lodash';
 import { FileType, TreeItem, workspace } from 'vscode';
 import { SpecType } from '../../constant';
 import { Spec } from '../../spec';
-import { GeneralEntry } from '../general/general_entry';
-import { SpecItem } from './spec_item';
+import { GeneralEntry } from '../general/general-entry';
+import { SpecItem } from './spec-item';
 import { SpecReplacer } from '../../util/spec-replacer';
 
 export class SpecEntry extends GeneralEntry {

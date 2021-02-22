@@ -1,5 +1,5 @@
 import { FileType, TreeItem, TreeItemCollapsibleState, Uri } from 'vscode';
-import { IEntry } from '../../definition/i_entry';
+import { IEntry } from '../../definition/i-entry';
 
 export class GeneralItem extends TreeItem {
   public readonly contextValue: string = 'rubygems.explorer.generalitem';

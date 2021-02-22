@@ -16,9 +16,10 @@ class UriComparer extends Comparer<Uri> {
     return lhs.scheme === rhs.scheme && lhs.fsPath === rhs.fsPath;
   }
 
-  // samedir
   samedir(dir: Uri, subdir: Uri): boolean {
-    return Path.samedir(dir.path, subdir.path);
+    if (dir === undefined || subdir === undefined) return false;
+
+    return dir.scheme === subdir.scheme && Path.samedir(dir.path, subdir.path);
   }
 }
 

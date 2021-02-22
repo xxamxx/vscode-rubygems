@@ -9,9 +9,9 @@ import {
   workspace
 } from 'vscode';
 import { Container } from './container';
-import { ADisposable } from './definition/a_disposable';
+import { ADisposable } from './definition/a-disposable';
 import { Project } from './project';
-import { SpecEntry } from './view/spec/spec_entry';
+import { SpecEntry } from './view/spec/spec-entry';
 
 export class Initialization extends ADisposable {
   private static singleton: Initialization;
