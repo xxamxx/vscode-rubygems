@@ -45,7 +45,7 @@ export class Initialization extends ADisposable {
       commands.registerCommand('rubygems.command.search', (...args) => console.log(args)),
       commands.registerCommand('rubygems.command.filter-reqs', (...args) => console.log(args)),
       commands.registerCommand('rubygems.command.filter-deps', (...args) => console.log(args)),
-      commands.registerCommand('rubygems.command.focus', (...args) => console.log(args)),
+      commands.registerCommand('rubygems.command.focus', async () => this.container.focus()),
       commands.registerCommand('rubygems.command.all-collapsed', (...args) => console.log(args)),
     );
     
@@ -91,11 +91,11 @@ export class Initialization extends ADisposable {
     // set current gemfile project folder
     const workspaceFolder = workspace.getWorkspaceFolder(document.uri);
     if (workspaceFolder) {
-    const uris = await Project.findProjectUris([workspaceFolder]);
-    this.container.setCurrentFolder(uris[0]);
-  }
+      const uris = await Project.findProjectUris([workspaceFolder]);
+      this.container.setCurrentFolder(uris[0]);
+    }
     
     // reveal entry by document
-    this.container.specview.reveal(document.uri)
+    this.container.specview.focus(document.uri)
   }
 }

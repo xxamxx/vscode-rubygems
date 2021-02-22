@@ -7,6 +7,7 @@ import { Spec } from './spec';
 import { UriComparer } from './util/comparer';
 import { SpecEntry } from './view/spec/spec_entry';
 import { Path } from './util/path';
+import { DefineFile } from './constant';
 
 export class Project {
   static readonly RubyBinPath: string = pjoin(process.env.GEM_HOME || '', '/bin/ruby');
@@ -53,8 +54,8 @@ export class Project {
   }
 
   private static async parseDependents(path: string): Promise<any[]> {
-    const gemfile = pjoin(path, 'Gemfile');
-    const lockfile = pjoin(path, 'Gemfile.lock');
+    const gemfile = pjoin(path, DefineFile.Gemfile);
+    const lockfile = pjoin(path, DefineFile.Lockfile);
     const converter = Container.context.asAbsolutePath('h11s/lockfile_converter.rb');
 
     console.debug('gemfilePath', gemfile);

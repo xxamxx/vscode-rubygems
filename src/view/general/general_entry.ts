@@ -13,7 +13,7 @@ export class GeneralEntry implements IEntry {
     public readonly name: string,
     public readonly type: FileType = FileType.Unknown
   ) {}
-
+  
   getTreeItem(): TreeItem {
     return new GeneralItem(this);
   }

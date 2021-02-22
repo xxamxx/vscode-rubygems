@@ -1,10 +1,15 @@
 import * as path from 'path';
+import * as fs from 'fs';
 
 export namespace Path {
-  export function contain(dir: string, subdir: string): boolean {
+  export function contain(dir: string, subdir: string): boolean{
     try {
-      dir = path.dirname(dir);
-      subdir = path.dirname(subdir);
+      if (!!path.extname(dir)){
+        dir = path.dirname(dir);
+      } else {
+        const dirStat = fs.statSync(dir)
+        if (!dirStat.isDirectory()) dir = path.dirname(dir);
+      }
     } catch (error) {
       return false;
     }

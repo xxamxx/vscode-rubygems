@@ -1,10 +1,10 @@
 
-import { ExtensionContext, Uri, window, workspace, WorkspaceFolder } from 'vscode';
+import _ = require('lodash');
+import { ExtensionContext, Uri, workspace, WorkspaceFolder } from 'vscode';
 import { ADisposable } from './definition/a_disposable';
 import { Project } from './project';
 import { Utils } from './util';
-import { UriComparer } from './util/comparer';
-import { SpecItem } from './view/spec/spec_item';
+import { getSameActiveTextEditor, getSamedirActiveTextEditor, getCurrentTextEditors } from './util/vscode-util';
 import { SpecView } from './view/spec/spec_view';
 
 export class Container extends ADisposable {
@@ -26,22 +26,21 @@ export class Container extends ADisposable {
     const uris = await Project.findProjectUris(workspaceFolders);
     if (uris.length === 0) return;
     if (uris.length === 1) return new Project(uris[0]);
-    let prj;
 
-    // 当前活跃的编辑器
-    const editor = window.activeTextEditor;
-    if (editor) prj = uris.find(uri => UriComparer.contain(uri, editor.document.uri));
-
-    // 打开的编辑中选第一个
-    const visible = [];
-    for (const editor of window.visibleTextEditors) {
-      const uri = uris.find(uri => UriComparer.contain(uri, editor.document.uri));
-      if (uri) visible.push(uri);
-    }
-    if (visible.length) prj = visible[0];
-
+    const activeUri = uris.find(uri => !!getSamedirActiveTextEditor(uri))
+    
     //上面都没有合适的，默认选中首个可用项目
-    return new Project(prj || uris[0]);
+    return new Project(activeUri || uris[0]);
+  }
+
+  static pickActiveTextEditorUri(uris: Uri[]): Uri | undefined{
+    for (const uri of uris) {
+      const editor = getSameActiveTextEditor(uri)
+      if (editor) return editor.document.uri
+    }
+    
+    const editors = getCurrentTextEditors()
+    return editors[0]?.document.uri
   }
 
   static async init(context: ExtensionContext) {
@@ -68,5 +67,13 @@ export class Container extends ADisposable {
 
   refresh() {
     this.specview.refresh();
+  }
+
+  async focus(){
+    const specs = await this.specview.project?.getSpecs()
+    const uris = _.map(specs || [], 'uri')
+    const uri = Container.pickActiveTextEditorUri(uris)
+
+    if(uri) await this.specview.focus(uri)
   }
 }

@@ -16,6 +16,7 @@ class UriComparer extends Comparer<Uri> {
     return lhs.scheme === rhs.scheme && lhs.fsPath === rhs.fsPath;
   }
 
+  // samedir
   contain(dir: Uri, subdir: Uri): boolean {
     return Path.contain(dir.path, subdir.path);
   }

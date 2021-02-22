@@ -1,5 +1,6 @@
 import { Uri } from 'vscode';
 import { DEFAULT_PLATFORM, SpecType } from './constant';
+import { UriComparer } from './util/comparer';
 
 export interface SpecOption {
   name: string;
@@ -39,6 +40,13 @@ export class Spec {
     this.type = value.type;
     this.dir = value.dir;
     this.uri = Uri.parse(value.path);
+  }
+
+  equal(other: Spec): boolean{
+    return UriComparer.equal(this.uri, other.uri)
+      && this.type === this.type
+      && this.platform === this.platform
+      && this.localness === this.localness
   }
 
   get fullname(): string {

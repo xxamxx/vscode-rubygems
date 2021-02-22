@@ -4,17 +4,19 @@ import { TreeItem, TreeView, window, FileType, Uri } from 'vscode';
 import { ViewEmitter } from '../../definition/a_view_emitter';
 import { IEntry } from '../../definition/i_entry';
 import { Project } from '../../project';
-import { Path } from '../../util';
+import { UriComparer } from '../../util/comparer';
+import { choicePriorityFileUri } from '../../util/gem-util';
 import { GeneralEntry } from '../general/general_entry';
 import { SpecEntry } from './spec_entry';
 
 export class SpecView extends ViewEmitter {
   public view: TreeView<IEntry>;
 
-  constructor(private project: Project | undefined) {
+  constructor(public project: Project | undefined) {
     super();
 
-    this.view = window.createTreeView('rubygems.explorer', { treeDataProvider: this });
+    this.view = window.createTreeView('rubygems.explorer', { treeDataProvider: this, showCollapseAll: true, canSelectMany: false });
+
     if (project) {
       this.project = project;
       this.setViewTitle(project.workspace?.name, this.project.name);
@@ -65,12 +67,21 @@ export class SpecView extends ViewEmitter {
     return SpecEntry.sort(entries);
   }
 
-  async reveal(uri: Uri){
+
+  async focus(uri: Uri){
     const entries = await this.project?.getSpecEntries();
-    const hasSpecEntry = !!entries?.find(entry => Path.contain(entry.uri.path, uri.path))
-    if (!hasSpecEntry) return
+    const specEntry = entries?.find(entry => UriComparer.contain(entry.uri, uri))
+    if (!specEntry) return
     
-    const entry = new GeneralEntry(uri, basename(uri.path), FileType.File);
+    let entry
+    if (UriComparer.equal(specEntry.uri, uri)){
+      const fileUri = await choicePriorityFileUri(uri.path)
+      entry = new GeneralEntry(fileUri, basename(fileUri.path), FileType.File);
+    } else {
+      entry = new GeneralEntry(uri, basename(uri.path), FileType.File);
+    }
+    
     await this.view.reveal(entry, {select: true, focus: true, expand: 3})
   }
+
 }
