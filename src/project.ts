@@ -6,7 +6,7 @@ import { Container } from './container';
 import { Spec } from './spec';
 import { UriComparer } from './util/comparer';
 import { SpecEntry } from './view/spec/spec_entry';
-import { Path } from './util/path';
+import { Filepath } from './util/filepath';
 import { DefineFile } from './constant';
 
 export class Project {
@@ -33,7 +33,7 @@ export class Project {
   }
 
   public findSpecEntry(path: string): SpecEntry | undefined{
-    return this.entries.find(entry => Path.contain(entry.uri.fsPath, path))
+    return this.entries.find(entry => Filepath.contain(entry.uri.fsPath, path))
   }
 
   public async getSpecEntries(options = {cache: true}): Promise<SpecEntry[]>{

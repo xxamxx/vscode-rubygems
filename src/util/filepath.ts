@@ -1,7 +1,7 @@
 import * as path from 'path';
 import * as fs from 'fs';
 
-export namespace Path {
+export namespace Filepath {
   export function contain(dir: string, subdir: string): boolean{
     try {
       if (!!path.extname(dir)){
