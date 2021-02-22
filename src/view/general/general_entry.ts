@@ -4,6 +4,7 @@ import { FileType, TreeItem, Uri } from 'vscode';
 import { IEntry } from '../../definition/i_entry';
 import { Spec } from '../../spec';
 import { Utils } from '../../util';
+import { FileStat } from '../../util/file-stat';
 import { SpecEntry } from '../spec/spec_entry';
 import { GeneralItem } from './general_item';
 
@@ -23,14 +24,14 @@ export class GeneralEntry implements IEntry {
    */
   async getChildren(): Promise<IEntry[]> {
     const path = this.uri.path;
-    const list = await Utils.readDirectory(path);
+    const list: [string, FileStat][] = await Utils.readDirectory(path);
 
     return _.chain(list)
-      .sortBy(([name, type]) => -type, 0)
+      .sortBy(([name, stat]) => -stat.type, 0)
       .map(
-        ([name, type]: [string, FileType]): IEntry => {
+        ([name, stat]): IEntry => {
           const uri = Uri.parse(pjoin(path, name));
-          return new GeneralEntry(uri, name, type);
+          return new GeneralEntry(uri, name, stat.type);
         }
       )
       .value();

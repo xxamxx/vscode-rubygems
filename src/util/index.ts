@@ -1,7 +1,6 @@
 import { join as pjoin } from 'path';
-import * as vscode from 'vscode';
 import { Uri, window, workspace, WorkspaceFolder } from 'vscode';
-import { FileStat } from './file_stat';
+import { FileStat } from './file-stat';
 import { Fs } from './fs';
 import { Filepath } from './filepath';
 
@@ -92,13 +91,13 @@ export namespace Utils {
     });
   }
 
-  export async function readDirectory(path: string): Promise<[string, vscode.FileType][]> {
+  export async function readDirectory(path: string): Promise<[string, FileStat][]> {
     const children = await Fs.readdir(path);
 
-    const list: [string, vscode.FileType][] = [];
+    const list: [string, FileStat][] = [];
     for (const child of children) {
       const stat = new FileStat(await Fs.stat(pjoin(path, child)));
-      list.push([child, stat.type]);
+      list.push([child, stat]);
     }
 
     return list;

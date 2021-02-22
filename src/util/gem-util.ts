@@ -1,8 +1,9 @@
 import _ = require("lodash");
 import { join, extname } from "path";
-import { FileType, Uri } from "vscode";
+import { Uri } from "vscode";
 import { Utils } from ".";
 import { DefineFile, SpecfileExtname } from "../constant";
+import { FileStat } from "./file-stat";
 
 const DefinedPriorityFiles = [
   'readme', 
@@ -12,7 +13,7 @@ const DefinedPriorityFiles = [
 ]
 
 export async function choicePriorityFileUri(path: string){
-  let list: [string, FileType][] = await Utils.readDirectory(path);
+  let list: [string, FileStat][] = await Utils.readDirectory(path);
   
   list = _.sortBy(list, [([a]) => {
     const file = a.toLowerCase()
