@@ -1,8 +1,8 @@
 import { join } from 'path';
 import { SpecType } from '../constant';
 import { Spec } from '../spec';
-import { GemDependency } from './gem_dependency';
-import { StubSpecification } from './stub_specification';
+import { GemDependency } from './gem-dependency';
+import { StubSpecification } from './stub-specification';
 
 const DEFAULT_PLATFORM = 'ruby';
 

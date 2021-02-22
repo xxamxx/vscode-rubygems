@@ -5,7 +5,7 @@ import * as bundler from './bundler/index';
 import { Container } from './container';
 import { Spec } from './spec';
 import { UriComparer } from './util/comparer';
-import { SpecEntry } from './view/spec/spec_entry';
+import { SpecEntry } from './view/spec/spec-entry';
 import { Filepath } from './util/filepath';
 import { DefineFile } from './constant';
 
