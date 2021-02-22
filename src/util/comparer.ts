@@ -17,8 +17,8 @@ class UriComparer extends Comparer<Uri> {
   }
 
   // samedir
-  contain(dir: Uri, subdir: Uri): boolean {
-    return Path.contain(dir.path, subdir.path);
+  samedir(dir: Uri, subdir: Uri): boolean {
+    return Path.samedir(dir.path, subdir.path);
   }
 }
 

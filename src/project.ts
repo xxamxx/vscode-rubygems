@@ -33,7 +33,7 @@ export class Project {
   }
 
   public findSpecEntry(path: string): SpecEntry | undefined{
-    return this.entries.find(entry => Filepath.contain(entry.uri.fsPath, path))
+    return this.entries.find(entry => Filepath.samedir(entry.uri.fsPath, path))
   }
 
   public async getSpecEntries(options = {cache: true}): Promise<SpecEntry[]>{

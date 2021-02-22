@@ -8,7 +8,7 @@ export function getCurrentTextEditors(): TextEditor[]{
 
 export function getSamedirActiveTextEditor(uri: Uri): TextEditor | undefined{
   const editors = getCurrentTextEditors()
-  return editors.find(editor => UriComparer.contain(uri, editor.document.uri))
+  return editors.find(editor => UriComparer.samedir(uri, editor.document.uri))
 }
 
 export function getSameActiveTextEditor(uri: Uri): TextEditor | undefined{

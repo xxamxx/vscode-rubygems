@@ -70,7 +70,7 @@ export class SpecView extends ViewEmitter {
 
   async focus(uri: Uri){
     const entries = await this.project?.getSpecEntries();
-    const specEntry = entries?.find(entry => UriComparer.contain(entry.uri, uri))
+    const specEntry = entries?.find(entry => UriComparer.samedir(entry.uri, uri))
     if (!specEntry) return
     
     let entry

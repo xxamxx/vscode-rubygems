@@ -8,7 +8,7 @@ import { Filepath } from './filepath';
 export namespace Utils {
   export function findWorkspaceFolder(uri: Uri): WorkspaceFolder | undefined {
     if (!workspace.workspaceFolders) return;
-    return workspace.workspaceFolders.find(folder => Filepath.contain(uri.fsPath, folder.uri.path));
+    return workspace.workspaceFolders.find(folder => Filepath.samedir(uri.fsPath, folder.uri.path));
   }
 
   export function getOpenWorkspaceFolder(): WorkspaceFolder | undefined {
