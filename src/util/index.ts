@@ -1,6 +1,6 @@
 import { join as pjoin } from 'path';
 import { Uri, window, workspace, WorkspaceFolder } from 'vscode';
-import { FileStat } from './file-stat';
+import { FileStat } from '../lib/file-stat';
 import { Fs } from './fs';
 import { Filepath } from './filepath';
 
@@ -102,8 +102,6 @@ export namespace Utils {
 
     return list;
   }
-
-  export const file_stat = FileStat;
 }
 
 export { Filepath as Path, Fs as fs };

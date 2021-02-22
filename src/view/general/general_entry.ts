@@ -4,7 +4,7 @@ import { FileType, TreeItem, Uri } from 'vscode';
 import { IEntry } from '../../definition/i_entry';
 import { Spec } from '../../spec';
 import { Utils } from '../../util';
-import { FileStat } from '../../util/file-stat';
+import { FileStat } from '../../lib/file-stat';
 import { SpecEntry } from '../spec/spec_entry';
 import { GeneralItem } from './general_item';
 

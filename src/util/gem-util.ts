@@ -3,7 +3,7 @@ import { join, extname } from "path";
 import { Uri } from "vscode";
 import { Utils } from ".";
 import { DefineFile, SpecfileExtname } from "../constant";
-import { FileStat } from "./file-stat";
+import { FileStat } from "../lib/file-stat";
 
 const DefinedPriorityFiles = [
   'readme', 
