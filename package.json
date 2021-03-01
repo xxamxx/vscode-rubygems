@@ -82,7 +82,8 @@
       "view/title": [
         {
           "command": "rubygems.command.refresh",
-          "when": "view == rubygems.explorer"
+          "when": "view == rubygems.explorer",
+          "group": "navigation"
         },
         {
           "command": "rubygems.command.all-collapsed",

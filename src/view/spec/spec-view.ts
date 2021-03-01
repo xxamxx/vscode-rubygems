@@ -1,6 +1,6 @@
 import * as _ from 'lodash';
 import { basename } from 'path';
-import { TreeItem, TreeView, window, FileType, Uri } from 'vscode';
+import { TreeItem, TreeView, window, FileType, Uri, TreeDataProvider } from 'vscode';
 import { ViewEmitter } from '../../definition/a-view-emitter';
 import { IEntry } from '../../definition/i-entry';
 import { Project } from '../../project';
@@ -9,7 +9,7 @@ import { choicePriorityFileUri } from '../../util/gem-util';
 import { GeneralEntry } from '../general/general-entry';
 import { SpecEntry } from './spec-entry';
 
-export class SpecView extends ViewEmitter {
+export class SpecView extends ViewEmitter implements TreeDataProvider<IEntry> {
   public view: TreeView<IEntry>;
 
   constructor(public project: Project | undefined) {
