@@ -70,7 +70,6 @@ export class Initialization extends ADisposable {
   }
 
   async registerView() {
-    this.disposable.push(window.registerTreeDataProvider('rubygems.explorer', this.container.specview));
   }
 
   private async onConfigurationChanged(e: ConfigurationChangeEvent) {

@@ -86,11 +86,6 @@
           "group": "navigation"
         },
         {
-          "command": "rubygems.command.all-collapsed",
-          "when": "view == rubygems.explorer",
-          "group": "navigation"
-        },
-        {
           "command": "rubygems.command.focus",
           "when": "view == rubygems.explorer",
           "group": "navigation"
