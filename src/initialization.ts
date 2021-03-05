@@ -9,16 +9,18 @@ import {
   workspace
 } from 'vscode';
 import { Container } from './container';
-import { ADisposable } from './definition/a-disposable';
+import { Global } from './global';
 import { Project } from './project';
-import { SpecEntry } from './view/spec/spec-entry';
+import { Disposition } from './shared/abstract/disposable';
+import { GemspecNode } from './view/node/gemspec-node';
 
-export class Initialization extends ADisposable {
+export class Initialization extends Disposition {
   private static singleton: Initialization;
 
   static async init(context: ExtensionContext) {
     if (this.singleton) return this.singleton;
-
+    Global.init(context);
+    
     const container = await Container.init(context);
     const initialization = new Initialization(container);
     await initialization.registerAll();
@@ -41,7 +43,7 @@ export class Initialization extends ADisposable {
     this.disposable.push(
       commands.registerCommand('rubygems.command.refresh', () => this.container.refresh()),
       commands.registerCommand('rubygems.command.open-file', async resource => window.showTextDocument(resource)),
-      commands.registerCommand('rubygems.command.open-rubygems-website', async (entry: SpecEntry) => (entry && entry.openWebsite())),
+      commands.registerCommand('rubygems.command.open-rubygems-website', async (node: GemspecNode) => (node && node.openWebsite())),
       commands.registerCommand('rubygems.command.search', (...args) => console.log(args)),
       commands.registerCommand('rubygems.command.filter-reqs', (...args) => console.log(args)),
       commands.registerCommand('rubygems.command.filter-deps', (...args) => console.log(args)),
@@ -94,7 +96,7 @@ export class Initialization extends ADisposable {
       this.container.setCurrentFolder(uris[0]);
     }
     
-    // reveal entry by document
-    this.container.specview.focus(document.uri)
+    // reveal GemspecNode by document
+    this.container.gemspecView.focus(document.uri)
   }
 }

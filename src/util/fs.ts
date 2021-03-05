@@ -36,7 +36,7 @@ function massageError(error: Error & { code?: string }): Error {
   return error;
 }
 
-export namespace Fs {
+export namespace fs {
   export function checkCancellation(token: vscode.CancellationToken): void {
     if (token.isCancellationRequested) {
       throw new Error('Operation cancelled');

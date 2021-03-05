@@ -1,6 +1,3 @@
-import { join } from 'path';
-import { SpecType } from '../constant';
-import { Spec } from '../spec';
 import { GemDependency } from './gem-dependency';
 import { StubSpecification } from './stub-specification';
 
@@ -36,20 +33,5 @@ export class Specification implements Specification {
     this.source = payload.source;
     this.dependencies = GemDependency.from_dependencies(payload.dependencies);
     this.stub = new StubSpecification(payload.stub);
-  }
-
-  public toSpec() {
-    const fullname = Spec.fullname(this.name, this.version, this.platform);
-    const localness = this.stub.gems_dir.includes('/vendor/bundle/');
-    return new Spec({
-      name: this.name,
-      version: this.version,
-      platform: this.platform,
-      defaulted: this.stub.default_gem,
-      type: this.dependencies.length ? SpecType.Requirement : SpecType.Dependency,
-      path: join(this.stub.gems_dir, fullname),
-      dir: this.stub.gems_dir,
-      localness
-    });
   }
 }

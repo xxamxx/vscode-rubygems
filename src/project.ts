@@ -1,20 +1,19 @@
-import { exec } from 'child_process';
-import { basename, dirname, join as pjoin } from 'path';
+import _ = require('lodash');
+import { basename, dirname } from 'path';
 import { RelativePattern, Uri, workspace, WorkspaceFolder } from 'vscode';
 import * as bundler from './bundler/index';
-import { Container } from './container';
-import { Spec } from './spec';
-import { UriComparer } from './util/comparer';
-import { SpecEntry } from './view/spec/spec-entry';
-import { Filepath } from './util/filepath';
-import { DefineFile } from './constant';
+import { Gemspec } from './bundler/gemspec';
+import { Specification } from './bundler';
+import { GemspecNode } from './view/node/gemspec-node';
+import { SpecType } from './shared/constant';
+import { FileUri } from './lib/ext/file-uri';
+import { global } from './global';
+import { FileNode } from './view/node/file-node';
+import { instantFileNode } from './view/node/base-node';
 
 export class Project {
-  static readonly RubyBinPath: string = pjoin(process.env.GEM_HOME || '', '/bin/ruby');
-  private entries: SpecEntry[] = []
-  private specs: Spec[] = []
 
-  constructor(public uri: Uri) {}
+  constructor(public uri: FileUri) {}
 
   public get name() {
     return basename(this.uri.path);
@@ -29,61 +28,40 @@ export class Project {
   }
 
   public equal(other: Project) {
-    return UriComparer.equal(this.uri, other.uri);
+    return this.uri.equal(other.uri);
   }
 
-  public findSpecEntry(path: string): SpecEntry | undefined{
-    return this.entries.find(entry => Filepath.samedir(entry.uri.fsPath, path))
-  }
-
-  public async getSpecEntries(options = {cache: true}): Promise<SpecEntry[]>{
-    if(options.cache && this.entries.length) return this.entries
-
-    const specs = await this.getSpecs();
-    return this.entries = specs.map(spec => new SpecEntry(spec));
-  }
-
-  public async getSpecs(options = {cache: true}): Promise<Spec[]> {
-    if(options.cache && this.specs.length) return this.specs
+  public async getGemspecNodes(options = {cache: true}): Promise<GemspecNode[]> {
+    let nodes: GemspecNode[] = [];
+    if(options.cache) {
+      nodes = global.nodeStorage.get(this.uri.path) as GemspecNode[]
+      if (nodes.length) return nodes
+    }
     
-    // const rubyPath = workspace.getConfiguration('rubygems.context').get('ruby', Project.RubyBinPath);
-    const data = await Project.parseDependents(this.uri.path || '');
-    const specifications = bundler.Specification.from_specifications(data);
+    const list: Gemspec[] = await Project.readGemspecList(this.uri.fsPath);
 
-    return this.specs = specifications.map(specification => specification.toSpec());
+    nodes = _.chain(list)
+      .sortBy(item => (item.type === SpecType.Requirement ? '0' : '1') + item.name)
+      .map(item => new GemspecNode(item))
+      .value();
+
+    // cache
+    global.nodeStorage.batch(this.uri.path, nodes)
+
+    return nodes
   }
 
-  private static async parseDependents(path: string): Promise<any[]> {
-    const gemfile = pjoin(path, DefineFile.Gemfile);
-    const lockfile = pjoin(path, DefineFile.Lockfile);
-    const converter = Container.context.asAbsolutePath('h11s/lockfile_converter.rb');
+  async buildFileNode(filepath: string): Promise<FileNode | undefined>{
+    return instantFileNode(this.uri.path, filepath)
+  }
 
-    console.debug('Gemfile Path:', gemfile);
-    console.debug('Lockfile Path:', lockfile);
-    console.debug('H11s Dir Path:', converter);
-
-    return new Promise((resolve, reject) => {
-      // /Users/am/.rvm/rubies/ruby-2.5.3/bin/ruby
-      exec(
-        `bundle exec ${converter} ${gemfile} ${lockfile}`,
-        {
-          cwd: path,
-          windowsHide: true,
-          maxBuffer: 1024 * 1024 * 10
-        },
-        (err: any, stdout: string | Buffer, stderr: string | Buffer) => {
-          if (err) return reject(err);
-          if (stderr) return reject(stderr);
-
-          try {
-            const data = JSON.parse(stdout.toString());
-            resolve(data);
-          } catch (error) {
-            reject(error);
-          }
-        }
-      );
-    });
+  static async readGemspecList(prjPath: string): Promise<Gemspec[]> {
+    const data = await bundler.parseRubyDeps(prjPath);
+    const specifications = Specification.from_specifications(data);
+  
+    const promises = specifications.map(specification => Gemspec.from(specification));
+    const gemspecs = await Promise.all(promises)
+    return gemspecs
   }
 
   static async findProjectUris(workspaceFolders: Readonly<WorkspaceFolder[]>): Promise<Uri[]> {
