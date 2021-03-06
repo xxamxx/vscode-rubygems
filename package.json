@@ -28,7 +28,7 @@
     "rimraf": "^2.6.2"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.158",
+    "@types/lodash": "^4.14.168",
     "@types/mkdirp": "^0.5.2",
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.12.51",
@@ -81,38 +81,77 @@
     "menus": {
       "view/title": [
         {
-          "command": "rubygems.command.refresh",
+          "command": "rubygems.command.clear-search",
           "when": "view == rubygems.explorer",
-          "group": "navigation"
+          "group": "navigation@1"
+        },
+        {
+          "command": "rubygems.command.reload",
+          "when": "view == rubygems.explorer",
+          "group": "navigation@2"
         },
         {
           "command": "rubygems.command.focus",
           "when": "view == rubygems.explorer",
-          "group": "navigation"
+          "group": "navigation@3"
         }
       ],
       "view/item/context": [
         {
-          "command": "rubygems.command.open-rubygems-website",
-          "when": "view == rubygems.explorer && viewItem == rubygems.explorer.specitem",
-          "group": "inline"
-        },
-        {
           "command": "rubygems.command.filter-deps",
-          "when": "view == rubygems.explorer && viewItem == rubygems.explorer.specitem",
-          "group": "inline"
+          "when": "view == rubygems.explorer && viewItem == rubygems.explorer.node.gemspec",
+          "group": "inline@1"
         },
         {
           "command": "rubygems.command.filter-reqs",
-          "when": "view == rubygems.explorer && viewItem == rubygems.explorer.specitem",
-          "group": "inline"
+          "when": "view == rubygems.explorer && viewItem == rubygems.explorer.node.gemspec",
+          "group": "inline@2"
+        },
+        {
+          "command": "rubygems.command.open-rubygems-website",
+          "when": "view == rubygems.explorer && viewItem == rubygems.explorer.node.gemspec",
+          "group": "inline@3"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "rubygems.command.reload",
+          "when": "false"
+        },
+        {
+          "command": "rubygems.command.all-collapsed",
+          "when": "false"
+        },
+        {
+          "command": "rubygems.command.focus",
+          "when": "false"
+        },
+        {
+          "command": "rubygems.command.clear-search",
+          "when": "false"
+        },
+        {
+          "command": "rubygems.command.filter-deps",
+          "when": "false"
+        },
+        {
+          "command": "rubygems.command.filter-reqs",
+          "when": "false"
+        },
+        {
+          "command": "rubygems.command.filter-nodes",
+          "when": "true"
+        },
+        {
+          "command": "rubygems.command.open-rubygems-website",
+          "when": "false"
         }
       ]
     },
     "commands": [
       {
-        "command": "rubygems.command.refresh",
-        "icon": "$(refresh)",
+        "command": "rubygems.command.reload",
+        "icon": "$(sync)",
         "category": "Rubygems",
         "title": "Reload RubyGems"
       },
@@ -129,28 +168,34 @@
         "title": "Focus"
       },
       {
-        "command": "rubygems.command.filter-deps",
-        "icon": "$(filter)",
+        "command": "rubygems.command.clear-search",
+        "icon": "$(clear-all)",
         "category": "Rubygems",
-        "title": "Filter Dependentcies"
+        "title": "Clear Search Results"
+      },
+      {
+        "command": "rubygems.command.filter-deps",
+        "icon": "$(type-hierarchy-sub)",
+        "category": "Rubygems",
+        "title": "Dependentcies Filter"
       },
       {
         "command": "rubygems.command.filter-reqs",
-        "icon": "$(list-filter)",
+        "icon": "$(type-hierarchy-super)",
         "category": "Rubygems",
-        "title": "Filter Requirements"
+        "title": "Requirements Filter"
       },
       {
-        "command": "rubygems.command.search",
+        "command": "rubygems.command.filter-nodes",
         "icon": "$(search)",
         "category": "Rubygems",
-        "title": "Search"
+        "title": "Search RubyGems"
       },
       {
         "command": "rubygems.command.open-rubygems-website",
         "icon": "$(link-external)",
         "category": "Rubygems",
-        "title": "Open RubyGems Website"
+        "title": "Open RubyGems On WebSite"
       }
     ],
     "configuration": {
@@ -158,11 +203,11 @@
       "title": "Rubygems",
       "properties": {
         "rubygems.other.website": {
-					"type": "string",
-					"default": "https://rubygems.org/search?query=${name}",
-					"markdownDescription": "The Ruby community’s gem hosting service.",
-					"scope": "resource"
-				}
+          "type": "string",
+          "default": "https://rubygems.org/gems/${name}",
+          "markdownDescription": "The Ruby community’s gem hosting service.",
+          "scope": "resource"
+        }
       }
     }
   }

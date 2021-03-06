@@ -1,11 +1,8 @@
-import _ = require('lodash');
+import * as _ from 'lodash';
 import { basename, dirname } from 'path';
 import { RelativePattern, Uri, workspace, WorkspaceFolder } from 'vscode';
-import * as bundler from './bundler/index';
 import { Gemspec } from './bundler/gemspec';
-import { Specification } from './bundler';
 import { GemspecNode } from './view/node/gemspec-node';
-import { SpecType } from './shared/constant';
 import { FileUri } from './lib/ext/file-uri';
 import { global } from './global';
 import { FileNode } from './view/node/file-node';
@@ -31,37 +28,27 @@ export class Project {
     return this.uri.equal(other.uri);
   }
 
-  public async getGemspecNodes(options = {cache: true}): Promise<GemspecNode[]> {
+  public async findGemspecNodes(predicate?: any, options = {cache: true}): Promise<GemspecNode[]> {
     let nodes: GemspecNode[] = [];
-    if(options.cache) {
-      nodes = global.nodeStorage.get(this.uri.path) as GemspecNode[]
-      if (nodes.length) return nodes
-    }
+    if(options.cache) nodes = global.nodeStorage.get(this.uri.path) as GemspecNode[]
     
-    const list: Gemspec[] = await Project.readGemspecList(this.uri.fsPath);
+    if (!nodes.length) {
+      global.nodeStorage.clear(this.uri.path)
+      const list = await Gemspec.findAll(this.uri.path, { cache: false});
+      // cache
+      global.nodeStorage.batch(
+        this.uri.path, 
+        nodes = list.map(item => new GemspecNode(item))
+      )
+    }
 
-    nodes = _.chain(list)
-      .sortBy(item => (item.type === SpecType.Requirement ? '0' : '1') + item.name)
-      .map(item => new GemspecNode(item))
-      .value();
-
-    // cache
-    global.nodeStorage.batch(this.uri.path, nodes)
-
-    return nodes
+    return predicate 
+      ? _.filter(nodes, predicate)
+      : nodes
   }
 
   async buildFileNode(filepath: string): Promise<FileNode | undefined>{
     return instantFileNode(this.uri.path, filepath)
-  }
-
-  static async readGemspecList(prjPath: string): Promise<Gemspec[]> {
-    const data = await bundler.parseRubyDeps(prjPath);
-    const specifications = Specification.from_specifications(data);
-  
-    const promises = specifications.map(specification => Gemspec.from(specification));
-    const gemspecs = await Promise.all(promises)
-    return gemspecs
   }
 
   static async findProjectUris(workspaceFolders: Readonly<WorkspaceFolder[]>): Promise<Uri[]> {

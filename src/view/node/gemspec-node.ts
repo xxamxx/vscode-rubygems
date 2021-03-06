@@ -3,7 +3,7 @@ import _ = require("lodash");
 import { extname } from "path";
 import { Command, TreeItem, TreeItemCollapsibleState, workspace } from "vscode";
 import { Gemspec } from "../../bundler/gemspec";
-import { DefineFile, SpecfileExtname, SpecType } from "../../shared/constant";
+import { DefineFile, SpecfileExtname, GemspecType } from "../../shared/constant";
 import { global } from "../../global";
 import { ChildNode } from "../../shared/interface";
 import { FileUri } from "../../lib/ext/file-uri";
@@ -18,7 +18,7 @@ const DefinedPriorityFiles = [
 ]
 
 export class GemspecNode extends TreeItem{
-  readonly contextValue: string = 'rubygems.explorer.gemspecnode';
+  readonly contextValue: string = 'rubygems.explorer.node.gemspec';
   readonly resourceUri!: FileUri;
   children: ChildNode[] = [];
 
@@ -50,7 +50,7 @@ export class GemspecNode extends TreeItem{
   }
 
   get iconPath() {
-    const svg = this.gemspec.type === SpecType.Requirement ? 'spec.svg' : 'dependency.svg';
+    const svg = this.gemspec.type === GemspecType.Requirement ? 'spec.svg' : 'dependency.svg';
     return {
       light: global.context.asAbsolutePath('resources/icon/light/' + svg),
       dark: global.context.asAbsolutePath('resources/icon/dark/' + svg)

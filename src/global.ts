@@ -36,6 +36,11 @@ export class Global extends Disposition{
     return this._node_storage
   }
 
+  private _source_storage: Map<string, any> = new Map<string, any>()
+  get sourceStorage(){
+    return this._source_storage
+  }
+
   private _command!: any;
   get command(){
     if (this._command) return this._command

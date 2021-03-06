@@ -41,12 +41,13 @@ export class Initialization extends Disposition {
   async registerCommand() {
     // - 注册命令
     this.disposable.push(
-      commands.registerCommand('rubygems.command.refresh', () => this.container.refresh()),
+      commands.registerCommand('rubygems.command.reload', () => this.container.gemspecView.reload()),
       commands.registerCommand('rubygems.command.open-file', async resource => window.showTextDocument(resource)),
       commands.registerCommand('rubygems.command.open-rubygems-website', async (node: GemspecNode) => (node && node.openWebsite())),
-      commands.registerCommand('rubygems.command.search', (...args) => console.log(args)),
-      commands.registerCommand('rubygems.command.filter-reqs', (...args) => console.log(args)),
-      commands.registerCommand('rubygems.command.filter-deps', (...args) => console.log(args)),
+      commands.registerCommand('rubygems.command.filter-nodes', () => this.search()),
+      commands.registerCommand('rubygems.command.clear-search', () => this.container.gemspecView.search()),
+      commands.registerCommand('rubygems.command.filter-reqs', node => this.container.gemspecView.filterDeps(node)),
+      commands.registerCommand('rubygems.command.filter-deps', node => this.container.gemspecView.filterReqs(node)),
       commands.registerCommand('rubygems.command.focus', async () => this.container.focus()),
       commands.registerCommand('rubygems.command.all-collapsed', (...args) => console.log(args)),
     );
@@ -72,6 +73,16 @@ export class Initialization extends Disposition {
   }
 
   async registerView() {
+  }
+
+  private async search(){
+    const val = await window.showInputBox({
+      placeHolder: 'Search RubyGems Information',
+      prompt: 'Filter: name, version, path, platform, type(dependency|requirement)'
+    })
+    if (!val) return
+
+    await this.container.gemspecView.filterNodes(val)
   }
 
   private async onConfigurationChanged(e: ConfigurationChangeEvent) {

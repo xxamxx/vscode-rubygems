@@ -8,6 +8,7 @@ import { ParentNode, ViewNode } from '../shared/interface';
 import { Project } from '../project';
 import { GemspecNode } from './node/gemspec-node';
 import { fp } from '../util/fp';
+import { GemspecType } from '../shared/constant';
 
 export class GemspecView implements TreeDataProvider<ViewNode> {
   readonly emitter: EventEmitter<ViewNode | undefined> = new EventEmitter<ViewNode | undefined>();
@@ -61,17 +62,62 @@ export class GemspecView implements TreeDataProvider<ViewNode> {
     return element.getParent();
   }
 
-  private nodes: GemspecNode[] = [];
-  async getRoot(): Promise<GemspecNode[]> {
-    if (!this.project) return [];
-    if (this.nodes.length) return this.nodes
 
-    return this.nodes = await this.project.getGemspecNodes({cache: false});
+  private nodes?: GemspecNode[];
+
+  async getRoot(): Promise<GemspecNode[]> {
+    if (this.nodes) return this.nodes
+    
+    return this.getGemspecNodes(this.filter)
   }
 
+  
+  private filter: any = undefined
+
+  async reload(){
+    this.nodes = await this.getGemspecNodes(this.filter, {cache: false})
+    this.refresh()
+  }
+  
+  async search(predicate?: any){
+    this.nodes = await this.getGemspecNodes(this.filter = predicate)
+    this.refresh()
+  }
+
+  async filterNodes(val: string){
+    await this.search((someone: GemspecNode) => {
+      return someone.gemspec.name.includes(val)
+        || someone.gemspec.version.includes(val) 
+        || someone.gemspec.platform.includes(val)  
+        || someone.gemspec.type.includes(val) 
+        || someone.gemspec.dir.includes(val) 
+    })
+  }
+
+  async filterDeps(node: GemspecNode){
+    const names = _.map(node.gemspec.specification.dependencies, 'name')
+
+    await this.search((someone: GemspecNode) => names.includes(someone.gemspec.name))
+  }
+
+  async filterReqs(node: GemspecNode){
+    await this.search((someone: GemspecNode) => {
+      return !!_.find(someone.gemspec.specification.dependencies, {name: node.gemspec.name})
+    })
+  }
+  
+
+  async getGemspecNodes(predicate?: any, options = {cache: true}){
+    if (!this.project) return [];
+
+    const nodes = await this.project.findGemspecNodes(predicate, options);
+    return this.nodes = _.sortBy(nodes, node => (node.gemspec.type === GemspecType.Requirement ? '0' : '1') + node.gemspec.name)
+  }
 
   public focus = _.debounce(this._focus, 150)
   private async _focus(uri: Uri, opts = {select: true, focus: true, expand: 3}){
+    if (!this.nodes) return
+
     const nodemap = _.keyBy(this.nodes, 'resourceUri.path')
     const node = this.nodes.find(node => {
       const samepath = fp.samedir(node.resourceUri.path, uri.path)

@@ -1,3 +1,4 @@
+import { RubyBundleHandler } from '../lib/ruby-bundle-handler';
 import { GemDependency } from './gem-dependency';
 import { StubSpecification } from './stub-specification';
 
@@ -14,7 +15,13 @@ export interface Specification {
 }
 
 export class Specification implements Specification {
-  public static from_specifications(data: any[]): Specification[] {
+
+  static async fromRubyBundle(prjPath: string): Promise<any[]> {
+    const data = await RubyBundleHandler.exec(prjPath)
+    return this.initialize(data);
+  }
+
+  static initialize(data: any[]): Specification[] {
     const list = [];
 
     for (const item of data) {
@@ -25,7 +32,7 @@ export class Specification implements Specification {
     return list;
   }
 
-  public constructor(payload: any) {
+  private constructor(payload: any) {
     this.name = payload.name;
     this.version = payload.version;
     this.platform = payload.platform;

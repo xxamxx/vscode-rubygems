@@ -1,5 +1,5 @@
 
-export enum SpecType {
+export enum GemspecType {
   Requirement = 'requirement',
   Dependency = 'dependency'
 }
