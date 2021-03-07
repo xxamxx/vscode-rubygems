@@ -1,7 +1,7 @@
 import * as _ from 'lodash';
 import { basename, dirname } from 'path';
 import { RelativePattern, Uri, workspace, WorkspaceFolder } from 'vscode';
-import { Gemspec } from './bundler/gemspec';
+import { Gemspec } from './model/gemspec';
 import { GemspecNode } from './view/node/gemspec-node';
 import { FileUri } from './lib/ext/file-uri';
 import { global } from './global';

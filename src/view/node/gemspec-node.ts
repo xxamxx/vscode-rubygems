@@ -2,7 +2,7 @@ import * as open from 'open';
 import _ = require("lodash");
 import { extname } from "path";
 import { Command, TreeItem, TreeItemCollapsibleState, workspace } from "vscode";
-import { Gemspec } from "../../bundler/gemspec";
+import { Gemspec } from "../../model/gemspec";
 import { DefineFile, SpecfileExtname, GemspecType } from "../../shared/constant";
 import { global } from "../../global";
 import { ChildNode } from "../../shared/interface";
