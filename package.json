@@ -119,10 +119,6 @@
           "when": "false"
         },
         {
-          "command": "rubygems.command.all-collapsed",
-          "when": "false"
-        },
-        {
           "command": "rubygems.command.focus",
           "when": "false"
         },
@@ -154,12 +150,6 @@
         "icon": "$(sync)",
         "category": "Rubygems",
         "title": "Reload RubyGems"
-      },
-      {
-        "command": "rubygems.command.all-collapsed",
-        "icon": "$(collapse-all)",
-        "category": "Rubygems",
-        "title": "Collapsed"
       },
       {
         "command": "rubygems.command.focus",

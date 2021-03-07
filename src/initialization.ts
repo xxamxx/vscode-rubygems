@@ -49,7 +49,6 @@ export class Initialization extends Disposition {
       commands.registerCommand('rubygems.command.filter-reqs', node => this.container.gemspecView.filterDeps(node)),
       commands.registerCommand('rubygems.command.filter-deps', node => this.container.gemspecView.filterReqs(node)),
       commands.registerCommand('rubygems.command.focus', async () => this.container.focus()),
-      commands.registerCommand('rubygems.command.all-collapsed', (...args) => console.log(args)),
     );
     
     // // this.disposable.push(commands.registerCommand('rubygems.explorer.selectLockfileFolder', () => this.pickLockfileFolder()));
