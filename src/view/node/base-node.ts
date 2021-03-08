@@ -1,10 +1,10 @@
 import _ = require("lodash");
+import { dirname } from "path";
 import { ChildNode, ParentNode } from "../../shared/interface";
 import { FileUri } from "../../lib/ext/file-uri";
 import { FileNode } from "./file-node";
 import { FolderNode } from "./folder-node";
 import { global } from "../../global"
-import { dirname } from "path";
 import * as util from "../../util"
 import { fp } from "../../util/fp";
 import { GemspecNode } from "./gemspec-node";

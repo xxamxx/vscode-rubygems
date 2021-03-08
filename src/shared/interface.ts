@@ -2,8 +2,6 @@ import { FileNode } from "../view/node/file-node"
 import { FolderNode } from "../view/node/folder-node"
 import { GemspecNode } from "../view/node/gemspec-node"
 
-export * from './interface/is'
-
 export type ParentNode = GemspecNode | FolderNode
 export type ChildNode = FolderNode | FileNode
 export type ViewNode = GemspecNode | FolderNode | FileNode

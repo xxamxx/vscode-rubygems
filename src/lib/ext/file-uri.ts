@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 import * as fs from 'fs';
 import { basename } from 'path';
-import { fp } from '../../util/fp';
+import { fp } from '../../util';
 
 export class FileUri implements vscode.Uri, vscode.FileStat {
   private readonly uri: vscode.Uri

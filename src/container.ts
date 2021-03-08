@@ -1,7 +1,7 @@
 
 import _ = require('lodash');
 import { ExtensionContext, Uri, workspace, WorkspaceFolder } from 'vscode';
-import { ws } from './util/ws';
+import { ws } from './util';
 import { Project } from './project';
 import { GemspecView } from './view/gemspec-view';
 import { Disposition } from './shared/abstract/disposable';

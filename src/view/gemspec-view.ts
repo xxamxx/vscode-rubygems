@@ -7,7 +7,7 @@ import { global } from "../global";
 import { ParentNode, ViewNode } from '../shared/interface';
 import { Project } from '../project';
 import { GemspecNode } from './node/gemspec-node';
-import { fp } from '../util/fp';
+import { fp } from '../util';
 import { GemspecType } from '../shared/constant';
 
 export class GemspecView implements TreeDataProvider<ViewNode> {
