@@ -9,6 +9,7 @@ import {
   window,
   workspace
 } from 'vscode';
+import { Api } from './api';
 import { Container } from './container';
 import { Global } from './global';
 import { Project } from './project';
@@ -70,6 +71,9 @@ export class Initialization extends Disposition {
 
   async registerView() { }
 
+  async registerApi(): Promise<Api> { 
+    return new Api(this.container)
+  }
 
   private async showSearchInputBox(){
     const val = await window.showInputBox({
