@@ -114,8 +114,8 @@ export class GemspecView implements TreeDataProvider<ViewNode> {
     return this.nodes = _.sortBy(nodes, node => (node.gemspec.type === GemspecType.Requirement ? '0' : '1') + node.gemspec.name)
   }
 
-  public focus = _.debounce(this._focus, 150)
-  private async _focus(uri: Uri, opts = {select: true, focus: true, expand: 3}){
+  public reveal = _.debounce(this._reveal, 150)
+  private async _reveal(uri: Uri, opts = {select: true, focus: true, expand: 3}){
     if (!this.nodes) return
 
     const nodemap = _.keyBy(this.nodes, 'resourceUri.path')

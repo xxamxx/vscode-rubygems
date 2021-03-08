@@ -45,10 +45,12 @@ export class Initialization extends Disposition {
       commands.registerCommand('rubygems.command.reload', () => this.container.gemspecView.reload()),
       commands.registerCommand('rubygems.command.open-file', async resource => window.showTextDocument(resource)),
       commands.registerCommand('rubygems.command.open-rubygems-website', async (node: GemspecNode) => (node && node.openWebsite())),
-      commands.registerCommand('rubygems.command.filter-nodes', () => this.search()),
+      commands.registerCommand('rubygems.command.search', () => this.search()),
+      commands.registerCommand('rubygems.command.filter-nodes', (val: string) => this.container.gemspecView.filterNodes(val)),
       commands.registerCommand('rubygems.command.clear-search', () => this.container.gemspecView.search()),
       commands.registerCommand('rubygems.command.filter-reqs', node => this.container.gemspecView.filterDeps(node)),
       commands.registerCommand('rubygems.command.filter-deps', node => this.container.gemspecView.filterReqs(node)),
+      commands.registerCommand('rubygems.command.reveal', async (uri: Uri) => this.container.gemspecView.reveal(uri)),
       commands.registerCommand('rubygems.command.focus', async () => this.container.focus()),
     );
   }
@@ -75,7 +77,7 @@ export class Initialization extends Disposition {
     })
     if (!val) return
 
-    await this.container.gemspecView.filterNodes(val)
+    await commands.executeCommand('rubygems.command.filter-nodes', val)
   }
 
   private async onConfigurationChanged(e: ConfigurationChangeEvent) {
@@ -101,6 +103,6 @@ export class Initialization extends Disposition {
     }
     
     // reveal GemspecNode by document
-    this.container.gemspecView.focus(document.uri)
+    await commands.executeCommand('rubygems.command.reveal', document.uri)
   }
 }

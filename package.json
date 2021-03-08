@@ -64,7 +64,9 @@
   },
   "activationEvents": [
     "onView:rubygems.explorer",
-    "workspaceContains:**/Gemfile.lock"
+    "onCommand:rubygems.command.search",
+    "onCommand:rubygems.command.reveal",
+    "onCommand:rubygems.command.filter-nodes"
   ],
   "contributes": {
     "viewsContainers": {
@@ -114,34 +116,15 @@
         }
       ],
       "commandPalette": [
-        {
-          "command": "rubygems.command.reload",
-          "when": "false"
-        },
-        {
-          "command": "rubygems.command.focus",
-          "when": "false"
-        },
-        {
-          "command": "rubygems.command.clear-search",
-          "when": "false"
-        },
-        {
-          "command": "rubygems.command.filter-deps",
-          "when": "false"
-        },
-        {
-          "command": "rubygems.command.filter-reqs",
-          "when": "false"
-        },
-        {
-          "command": "rubygems.command.filter-nodes",
-          "when": "true"
-        },
-        {
-          "command": "rubygems.command.open-rubygems-website",
-          "when": "false"
-        }
+        { "command": "rubygems.command.reload", "when": "false" },
+        { "command": "rubygems.command.focus", "when": "false" },
+        { "command": "rubygems.command.reveal", "when": "false" },
+        { "command": "rubygems.command.clear-search", "when": "false" },
+        { "command": "rubygems.command.search", "when": "true" },
+        { "command": "rubygems.command.filter-deps", "when": "false" },
+        { "command": "rubygems.command.filter-reqs", "when": "false" },
+        { "command": "rubygems.command.filter-nodes", "when": "false" },
+        { "command": "rubygems.command.open-rubygems-website", "when": "false" }
       ]
     },
     "commands": [
@@ -158,10 +141,21 @@
         "title": "Focus"
       },
       {
+        "command": "rubygems.command.reveal",
+        "category": "Rubygems",
+        "title": "Reveal"
+      },
+      {
         "command": "rubygems.command.clear-search",
         "icon": "$(clear-all)",
         "category": "Rubygems",
         "title": "Clear Search Results"
+      },
+      {
+        "command": "rubygems.command.search",
+        "icon": "$(search)",
+        "category": "Rubygems",
+        "title": "Search RubyGems"
       },
       {
         "command": "rubygems.command.filter-deps",
@@ -177,9 +171,8 @@
       },
       {
         "command": "rubygems.command.filter-nodes",
-        "icon": "$(search)",
         "category": "Rubygems",
-        "title": "Search RubyGems"
+        "title": "RubyGems Filter"
       },
       {
         "command": "rubygems.command.open-rubygems-website",

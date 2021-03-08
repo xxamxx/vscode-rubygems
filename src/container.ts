@@ -69,6 +69,6 @@ export class Container extends Disposition {
     const uris = _.map(nodes || [], 'resourceUri')
     const uri = Container.pickActiveTextEditorUri(uris)
 
-    if(uri) await this.gemspecView.focus(uri)
+    if(uri) await this.gemspecView.reveal(uri)
   }
 }
