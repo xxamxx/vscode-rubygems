@@ -45,9 +45,9 @@ export class Initialization extends Disposition {
       commands.registerCommand('rubygems.command.reload', () => this.container.gemspecView.reload()),
       commands.registerCommand('rubygems.command.open-file', async resource => window.showTextDocument(resource)),
       commands.registerCommand('rubygems.command.open-rubygems-website', async (node: GemspecNode) => (node && node.openWebsite())),
-      commands.registerCommand('rubygems.command.search', () => this.search()),
-      commands.registerCommand('rubygems.command.filter-nodes', (val: string) => this.container.gemspecView.filterNodes(val)),
-      commands.registerCommand('rubygems.command.clear-search', () => this.container.gemspecView.search()),
+      commands.registerCommand('rubygems.command.show-search-input-box', () => this.showSearchInputBox()),
+      commands.registerCommand('rubygems.command.search', (val: string) => this.container.gemspecView.search(val)),
+      commands.registerCommand('rubygems.command.clear-search', () => this.container.gemspecView.filterNodes()),
       commands.registerCommand('rubygems.command.filter-reqs', node => this.container.gemspecView.filterReqs(node)),
       commands.registerCommand('rubygems.command.filter-deps', node => this.container.gemspecView.filterDeps(node)),
       commands.registerCommand('rubygems.command.reveal', async (uri: Uri) => this.container.gemspecView.reveal(uri)),
@@ -70,14 +70,15 @@ export class Initialization extends Disposition {
 
   async registerView() { }
 
-  private async search(){
+
+  private async showSearchInputBox(){
     const val = await window.showInputBox({
       placeHolder: 'Search RubyGems Information',
       prompt: 'Filter: name, version, path, platform, type(dependency|requirement)'
     })
     if (!val) return
 
-    await commands.executeCommand('rubygems.command.filter-nodes', val)
+    await commands.executeCommand('rubygems.command.search', val)
   }
 
   private async onConfigurationChanged(e: ConfigurationChangeEvent) {

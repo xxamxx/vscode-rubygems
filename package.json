@@ -64,7 +64,7 @@
   },
   "activationEvents": [
     "onView:rubygems.explorer",
-    "onCommand:rubygems.command.search",
+    "onCommand:rubygems.command.show-search-input-box",
     "onCommand:rubygems.command.reveal",
     "onCommand:rubygems.command.filter-nodes"
   ],
@@ -120,7 +120,7 @@
         { "command": "rubygems.command.focus", "when": "false" },
         { "command": "rubygems.command.reveal", "when": "false" },
         { "command": "rubygems.command.clear-search", "when": "false" },
-        { "command": "rubygems.command.search", "when": "true" },
+        { "command": "rubygems.command.show-search-input-box", "when": "true" },
         { "command": "rubygems.command.filter-deps", "when": "false" },
         { "command": "rubygems.command.filter-reqs", "when": "false" },
         { "command": "rubygems.command.filter-nodes", "when": "false" },
@@ -152,7 +152,7 @@
         "title": "Clear Search Results"
       },
       {
-        "command": "rubygems.command.search",
+        "command": "rubygems.command.show-search-input-box",
         "icon": "$(search)",
         "category": "Rubygems",
         "title": "Search RubyGems"

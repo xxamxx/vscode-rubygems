@@ -81,15 +81,15 @@ export class GemspecView implements TreeDataProvider<ViewNode> {
     this.refresh()
   }
   
-  async search(predicate?: any){
+  async filterNodes(predicate?: any){
     this.nodes = await this.getGemspecNodes(this.filter = predicate)
     this.refresh()
 
     if (typeof predicate == 'undefined' && this.project) this.setMessage(undefined);
   }
 
-  async filterNodes(val: string){
-    await this.search((someone: GemspecNode) => {
+  async search(val: string){
+    await this.filterNodes((someone: GemspecNode) => {
       return someone.gemspec.name.includes(val)
         || someone.gemspec.version.includes(val) 
         || someone.gemspec.platform.includes(val)  
@@ -103,13 +103,13 @@ export class GemspecView implements TreeDataProvider<ViewNode> {
   async filterDeps(node: GemspecNode){
     const names = _.map(node.gemspec.specification.dependencies, 'name')
 
-    await this.search((someone: GemspecNode) => names.includes(someone.gemspec.name))
+    await this.filterNodes((someone: GemspecNode) => names.includes(someone.gemspec.name))
 
     if (this.project) this.setMessage(`Deps Filter: ${node.gemspec.fullname}`);
   }
 
   async filterReqs(node: GemspecNode){
-    await this.search((someone: GemspecNode) => {
+    await this.filterNodes((someone: GemspecNode) => {
       return !!_.find(someone.gemspec.specification.dependencies, {name: node.gemspec.name})
     })
 
