@@ -5,6 +5,7 @@ import {
   ExtensionContext,
   TextDocument,
   TextEditor,
+  Uri,
   window,
   workspace
 } from 'vscode';
@@ -50,29 +51,22 @@ export class Initialization extends Disposition {
       commands.registerCommand('rubygems.command.filter-deps', node => this.container.gemspecView.filterReqs(node)),
       commands.registerCommand('rubygems.command.focus', async () => this.container.focus()),
     );
-    
-    // // this.disposable.push(commands.registerCommand('rubygems.explorer.selectLockfileFolder', () => this.pickLockfileFolder()));
   }
 
   async registerWatcher() {
     // - 监控所有 lockfile
-    // const watcher = workspace.createFileSystemWatcher('**/Gemfile.lock');
-    // watcher.onDidCreate((uri: Uri) => this.onLockfilesAdded([uri]));
-    // watcher.onDidDelete((uri: Uri) => this.onLockfilesDeleted([uri]));
-    // watcher.onDidChange((uri: Uri) => this.onLockfileChanged([uri]));
-    // this.disposable.push(watcher);
+    // let watcher;
+    // this.disposable.push(watcher = workspace.createFileSystemWatcher('**/Gemfile.lock'));
   }
 
   async registerEvent() {
     // - 监听 workspace change event
-    // this.disposable.push(workspace.onDidChangeWorkspaceFolders(e => this.onWorkspaceFolderChanged(e)));
     this.disposable.push(window.onDidChangeActiveTextEditor(e => this.onTextEditorActiveChanged(e)));
     this.disposable.push(workspace.onDidChangeConfiguration(e => this.onConfigurationChanged(e)));
     this.disposable.push(workspace.onDidOpenTextDocument(e => this.onTextDocumentActivated(e)));
   }
 
-  async registerView() {
-  }
+  async registerView() { }
 
   private async search(){
     const val = await window.showInputBox({
@@ -86,7 +80,7 @@ export class Initialization extends Disposition {
 
   private async onConfigurationChanged(e: ConfigurationChangeEvent) {
     if (e.affectsConfiguration('rubygems.context.ruby')) {
-      this.container.refresh();
+      commands.executeCommand('rubygems.command.reload')
     }
   }
 

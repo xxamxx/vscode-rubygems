@@ -42,13 +42,13 @@ export class Global extends Disposition{
   }
 
   private _command!: any;
-  get command(){
+  private get command(){
     if (this._command) return this._command
     return undefined
   }
   
   private _configuration!: any;
-  get configuration(){
+  private get configuration(){
     if (this._configuration) return this._configuration
     return undefined
   }

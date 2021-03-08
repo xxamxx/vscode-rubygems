@@ -53,7 +53,6 @@ export class Container extends Disposition {
 
   private constructor(public gemspecView: GemspecView) {
     super();
-    // this.disposable.push(this.gemspecView);
   }
 
   async setCurrentFolder(uri: Uri | undefined) {
@@ -63,10 +62,6 @@ export class Container extends Disposition {
 
     if (!project) return;
     this.gemspecView.setProject(project);
-  }
-
-  refresh() {
-    this.gemspecView.refresh();
   }
 
   async focus(){
