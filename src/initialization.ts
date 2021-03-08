@@ -48,8 +48,8 @@ export class Initialization extends Disposition {
       commands.registerCommand('rubygems.command.search', () => this.search()),
       commands.registerCommand('rubygems.command.filter-nodes', (val: string) => this.container.gemspecView.filterNodes(val)),
       commands.registerCommand('rubygems.command.clear-search', () => this.container.gemspecView.search()),
-      commands.registerCommand('rubygems.command.filter-reqs', node => this.container.gemspecView.filterDeps(node)),
-      commands.registerCommand('rubygems.command.filter-deps', node => this.container.gemspecView.filterReqs(node)),
+      commands.registerCommand('rubygems.command.filter-reqs', node => this.container.gemspecView.filterReqs(node)),
+      commands.registerCommand('rubygems.command.filter-deps', node => this.container.gemspecView.filterDeps(node)),
       commands.registerCommand('rubygems.command.reveal', async (uri: Uri) => this.container.gemspecView.reveal(uri)),
       commands.registerCommand('rubygems.command.focus', async () => this.container.focus()),
     );

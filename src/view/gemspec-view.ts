@@ -20,33 +20,33 @@ export class GemspecView implements TreeDataProvider<ViewNode> {
 
     if (project) {
       this.project = project;
-      this.setTitle(project.workspace?.name, this.project.name);
+      this.setTitle(this.project.title);
     }
 
     return this;
   }
 
-  private setTitle(workspaceName: string | undefined, folderName: string) {
-    let title = '';
+  private setTitle(title: string) {
+    this.view.title = title ? 'Rubygems ∙ ' + title : 'Rubygems';
+    this.refresh();
+  }  
 
-    if (!workspaceName) title = folderName;
-    else if (workspaceName === folderName) title = workspaceName;
-    else title = workspaceName + ' ‣ ' + folderName;
-
-    this.view.title = title ? 'RUBYGEMS ∙ ' + title : 'RUBYGEMS';
+  private setMessage(msg: string | undefined) {
+    this.view.message = msg;
+    this.refresh();
   }  
   
   refresh(): void {
     this.emitter.fire(undefined);
   }
 
+
   public setProject = _.debounce(this._setProject, 200)
   private _setProject(project: Project) {
     if (!project) return
 
     this.project = project;
-    this.setTitle(project.workspace?.name, this.project.name);
-    this.refresh();
+    this.setTitle(this.project.title)
   }
 
   async getTreeItem(element: ViewNode): Promise<ViewNode> {
@@ -84,6 +84,8 @@ export class GemspecView implements TreeDataProvider<ViewNode> {
   async search(predicate?: any){
     this.nodes = await this.getGemspecNodes(this.filter = predicate)
     this.refresh()
+
+    if (typeof predicate == 'undefined' && this.project) this.setMessage(undefined);
   }
 
   async filterNodes(val: string){
@@ -94,18 +96,24 @@ export class GemspecView implements TreeDataProvider<ViewNode> {
         || someone.gemspec.type.includes(val) 
         || someone.gemspec.dir.includes(val) 
     })
+
+    if (this.project) this.setMessage('Search: ' + val);
   }
 
   async filterDeps(node: GemspecNode){
     const names = _.map(node.gemspec.specification.dependencies, 'name')
 
     await this.search((someone: GemspecNode) => names.includes(someone.gemspec.name))
+
+    if (this.project) this.setMessage(`Deps Filter: ${node.gemspec.fullname}`);
   }
 
   async filterReqs(node: GemspecNode){
     await this.search((someone: GemspecNode) => {
       return !!_.find(someone.gemspec.specification.dependencies, {name: node.gemspec.name})
     })
+
+    if (this.project) this.setMessage(`Reqs Filter: ${node.gemspec.fullname}`);
   }
   
 

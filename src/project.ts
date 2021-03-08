@@ -12,6 +12,15 @@ export class Project {
 
   constructor(public uri: FileUri) {}
 
+  public get title() {
+    const workspaceName = this.workspace?.name || ''
+    const folderName = this.name || ''
+
+    if (!workspaceName) return folderName;
+    else if (workspaceName === folderName) return workspaceName;
+    else return workspaceName + ' ‣ ' + folderName;
+  }
+
   public get name() {
     return basename(this.uri.path);
   }
