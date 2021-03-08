@@ -40,7 +40,8 @@ export class GemspecView implements TreeDataProvider<ViewNode> {
     this.emitter.fire(undefined);
   }
 
-  setProject(project: Project) {
+  public setProject = _.debounce(this._setProject, 200)
+  private _setProject(project: Project) {
     if (!project) return
 
     this.project = project;
@@ -74,7 +75,8 @@ export class GemspecView implements TreeDataProvider<ViewNode> {
   
   private filter: any = undefined
 
-  async reload(){
+  public reload = _.debounce(this._reload, 500)
+  private async _reload(){
     this.nodes = await this.getGemspecNodes(this.filter, {cache: false})
     this.refresh()
   }
