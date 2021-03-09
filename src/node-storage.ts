@@ -12,16 +12,22 @@ export class NodeStorage implements Disposable{
   private readonly collection = new Set<ViewNode>()
   private readonly map = new Map<string, Set<ViewNode>>()
   
-  add(scope: string, value: ViewNode): this { 
-    const set = this.map.get(scope) || new Set<ViewNode>()
-    this.map.set(scope, set.add(value))
-    this.collection.add(value)
+  add(scope: string, values: ViewNode | ViewNode[]): this { 
+    if (!_.isArray(values)) values = [values]
 
+    const set = this.map.get(scope) || new Set<ViewNode>()
+
+    values.forEach(value => {
+      set.add(value)
+      this.collection.add(value)
+    });
+
+    this.map.set(scope, set)
     return this
   }
 
-  batch(scope: string, values: ViewNode[]): this { 
-    const set = this.map.get(scope) || new Set<ViewNode>()
+  replace(scope: string, values: ViewNode[]): this { 
+    const set = new Set<ViewNode>()
 
     values.forEach(value => {
       set.add(value)

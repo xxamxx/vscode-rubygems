@@ -42,10 +42,10 @@ export class Project {
     if(options.cache) nodes = global.nodeStorage.get(this.uri.path) as GemspecNode[]
     
     if (!nodes.length) {
-      global.nodeStorage.clear(this.uri.path)
+      global.nodeStorage.clear()
       const list = await Gemspec.findAll(this.uri.path, { cache: false});
       // cache
-      global.nodeStorage.batch(
+      global.nodeStorage.replace(
         this.uri.path, 
         nodes = list.map(item => new GemspecNode(item))
       )

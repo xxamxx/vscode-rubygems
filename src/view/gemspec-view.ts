@@ -14,9 +14,10 @@ export class GemspecView implements TreeDataProvider<ViewNode> {
   readonly emitter: EventEmitter<ViewNode | undefined> = new EventEmitter<ViewNode | undefined>();
   readonly onDidChangeTreeData: Event<ViewNode | undefined> = this.emitter.event;
   readonly view: TreeView<ViewNode>;
+  readonly id: string = 'rubygems.explorer';
 
   constructor(public project: Project | undefined) {
-    this.view = window.createTreeView('rubygems.explorer', { treeDataProvider: this, showCollapseAll: true, canSelectMany: false });
+    this.view = window.createTreeView(this.id, { treeDataProvider: this, showCollapseAll: true, canSelectMany: false });
 
     if (project) {
       this.project = project;
@@ -81,7 +82,8 @@ export class GemspecView implements TreeDataProvider<ViewNode> {
     this.refresh()
   }
   
-  async filterNodes(predicate?: any){
+  public filterNodes = _.debounce(this._filterNodes, 500)
+  private async _filterNodes(predicate?: any){
     this.nodes = await this.getGemspecNodes(this.filter = predicate)
     this.refresh()
 

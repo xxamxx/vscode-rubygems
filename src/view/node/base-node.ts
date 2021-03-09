@@ -12,6 +12,9 @@ import { GemspecNode } from "./gemspec-node";
 
 
 export async function getFolderChildren(folder: ParentNode): Promise<ChildNode[]> {
+  const nodes = global.nodeStorage.get(folder.resourceUri.path) as ChildNode[]
+  if (nodes.length) return nodes;
+
   const list: FileUri[] = await util.readlist(folder.resourceUri);
 
   const children = _.chain(list)
@@ -22,7 +25,7 @@ export async function getFolderChildren(folder: ParentNode): Promise<ChildNode[]
     )
     .value();
 
-  global.nodeStorage.batch(folder.resourceUri.path, children)
+  global.nodeStorage.replace(folder.resourceUri.path, children)
   return children
 }
 
