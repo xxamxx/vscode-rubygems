@@ -24,7 +24,6 @@
   "dependencies": {
     "lodash": "^4.17.19",
     "mkdirp": "^1.0.4",
-    "open": "^7.1.0",
     "rimraf": "^2.6.2"
   },
   "devDependencies": {

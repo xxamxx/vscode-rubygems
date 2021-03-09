@@ -1,7 +1,6 @@
-import * as open from 'open';
 import _ = require("lodash");
 import { extname } from "path";
-import { Command, TreeItem, TreeItemCollapsibleState, workspace } from "vscode";
+import { env, Command, TreeItem, TreeItemCollapsibleState, workspace, Uri } from "vscode";
 import { Gemspec } from "../../model/gemspec";
 import { DefineFile, SpecfileExtname, GemspecType } from "../../shared/constant";
 import { global } from "../../global";
@@ -76,7 +75,9 @@ export class GemspecNode extends TreeItem{
     Object.entries(this.gemspec).forEach(([key, val])=>{
       if (typeof val === 'string') url = url.replace(`\$\{${key}\}`, val)
     })
-    return open(url)
+
+    const uri = await env.asExternalUri(Uri.parse(url))
+    return env.openExternal(uri)
   }
 
   choicePriorityChild(){
