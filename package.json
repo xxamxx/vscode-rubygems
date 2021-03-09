@@ -2,7 +2,7 @@
   "name": "vscode-rubygems",
   "displayName": "Rubygems",
   "description": "The Rubygems Explorer can browser RubyGems source codes of your project by `Gemfile.lock`",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "main": "./dist/extension.js",
   "license": "MIT",
   "engines": {
@@ -40,7 +40,7 @@
     "mocha": "^6.2.3",
     "prettier": "^2.1.2",
     "typescript": "^3.9.7",
-    "vsce": "^1.81.1",
+    "vsce": "^1.85.1",
     "vscode-test": "^1.4.0"
   },
   "publisher": "xxamxx",
@@ -115,15 +115,42 @@
         }
       ],
       "commandPalette": [
-        { "command": "rubygems.command.reload", "when": "false" },
-        { "command": "rubygems.command.focus", "when": "false" },
-        { "command": "rubygems.command.reveal", "when": "false" },
-        { "command": "rubygems.command.clear-search", "when": "false" },
-        { "command": "rubygems.command.show-search-input-box", "when": "true" },
-        { "command": "rubygems.command.filter-deps", "when": "false" },
-        { "command": "rubygems.command.filter-reqs", "when": "false" },
-        { "command": "rubygems.command.filter-nodes", "when": "false" },
-        { "command": "rubygems.command.open-rubygems-website", "when": "false" }
+        {
+          "command": "rubygems.command.reload",
+          "when": "false"
+        },
+        {
+          "command": "rubygems.command.focus",
+          "when": "false"
+        },
+        {
+          "command": "rubygems.command.reveal",
+          "when": "false"
+        },
+        {
+          "command": "rubygems.command.clear-search",
+          "when": "false"
+        },
+        {
+          "command": "rubygems.command.show-search-input-box",
+          "when": "true"
+        },
+        {
+          "command": "rubygems.command.filter-deps",
+          "when": "false"
+        },
+        {
+          "command": "rubygems.command.filter-reqs",
+          "when": "false"
+        },
+        {
+          "command": "rubygems.command.filter-nodes",
+          "when": "false"
+        },
+        {
+          "command": "rubygems.command.open-rubygems-website",
+          "when": "false"
+        }
       ]
     },
     "commands": [
