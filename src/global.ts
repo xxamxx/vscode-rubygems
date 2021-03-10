@@ -5,11 +5,12 @@ import { NodeStorage } from "./node-storage";
 
 
 export class Global extends Disposition{
-  private static singleton: ExtensionContext
+  private static context: ExtensionContext
   private static global: Global
 
   static init(context: ExtensionContext){
-    this.singleton = context
+    context.subscriptions.push(this.global)
+    this.context = context
   }
   
   constructor(){
@@ -21,7 +22,7 @@ export class Global extends Disposition{
   }
 
   get context(): ExtensionContext{
-    return Global.singleton
+    return Global.context
   }
     
   readonly gempath: string = join(process.env.GEM_HOME || '', '/bin/ruby');

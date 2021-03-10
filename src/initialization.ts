@@ -11,7 +11,6 @@ import {
 } from 'vscode';
 import { Api } from './api';
 import { Container } from './container';
-import { Global } from './global';
 import { Project } from './project';
 import { Disposition } from './shared/abstract/disposable';
 import { GemspecNode } from './view/node/gemspec-node';
@@ -21,7 +20,6 @@ export class Initialization extends Disposition {
 
   static async init(context: ExtensionContext) {
     if (this.singleton) return this.singleton;
-    Global.init(context);
     
     const container = await Container.init(context);
     const initialization = new Initialization(container);
