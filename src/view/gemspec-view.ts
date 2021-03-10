@@ -28,7 +28,7 @@ export class GemspecView implements TreeDataProvider<ViewNode> {
   }
 
   private setTitle(title: string) {
-    this.view.title = title ? 'Rubygems ∙ ' + title : 'Rubygems';
+    this.view.title = title ? 'RubyGems ∙ ' + title : 'RubyGems';
     this.refresh();
   }  
 

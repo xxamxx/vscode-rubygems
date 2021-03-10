@@ -1,6 +1,6 @@
-# Vscode-Rubygems README
+# VSCode-RubyGems README
 
-The is Rubygems Explorer, it can browser rubygems source codes of your project by `Gemfile.lock`.
+The is RubyGems Explorer, it can browser rubygems source codes of your project by `Gemfile.lock`.
 
 ![explorer](https://raw.githubusercontent.com/xxamxx/vscode-rubygems/develop/resources/screenshots/001.png "explorer")
 

@@ -1,7 +1,7 @@
 {
   "name": "vscode-rubygems",
-  "displayName": "Rubygems",
-  "description": "The Rubygems Explorer can browser RubyGems source codes of your project by `Gemfile.lock`",
+  "displayName": "RubyGems",
+  "description": "The RubyGems Explorer can browser RubyGems source codes of your project by `Gemfile.lock`",
   "version": "1.1.0",
   "main": "./dist/extension.js",
   "license": "MIT",
@@ -75,7 +75,8 @@
       "explorer": [
         {
           "id": "rubygems.explorer",
-          "name": "rubygems"
+          "name": "RubyGems",
+          "contextualTitle": "RubyGems Library"
         }
       ]
     },

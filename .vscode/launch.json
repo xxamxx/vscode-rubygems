@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch Rubygems",
+      "name": "Launch RubyGems",
       "type": "extensionHost",
       "request": "launch",
       "runtimeExecutable": "${execPath}",
@@ -19,7 +19,7 @@
       "preLaunchTask": "build"
     },
     {
-      "name": "Launch Rubygems (Sandbox)",
+      "name": "Launch RubyGems (Sandbox)",
       "type": "extensionHost",
       "request": "launch",
       "runtimeExecutable": "${execPath}",
@@ -38,7 +38,7 @@
       }
     },
     {
-      "name": "Watch & Launch Rubygems",
+      "name": "Watch & Launch RubyGems",
       "type": "extensionHost",
       "request": "launch",
       "runtimeExecutable": "${execPath}",
