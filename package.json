@@ -76,8 +76,7 @@
         {
           "id": "rubygems.explorer",
           "name": "RubyGems",
-          "contextualTitle": "RubyGems Library",
-          "when": "resourceLangId == ruby"
+          "contextualTitle": "RubyGems Library"
         }
       ]
     },
