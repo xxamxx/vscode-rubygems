@@ -65,7 +65,7 @@ export class Container extends Disposition {
   }
 
   async focus(){
-    const nodes = await this.gemspecView.project?.findGemspecNodes()
+    const nodes = await this.gemspecView.filterNodes()
     const uris = _.map(nodes || [], 'resourceUri')
     const uri = Container.pickActiveTextEditorUri(uris)
 

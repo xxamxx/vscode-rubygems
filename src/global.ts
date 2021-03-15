@@ -1,7 +1,9 @@
-import { join } from "path";
+import _ = require("lodash");
+import { join, delimiter } from "path";
 import { ExtensionContext } from "vscode";
 import { Disposition } from "./shared/abstract/disposable";
 import { NodeStorage } from "./node-storage";
+import { fs } from "./util";
 
 
 export class Global extends Disposition{
@@ -52,6 +54,41 @@ export class Global extends Disposition{
   private get configuration(){
     if (this._configuration) return this._configuration
     return undefined
+  }
+
+  get ruby_paths(){
+    return _.compact([
+      process.env['MY_RUBY_HOME'] ? join(process.env['MY_RUBY_HOME'], 'bin') : '',
+      ...(process.env['PATH']?.split(delimiter).filter(ele => ele.includes('ruby')) || [])
+    ])
+  }
+
+  private async getBundleBinaryPath(){
+    return this.ruby_paths.find(async path => {
+      return fs.exists(join(path, 'bundle'))
+    })
+  }
+
+  private _bundle_binary?: string
+  async getBundleBinary(){
+    if (this._bundle_binary) return this._bundle_binary
+    
+    const path = await this.getRubyBinaryPath()
+    return this._bundle_binary = path && join(path, 'bundle')
+  }
+
+  private async getRubyBinaryPath(){
+    return this.ruby_paths.find(async path => {
+      return fs.exists(join(path, 'ruby'))
+    })
+  }
+
+  private _ruby_binary?: string
+  async getRubyBinary(){
+    if (this._ruby_binary) return this._ruby_binary
+    
+    const path = await this.getRubyBinaryPath()
+    return this._ruby_binary = path && join(path, 'ruby')
   }
 }
 
