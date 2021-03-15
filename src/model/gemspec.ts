@@ -1,4 +1,3 @@
-import { join } from 'path';
 import _ = require('lodash');
 import { Specification } from './specification';
 import { DEFAULT_PLATFORM, GemspecType } from '../shared/constant';
@@ -20,7 +19,6 @@ export interface SpecOption {
 export class Gemspec {
 
   static async from(specification: Specification) {
-    const fullname = Gemspec.fullname(specification.name, specification.version, specification.platform);
     const localness = specification.stub.gems_dir.includes('/vendor/bundle/');
     return new Gemspec({
       name: specification.name,
@@ -28,7 +26,7 @@ export class Gemspec {
       platform: specification.platform,
       defaulted: specification.stub.default_gem,
       type: specification.dependencies.length ? GemspecType.Requirement : GemspecType.Dependency,
-      uri: await FileUri.file(join(specification.stub.gems_dir, fullname)),
+      uri: await FileUri.file(specification.stub.full_gem_path),
       dir: specification.stub.gems_dir,
       localness,
       specification,
@@ -101,6 +99,6 @@ export class Gemspec {
   }
 
   get fullname(): string {
-    return Gemspec.fullname(this.name, this.version, this.platform);
+    return this.specification.stub.data.full_name
   }
 }

@@ -1,10 +1,20 @@
+
+export interface StubSpecificationData {
+  full_name: string;
+  name: string;
+  version: string;
+  platform: string;
+  require_paths: string[];
+  extensions: string[];
+}
+
 export interface StubSpecification {
   extension_dir: string;
   full_gem_path: string;
   gem_dir: string;
   ignored: string;
   loaded_from: string;
-  data: string;
+  data: StubSpecificationData;
   name: string;
   spec: string;
   base_dir: string;
