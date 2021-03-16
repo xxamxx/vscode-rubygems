@@ -1,8 +1,8 @@
 {
   "name": "vscode-rubygems",
-  "displayName": "Rubygems",
-  "description": "The Rubygems Explorer can browser rubygems source codes of your project by `Gemfile.lock`",
-  "version": "1.0.1",
+  "displayName": "RubyGems",
+  "description": "The RubyGems Explorer is helpful to browser RubyGems source codes",
+  "version": "1.1.0",
   "main": "./dist/extension.js",
   "license": "MIT",
   "engines": {
@@ -24,15 +24,14 @@
   "dependencies": {
     "lodash": "^4.17.19",
     "mkdirp": "^1.0.4",
-    "open": "^7.1.0",
     "rimraf": "^2.6.2"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.158",
+    "@types/lodash": "^4.14.168",
     "@types/mkdirp": "^0.5.2",
-    "@types/rimraf": "^2.0.4",
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.12.51",
+    "@types/rimraf": "^2.0.4",
     "@types/vscode": "^1.47.0",
     "@typescript-eslint/eslint-plugin": "^4.1.1",
     "@typescript-eslint/parser": "^4.1.1",
@@ -41,6 +40,7 @@
     "mocha": "^6.2.3",
     "prettier": "^2.1.2",
     "typescript": "^3.9.7",
+    "vsce": "^1.85.1",
     "vscode-test": "^1.4.0"
   },
   "publisher": "xxamxx",
@@ -63,7 +63,9 @@
   },
   "activationEvents": [
     "onView:rubygems.explorer",
-    "workspaceContains:**/Gemfile.lock"
+    "onCommand:rubygems.command.show-search-input-box",
+    "onCommand:rubygems.command.reveal",
+    "onCommand:rubygems.command.filter-nodes"
   ],
   "contributes": {
     "viewsContainers": {
@@ -73,21 +75,149 @@
       "explorer": [
         {
           "id": "rubygems.explorer",
-          "name": "rubygems"
+          "name": "RubyGems",
+          "contextualTitle": "RubyGems Library"
+        }
+      ]
+    },
+    "menus": {
+      "view/title": [
+        {
+          "command": "rubygems.command.clear-search",
+          "when": "view == rubygems.explorer",
+          "group": "navigation@1"
+        },
+        {
+          "command": "rubygems.command.reload",
+          "when": "view == rubygems.explorer",
+          "group": "navigation@2"
+        },
+        {
+          "command": "rubygems.command.focus",
+          "when": "view == rubygems.explorer",
+          "group": "navigation@3"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "rubygems.command.filter-deps",
+          "when": "view == rubygems.explorer && viewItem == rubygems.explorer.node.gemspec",
+          "group": "inline@1"
+        },
+        {
+          "command": "rubygems.command.filter-reqs",
+          "when": "view == rubygems.explorer && viewItem == rubygems.explorer.node.gemspec",
+          "group": "inline@2"
+        },
+        {
+          "command": "rubygems.command.open-rubygems-website",
+          "when": "view == rubygems.explorer && viewItem == rubygems.explorer.node.gemspec",
+          "group": "inline@3"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "rubygems.command.reload",
+          "when": "false"
+        },
+        {
+          "command": "rubygems.command.focus",
+          "when": "false"
+        },
+        {
+          "command": "rubygems.command.reveal",
+          "when": "false"
+        },
+        {
+          "command": "rubygems.command.clear-search",
+          "when": "false"
+        },
+        {
+          "command": "rubygems.command.show-search-input-box",
+          "when": "true"
+        },
+        {
+          "command": "rubygems.command.filter-deps",
+          "when": "false"
+        },
+        {
+          "command": "rubygems.command.filter-reqs",
+          "when": "false"
+        },
+        {
+          "command": "rubygems.command.filter-nodes",
+          "when": "false"
+        },
+        {
+          "command": "rubygems.command.open-rubygems-website",
+          "when": "false"
         }
       ]
     },
     "commands": [
       {
-        "command": "rubygems.explorer.refresh",
-        "title": "Rubygems: reload current libraries and dependencies"
+        "command": "rubygems.command.reload",
+        "icon": "$(sync)",
+        "category": "RubyGems",
+        "title": "Reload RubyGems"
+      },
+      {
+        "command": "rubygems.command.focus",
+        "icon": "$(record)",
+        "category": "RubyGems",
+        "title": "Focus"
+      },
+      {
+        "command": "rubygems.command.reveal",
+        "category": "RubyGems",
+        "title": "Reveal"
+      },
+      {
+        "command": "rubygems.command.clear-search",
+        "icon": "$(clear-all)",
+        "category": "RubyGems",
+        "title": "Clear Search Results"
+      },
+      {
+        "command": "rubygems.command.show-search-input-box",
+        "icon": "$(search)",
+        "category": "RubyGems",
+        "title": "Search RubyGems"
+      },
+      {
+        "command": "rubygems.command.filter-deps",
+        "icon": "$(type-hierarchy-sub)",
+        "category": "RubyGems",
+        "title": "Dependencies Filter"
+      },
+      {
+        "command": "rubygems.command.filter-reqs",
+        "icon": "$(type-hierarchy-super)",
+        "category": "RubyGems",
+        "title": "Requirements Filter"
+      },
+      {
+        "command": "rubygems.command.filter-nodes",
+        "category": "RubyGems",
+        "title": "RubyGems Filter"
+      },
+      {
+        "command": "rubygems.command.open-rubygems-website",
+        "icon": "$(link-external)",
+        "category": "RubyGems",
+        "title": "Open RubyGems On Website"
       }
     ],
-    "menus": {},
     "configuration": {
       "type": "object",
-      "title": "Rubygems",
+      "title": "RubyGems",
       "properties": {
+        "rubygems.other.website": {
+          "type": "string",
+          "default": "https://rubygems.org/gems/${name}",
+          "markdownDescription": "The Ruby community’s gem hosting service.",
+          "scope": "resource"
+        }
       }
     }
   }

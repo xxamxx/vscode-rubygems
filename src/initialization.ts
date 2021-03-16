@@ -1,23 +1,26 @@
-import * as open from 'open';
+
 import {
   commands,
   ConfigurationChangeEvent,
   ExtensionContext,
   TextDocument,
   TextEditor,
+  Uri,
   window,
   workspace
 } from 'vscode';
+import { Api } from './api';
 import { Container } from './container';
-import { ADisposable } from './definition/a_disposable';
 import { Project } from './project';
+import { Disposition } from './shared/abstract/disposable';
+import { GemspecNode } from './view/node/gemspec-node';
 
-export class Initialization extends ADisposable {
+export class Initialization extends Disposition {
   private static singleton: Initialization;
 
   static async init(context: ExtensionContext) {
     if (this.singleton) return this.singleton;
-
+    
     const container = await Container.init(context);
     const initialization = new Initialization(container);
     await initialization.registerAll();
@@ -38,59 +41,71 @@ export class Initialization extends ADisposable {
   async registerCommand() {
     // - 注册命令
     this.disposable.push(
-      commands.registerCommand('rubygems.explorer.refresh', () => this.container.specview.refresh())
+      commands.registerCommand('rubygems.command.reload', () => this.container.gemspecView.reload()),
+      commands.registerCommand('rubygems.command.open-file', async resource => window.showTextDocument(resource)),
+      commands.registerCommand('rubygems.command.open-rubygems-website', async (node: GemspecNode) => (node && node.openWebsite())),
+      commands.registerCommand('rubygems.command.show-search-input-box', () => this.showSearchInputBox()),
+      commands.registerCommand('rubygems.command.search', (val: string) => this.container.gemspecView.search(val)),
+      commands.registerCommand('rubygems.command.clear-search', () => this.container.gemspecView.filterNodes()),
+      commands.registerCommand('rubygems.command.filter-reqs', node => this.container.gemspecView.filterReqs(node)),
+      commands.registerCommand('rubygems.command.filter-deps', node => this.container.gemspecView.filterDeps(node)),
+      commands.registerCommand('rubygems.command.reveal', async (uri: Uri) => this.container.gemspecView.reveal(uri)),
+      commands.registerCommand('rubygems.command.focus', async () => this.container.focus()),
     );
-    this.disposable.push(
-      commands.registerCommand('rubygems.explorer.openFile', async resource => window.showTextDocument(resource))
-    );
-    // this.disposable.push(commands.registerCommand('rubygems.explorer.openWebsite', url => this.openWebsite(url)));
-    // this.disposable.push(commands.registerCommand('rubygems.explorer.selectLockfileFolder', () => this.pickLockfileFolder()));
   }
 
   async registerWatcher() {
     // - 监控所有 lockfile
-    // const watcher = workspace.createFileSystemWatcher('**/Gemfile.lock');
-    // watcher.onDidCreate((uri: Uri) => this.onLockfilesAdded([uri]));
-    // watcher.onDidDelete((uri: Uri) => this.onLockfilesDeleted([uri]));
-    // watcher.onDidChange((uri: Uri) => this.onLockfileChanged([uri]));
-    // this.disposable.push(watcher);
+    // let watcher;
+    // this.disposable.push(watcher = workspace.createFileSystemWatcher('**/Gemfile.lock'));
   }
 
   async registerEvent() {
     // - 监听 workspace change event
-    // this.disposable.push(workspace.onDidChangeWorkspaceFolders(e => this.onWorkspaceFolderChanged(e)));
     this.disposable.push(window.onDidChangeActiveTextEditor(e => this.onTextEditorActiveChanged(e)));
     this.disposable.push(workspace.onDidChangeConfiguration(e => this.onConfigurationChanged(e)));
     this.disposable.push(workspace.onDidOpenTextDocument(e => this.onTextDocumentActivated(e)));
   }
 
-  async registerView() {
-    this.disposable.push(window.registerTreeDataProvider('rubygems.explorer', this.container.specview));
+  async registerView() { }
+
+  async registerApi(): Promise<Api> { 
+    return new Api(this.container)
   }
 
-  private async openWebsite(url: string): Promise<void> {
-    console.debug('open website', url);
-    await open(url);
+  private async showSearchInputBox(){
+    const val = await window.showInputBox({
+      placeHolder: 'Search RubyGems Information',
+      prompt: 'Filter: name, version, path, platform, type(dependency|requirement)'
+    })
+    if (!val) return
+
+    await commands.executeCommand('rubygems.command.search', val)
   }
 
   private async onConfigurationChanged(e: ConfigurationChangeEvent) {
     if (e.affectsConfiguration('rubygems.context.ruby')) {
-      this.container.refresh();
+      commands.executeCommand('rubygems.command.reload')
     }
   }
 
   private async onTextEditorActiveChanged(editor: TextEditor | undefined) {
-    console.debug('open ', editor?.document.uri.path);
+    console.debug('open document', editor?.document.uri.path);
     if (!editor?.document) return;
     this.onTextDocumentActivated(editor.document);
   }
-
+  
   private async onTextDocumentActivated(document: TextDocument | undefined) {
     if (!document) return;
-    const workspaceFolder = workspace.getWorkspaceFolder(document.uri);
-    if (!workspaceFolder) return;
 
-    const uris = await Project.findProjectUris([workspaceFolder]);
-    this.container.setCurrentFolder(uris[0]);
+    // set current gemfile project folder
+    const workspaceFolder = workspace.getWorkspaceFolder(document.uri);
+    if (workspaceFolder) {
+      const uris = await Project.findProjectUris([workspaceFolder]);
+      this.container.setCurrentFolder(uris[0]);
+    }
+    
+    // reveal GemspecNode by document
+    await commands.executeCommand('rubygems.command.reveal', document.uri)
   }
 }

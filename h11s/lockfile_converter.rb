@@ -1,13 +1,24 @@
 #!/usr/bin/env ruby
 
-require 'rubygems' unless defined?(Gem)
-require 'bundler/setup'
+# rubygems silence
+$VERBOSE = nil
+RUBYOPT="-W0"
+
 require 'json'
+require 'bundler/setup'
 
-# 通过 BUNDLE_GEMFILE 写入lockfile对应的Gemfile文件
-# BUNDLE_GEMFILE=/Users/am/Dev/huion/huion-backends/Gemfile
 
-Bundler::SharedHelpers.set_bundle_environment
+# set silence
+Bundler.settings.temporary({
+  :disable_version_check => false,
+  :ignore_messages => true,
+  :silence_root_warning => true,
+})
+# ui initialize
+ui = Bundler::UI::Shell.new
+ui.level = 'silent'
+Bundler.ui = ui
+
 
 proc_block = proc do
   def to_node_object
