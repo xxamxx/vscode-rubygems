@@ -158,59 +158,59 @@
       {
         "command": "rubygems.command.reload",
         "icon": "$(sync)",
-        "category": "Rubygems",
+        "category": "RubyGems",
         "title": "Reload RubyGems"
       },
       {
         "command": "rubygems.command.focus",
         "icon": "$(record)",
-        "category": "Rubygems",
+        "category": "RubyGems",
         "title": "Focus"
       },
       {
         "command": "rubygems.command.reveal",
-        "category": "Rubygems",
+        "category": "RubyGems",
         "title": "Reveal"
       },
       {
         "command": "rubygems.command.clear-search",
         "icon": "$(clear-all)",
-        "category": "Rubygems",
+        "category": "RubyGems",
         "title": "Clear Search Results"
       },
       {
         "command": "rubygems.command.show-search-input-box",
         "icon": "$(search)",
-        "category": "Rubygems",
+        "category": "RubyGems",
         "title": "Search RubyGems"
       },
       {
         "command": "rubygems.command.filter-deps",
         "icon": "$(type-hierarchy-sub)",
-        "category": "Rubygems",
-        "title": "Dependentcies Filter"
+        "category": "RubyGems",
+        "title": "Dependencies Filter"
       },
       {
         "command": "rubygems.command.filter-reqs",
         "icon": "$(type-hierarchy-super)",
-        "category": "Rubygems",
+        "category": "RubyGems",
         "title": "Requirements Filter"
       },
       {
         "command": "rubygems.command.filter-nodes",
-        "category": "Rubygems",
+        "category": "RubyGems",
         "title": "RubyGems Filter"
       },
       {
         "command": "rubygems.command.open-rubygems-website",
         "icon": "$(link-external)",
-        "category": "Rubygems",
+        "category": "RubyGems",
         "title": "Open RubyGems On WebSite"
       }
     ],
     "configuration": {
       "type": "object",
-      "title": "Rubygems",
+      "title": "RubyGems",
       "properties": {
         "rubygems.other.website": {
           "type": "string",
