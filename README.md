@@ -1,20 +1,31 @@
-# VSCode-RubyGems README
+# The RubyGems Explorer
+This VSCode Extension can be used to browser RubyGems source codes from your Ruby project.
 
-The is RubyGems Explorer, it can browser rubygems source codes of your project by `Gemfile.lock`.
-
-![explorer](https://raw.githubusercontent.com/xxamxx/vscode-rubygems/develop/resources/screenshots/001.png "explorer")
+![show-how](https://raw.githubusercontent.com/xxamxx/vscode-rubygems/develop/resources/screenshots/rubygems-show-how.gif "show-how")
 
 ## Features
 
-feature
-
 - Explore RubyGems by `Gemfile.lock`
 - Support Multi-root Workspaces
+- Filter RubyGems
+  - Search
+  - Dependencies Filter
+  - Requirements Filter
+- Focus on one of the RubyGems
+- Open Website
+- Provide APIs
+  - `async focus(uri: Uri): Promise<void>`  
+    focus on one of the RubyGems on Explorer via file uri
+  - `async search(val: string): Promise<void>`  
+    search some RubyGems information on Explorer
 
 ## Extension Settings
 
 This extension contributes the following settings:
 
+| Setting | Default | Description |  
+| ------- | ------- | ----------- | 
+| `rubygems.other.website` | `"https://rubygems.org/gems/${name}"` | The Ruby community’s gem hosting service. <br> provide properties: `name`, `version`, `platform`, `dir` | 
 
 ## Known Issues
 
