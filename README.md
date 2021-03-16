@@ -1,7 +1,7 @@
 # The RubyGems Explorer
 This VSCode Extension can be used to browser RubyGems source codes from your Ruby project.
 
-![show-how](https://raw.githubusercontent.com/xxamxx/vscode-rubygems/develop/resources/screenshots/rubygems-show-how.gif "show-how")
+![show-how](https://raw.githubusercontent.com/xxamxx/vscode-rubygems/master/resources/screenshots/rubygems-show-how.gif "show-how")
 
 ## Features
 
