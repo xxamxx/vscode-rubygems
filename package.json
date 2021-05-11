@@ -22,7 +22,7 @@
     "pretty": "prettier --config .prettierrc.js --loglevel warn --write \"./**/*.{ts,md,json}\""
   },
   "dependencies": {
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "mkdirp": "^1.0.4",
     "rimraf": "^2.6.2"
   },
