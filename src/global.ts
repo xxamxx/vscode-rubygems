@@ -28,6 +28,7 @@ export class Global extends Disposition{
   }
     
   readonly gempath: string = join(process.env.GEM_HOME || '', '/bin/ruby');
+  readonly ruby_path_names = ["ruby", "shims"]
 
   private _node_storage!: NodeStorage;
   get nodeStorage(){
@@ -59,7 +60,7 @@ export class Global extends Disposition{
   get ruby_paths(){
     return _.compact([
       process.env['MY_RUBY_HOME'] ? join(process.env['MY_RUBY_HOME'], 'bin') : '',
-      ...(process.env['PATH']?.split(delimiter).filter(ele => ele.includes('ruby')) || [])
+      ...(process.env['PATH']?.split(delimiter).filter(ele => this.ruby_path_names.some(n => ele.includes(n))) || [])
     ])
   }
 
