@@ -4,5 +4,5 @@
     "lib": ["dom", "dom.iterable", "es2018"],
     "skipLibCheck": true
   },
-  "exclude": ["node_modules", "test"]
+  "exclude": ["node_modules", "test", "dist", ".*", "resources"]
 }

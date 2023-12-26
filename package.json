@@ -2,7 +2,7 @@
   "name": "vscode-rubygems",
   "displayName": "RubyGems",
   "description": "The RubyGems Explorer is helpful to browser RubyGems source codes",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "./dist/extension.js",
   "license": "MIT",
   "engines": {
@@ -22,7 +22,7 @@
     "pretty": "prettier --config .prettierrc.js --loglevel warn --write \"./**/*.{ts,md,json}\""
   },
   "dependencies": {
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "mkdirp": "^1.0.4",
     "rimraf": "^2.6.2"
   },
@@ -30,18 +30,18 @@
     "@types/lodash": "^4.14.168",
     "@types/mkdirp": "^0.5.2",
     "@types/mocha": "^5.2.7",
-    "@types/node": "^12.12.51",
-    "@types/rimraf": "^2.0.4",
+    "@types/node": "^12.20.55",
+    "@types/rimraf": "^2.0.5",
     "@types/vscode": "^1.47.0",
-    "@typescript-eslint/eslint-plugin": "^4.1.1",
-    "@typescript-eslint/parser": "^4.1.1",
-    "eslint": "^7.9.0",
-    "eslint-config-airbnb-typescript": "^10.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-typescript": "^10.0.2",
     "mocha": "^6.2.3",
-    "prettier": "^2.1.2",
-    "typescript": "^3.9.7",
+    "prettier": "^2.8.8",
+    "typescript": "^3.9.10",
     "vsce": "^1.85.1",
-    "vscode-test": "^1.4.0"
+    "vscode-test": "^1.6.1"
   },
   "publisher": "xxamxx",
   "author": {
